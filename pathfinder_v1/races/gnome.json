@@ -1,0 +1,153 @@
+{
+  "gnome-std" : {
+    "_name" : "Standard",
+    "_description" : "Gnomes are distant relatives of the fey, and their history tells of a time when they lived in the fey’s mysterious realm, a place where colors are brighter, the wildlands wilder, and emotions more primal. Unknown forces drove the ancient gnomes from that realm long ago, forcing them to seek refuge in this world; despite this, the gnomes have never completely abandoned their fey roots or adapted to mortal culture. Though gnomes are no longer truly fey, their fey heritage can be seen in their innate magic powers, their oft-capricious natures, and their outlooks on life and the world. Gnomes can have the same concerns and motivations as members of other races, but just as often they are driven by passions and desires that non-gnomes see as eccentric at best, and nonsensical at worst. A gnome may risk his life to taste the food at a giant’s table, to reach the bottom of a pit just because it would be the lowest place he’s ever been, or to tell jokes to a dragon—and to the gnome those goals are as worthy as researching a new spell, gaining vast wealth, or putting down a powerful evil force. While such apparently fickle and impulsive acts are not universal among gnomes, they are common enough for the race as a whole to have earned a reputation for being impetuous and at least a little mad. Combined with their diminutive sizes, vibrant coloration, and lack of concern for the opinions of others, these attitudes have caused gnomes to be widely regarded by the other races as alien and strange. Gnomes, in turn, are often amazed how alike other common, civilized races are. It seems stranger to a gnome that humans and elves share so many similarities than that the gnomes do not. Indeed, gnomes often confound their allies by treating everyone who is not a gnome as part of a single, vast non-gnome collective race.",
+    "_icon" : "wisdom",
+    "+info.race" : {
+       "_name" : "Gnome",
+       "_description" : "Gnomes are distant relatives of the fey, and their history tells of a time when they lived in the fey’s mysterious realm, a place where colors are brighter, the wildlands wilder, and emotions more primal. Unknown forces drove the ancient gnomes from that realm long ago, forcing them to seek refuge in this world; despite this, the gnomes have never completely abandoned their fey roots or adapted to mortal culture. Though gnomes are no longer truly fey, their fey heritage can be seen in their innate magic powers, their oft-capricious natures, and their outlooks on life and the world. Gnomes can have the same concerns and motivations as members of other races, but just as often they are driven by passions and desires that non-gnomes see as eccentric at best, and nonsensical at worst. A gnome may risk his life to taste the food at a giant’s table, to reach the bottom of a pit just because it would be the lowest place he’s ever been, or to tell jokes to a dragon—and to the gnome those goals are as worthy as researching a new spell, gaining vast wealth, or putting down a powerful evil force. While such apparently fickle and impulsive acts are not universal among gnomes, they are common enough for the race as a whole to have earned a reputation for being impetuous and at least a little mad. Combined with their diminutive sizes, vibrant coloration, and lack of concern for the opinions of others, these attitudes have caused gnomes to be widely regarded by the other races as alien and strange. Gnomes, in turn, are often amazed how alike other common, civilized races are. It seems stranger to a gnome that humans and elves share so many similarities than that the gnomes do not. Indeed, gnomes often confound their allies by treating everyone who is not a gnome as part of a single, vast non-gnome collective race.",
+       "physical description" : "Gnomes are one of the smallest of the common races, generally standing just over 3 feet in height. Despite their small frames, however, gnomes are extremely resilient, and not as weak as many of their foes assume. Though their diminutive stature reduces their ability to move quickly, gnomes often train to take advantage of their size, especially when fighting foes much larger than themselves. The coloration of gnomes varies so wildly that many outsiders assume gnomes commonly use dyes and illusions to change their skin and hair tones. While gnomes are certainly not above cosmetic enhancement (and may wish to change their appearance just to see how outlandish they can look), their natural hues truly range over a rainbow of coloration. Their hair tends toward vibrant colors such as the fiery orange of autumn leaves, the verdant green of forests at springtime, or the deep reds and purples of wildflowers in bloom. Similarly, their flesh tones range from earthy browns to floral pinks, and gnomes with black, pastel blue, or even green skin are not unknown. Gnomes’ coloration has little regard for heredity, with the color of a gnome’s parents and other kin having no apparent bearing on the gnome’s appearance. Gnomes possess highly mutable facial characteristics, and their proportions often don’t match the norm of other humanoid races. Many have overly large mouths and eyes, an effect which can be both disturbing and stunning, depending on the individual. Others may have extremely small features spread over an otherwise blank expanse of face, or may mix shockingly large eyes with a tiny, pursed mouth and a pert button of a nose. Gnomes rarely take pride in or show embarrassment about their features, but members of other races often fixate on a gnome’s most prominent feature and attempt to use it as the focus of insults or endearments.",
+       "society" : "Unlike most races, gnomes do not generally organize themselves within classic societal structures. Gnome cities are unusual and gnome kingdoms almost unknown. Further, gnomes have no particular tendency to gather in specific neighborhoods even when a large number of them live among other races. While specific laws meant to contain the potential impact of gnomes on a society may require a “gnome quarter,” and societal pressure sometimes causes all non-gnomes to move away from areas with high gnome populations, left to their own devices, gnomes tend to spread evenly throughout communities that allow them. However, even when gnomes are common within a community as a group, individual gnomes tend to be always on the move. Whimsical creatures at heart, they typically travel alone or with temporary companions, ever seeking new and more exciting experiences. They rarely form enduring relationships among themselves or with members of other races, instead pursuing crafts, professions, or collections with a passion that borders on zealotry. If a gnome does settle in an area or stay with a group for a longer period, it is almost always the result of some benefit that area gives to a vocation or obsession to which the gnome had dedicated himself. Despite their extremely varied backgrounds and lack of a unifying homeland, gnomes do possess some common cultural traits. Male gnomes have a strange fondness for unusual hats and headgear, often wearing the most expensive and ostentatious head-covering they can afford (and that their chosen careers will allow them to wear without causing problems). Females rarely cover their heads, but proudly wear elaborate and eccentric hairstyles that often include intricate jeweled combs and headpieces.",
+       "relations" : "Gnomes have difficulty interacting with the other races, on both emotional and physical levels. In many ways the very fact other races see gnomes as odd is itself the thing gnomes find most odd about other races, and this leads to a strong lack of common ground upon which understanding and relationships can be built. When two gnomes encounter one another, they generally assume some mutually beneficial arrangement can be reached, no matter how different their beliefs and traditions may be. Even if this turns out not to be the case, the gnomes continue to look for commonalities in their dealings with each other. The inability or unwillingness of members of other races to make the same effort when dealing with gnomes is both frustrating and confusing to most gnomes. In many ways, it is gnomes’ strong connection to a wide range of apparently unconnected ideas that makes it difficult for other races to build relationships with them. Gnome humor, for example, is often focused on physical pranks, nonsensical rhyming nicknames, and efforts to convince others of outrageous lies that strain all credibility. Gnomes find such efforts hysterically funny, but their pranks often come across as malicious or senseless to other races, while gnomes in turn tend to think of the taller races as dull and lumbering giants. Gnomes get along reasonably well with halflings and humans, who at least have some traditions of bizarre, gnome-like humor. Gnomes generally feel dwarves and half-orcs need to lighten up, and attempt to bring levity into their lives with tricks, jokes, and outrageous tales the more dour races simply cannot see the sense of. Gnomes respect elves, but often grow frustrated with the slow pace at which members of the long-lived race make decisions. To gnomes, action is always better than inaction, and many gnomes carry several highly involved projects with them at all times to keep themselves entertained during rest periods.",
+       "alignment and religion" : "Although gnomes are impulsive tricksters, with sometimes inscrutable motives and equally confusing methods, their hearts are generally in the right place. What may seem a malicious act to a non-gnome is more likely an effort to introduce new acquaintances to new experiences, however unpleasant the experiences may be. Gnomes are prone to powerful fits of emotion, and find themselves most at peace within the natural world. They are usually neutral good, and prefer to worship deities who value individuality and nature.",
+       "adventurers" : "Gnomes’ propensity for wanderlust, deep curiosity, and desire to master odd or esoteric skills and languages make them natural adventurers. They often become wanderers to experience new aspects of life, for nothing is as novel as the uncounted dangers facing adventurers. Many gnomes see adventuring as the only worthwhile purpose in life, and seek out adventures for no other motive than to experience them. Other gnomes desire to find some lost lore or material that has ties to their chosen vocation and believe only dragon hoards and ancient ruins can contain the lore they need, which can result in gnomes who think of themselves as bakers or weavers being just as accomplished adventurers as those who declare themselves to be mages or scouts. Gnomes are physically weak compared to many races, and see this as a simple fact of life to be planned for accordingly. Most adventuring gnomes make up for their weakness with a proclivity for sorcery or bardic music, while others turn to alchemy or exotic weapons to grant them an edge in conflicts.",
+       "ages" : "Adulthood: 40 years, Long lifespan (100s of years)",
+       "male names" : "Abroshtor, Bastargre, Halungalom, Krolmnite, Poshment, Zarzuket, Zatqualmie.",
+       "female names" : "Besh, Fijit, Lini, Majet, Neji, Pai, Queck, Trig.",
+       "male height" : "3ft 2in to 3ft 8in",
+       "male weight" : "37 to 43 lbs",
+       "female height" : "3ft to 3ft 6 in",
+       "female weight" : "32 to 38 lbs",
+       "languages_available" : ["Draconic","Dwarven","Elven", "Giant", "Goblin", "Orc"]
+     },
+    "+info.type" : ["humanoid","gnome"],
+    "+info.weapons_gnome" : ["gnome"],
+    "+stats.languages._suffix" : ["Common", "Gnome", "Sylvan"],
+    "+stats.con.gnome" : 2,
+    "+stats.cha.gnome" : 2,
+    "+stats.str.gnome" : -2,
+    "+stats.size.gnome" : 1,
+    "+stats.speed.base" : 20,
+    "+skills.stealth.gnome" : 4,
+    "+skills.perception.gnome" : 2,
+    "+skills.profession_template.gnome" : 2,
+    "+skills.craft_template.gnome" : 2,
+    "+stats.ac_giant" : { "base" : ["stats.ac",4], "_name" : "vs Giant size" },
+    "+stats.save_will_illusion" : { "base" : ["stats.save_will", 2], "_name" : "vs Illusion spells and effects"},
+    "+stats.save_ref_illusion" : { "base" : ["stats.save_ref", 2], "_name" : "vs Illusion spells and effects"},
+    "+stats.save_con_illusion" : { "base" : ["stats.save_con", 2], "_name" : "vs Illusion spells and effects"},
+    "+stats.vision_dim.low-light-vision" : "stats.vision",
+    "+feats.gnome_hatred" : { "_name" : "Gnome Hatred", "_description" : "Gnomes receive a +1 bonus on attack rolls against humanoid creatures of the reptilian and goblinoid subtypes because of their special training against these hated foes." },
+    "+abilities.gnome_speak_with_animals": {
+      "_description": "You can ask questions of and receive answers from animals, but the spell doesn’t make them any more friendly than normal. Wary and cunning animals are likely to be terse and evasive, while the more stupid ones make inane comments. If an animal is friendly toward you, it may do some favor or service for you.",
+      "_name": "Speak with Animals (Gnome)",
+      "_icon" : "",
+      "level" : 0,
+      "dc": { "base" : [10, "cha", "stats.total_level"] },
+      "range": "Personal",
+      "cast_time" : "1 Standard Action",
+      "require": "V,S",
+      "save" : "none",
+      "duration" : {
+        "base" : "stats.total_level",
+        "_suffix" : "minutes"
+      },
+      "prepared" : true,
+      "uses": {
+        "if" : ["stats.cha", ">", 11],
+        "then" : 1,
+        "else" : 0
+      },
+      "target" : "Personal"
+    },
+    "+abilities.gnome_dancing_lights": {
+      "_description": "Depending on the version selected, you create up to four lights that resemble lanterns or torches (and cast that amount of light), or up to four glowing spheres of light (which look like will-o’-wisps), or one faintly glowing, vaguely humanoid shape. The dancing lights must stay within a 10-foot-radius area in relation to each other but otherwise move as you desire (no concentration required): forward or back, up or down, straight or turning corners, or the like. The lights can move up to 100 feet per round. A light winks out if the distance between you and it exceeds the spell’s range. You can only have one dancing lights spell active at any one time. If you cast this spell while another casting is still in effect, the previous casting is dispelled. If you make this spell permanent, it does not count against this limit.",
+      "_name": "Dancing Lights (Gnome)",
+      "_icon" : "sun",
+      "level" : 0,
+      "dc": { "base" : [10, "cha", "stats.total_level"] },
+      "spell_failure" : {
+        "base" : "stats.spell_failure",
+        "_suffix" : "%"
+      },
+      "range": {
+        "base" : 100,
+        "multiply" : [10, "stats.total_level"],
+        "_suffix" : "ft"
+      },
+      "cast_time" : "1 Standard Action",
+      "require": "V,S",
+      "save" : "none",
+      "duration" : {
+        "base" : 1,
+        "_suffix" : " minute"
+      },
+      "prepared" : true,
+      "uses": {
+        "if" : ["stats.cha", ">", 11],
+        "then" : 1,
+        "else" : 0
+      },
+      "target" : "area"
+    },
+    "+abilities.gnome_ghost_sound": {
+      "_description": "Ghost sound allows you to create a volume of sound that rises, recedes, approaches, or remains at a fixed place. You choose what type of sound ghost sound creates when casting it and cannot thereafter change the sound’s basic character. The volume of sound created depends on your level. You can produce as much noise as four normal humans per caster level (maximum 40 humans). Thus, talking, singing, shouting, walking, marching, or running sounds can be created. The noise a ghost sound spell produces can be virtually any type of sound within the volume limit. A horde of rats running and squeaking is about the same volume as eight humans running and shouting. A roaring lion is equal to the noise from 16 humans, while a roaring dragon is equal to the noise from 32 humans. Anyone who hears a ghost sound receives a Will save to disbelieve.",
+      "_name": "Ghost Sound (Gnome)",
+      "_icon" : "sound-waves",
+      "level" : 0,
+      "dc": { "base" : [11, "cha", "stats.total_level"] },
+      "spell_failure" : {
+        "base" : "stats.spell_failure",
+        "_suffix" : "%"
+      },
+      "range": {
+        "base" : 25,
+        "multiply" : [5, { "divide" : ["stats.total_level",2]}],
+        "_suffix" : "ft"
+      },
+      "cast_time" : "1 Standard Action",
+      "require": "V,S,M (bit of wool or wax)",
+      "save" : "Will (Negates)",
+      "duration" : {
+        "base" : "stats.total_level",
+        "_suffix" : "rounds"
+      },
+      "prepared" : true,
+      "uses": {
+        "if" : ["stats.cha", ">", 11],
+        "then" : 1,
+        "else" : 0
+      },
+      "target" : "area"
+    },
+    "+abilities.gnome_prestidigitation": {
+      "_description": "Prestidigitations are minor tricks that novice spellcasters use for practice. Once cast, a prestidigitation spell enables you to perform simple magical effects for 1 hour. The effects are minor and have severe limitations. A prestidigitation can slowly lift 1 pound of material. It can color, clean, or soil items in a 1-foot cube each round. It can chill, warm, or flavor 1 pound of nonliving material. It cannot deal damage or affect the concentration of spellcasters. Prestidigitation can create small objects, but they look crude and artificial. The materials created by a prestidigitation spell are extremely fragile, and they cannot be used as tools, weapons, or spell components. Finally, prestidigitation lacks the power to duplicate any other spell effects. Any actual change to an object (beyond just moving, cleaning, or soiling it) persists only 1 hour.",
+      "_name": "Prestidigitation (Gnome)",
+      "_icon" : "star-swirl",
+      "level" : 0,
+      "dc": { "base" : [10, "cha", "stats.total_level"] },
+      "spell_failure" : {
+        "base" : "stats.spell_failure",
+        "_suffix" : "%"
+      },
+      "range": {
+        "base" : 10,
+        "_suffix" : "ft"
+      },
+      "cast_time" : "1 Standard Action",
+      "require": "V, S",
+      "save" : "none",
+      "duration" : {
+        "base" : 1,
+        "_suffix" : "hour"
+      },
+      "prepared" : true,
+      "uses": {
+        "if" : ["stats.cha", ">", 11],
+        "then" : 1,
+        "else" : 0
+      },
+      "target" : "See Text"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "+class.CHANGEME": {
+    "main_attributes": "A and B",
+    "alignment_restrictions": "",
+    "_armor_notes": "",
+    "_armor_proficiency": ["light", "medium","heavy"],
+    "_description": "",
+    "_hit_dice": "1d10",
+    "_skill_ranks": {
+	"base" : 4,
+	"_suffix" : " per level"
+    },
+    "_name": "CHANGEME",
+    "_role": "",
+    "_spell_notes": "",
+    "_starting_wealth": "",
+    "_weapon_notes": "",
+    "_weapon_proficiency": ["simple", "martial", "exotic"],
+    "archetype": "",
+    "bab": {},
+    "bab_2" : {},
+    "bab_3" : {},
+    "bab_4" : {},
+    "level": 0,
+    "save_fort": {},
+    "save_ref": {},
+    "save_will": {},
+    "spell_dc": {
+        "base": [ 10, "cha" ]
+    },
+    "spells_known" : {
+       "lvl_1": {},
+       "lvl_2": {},
+       "lvl_3": {},
+       "lvl_4": {}
+    },
+    "spells_per_day": {
+      "lvl_1": {
+        "bonus" : {
+          "table_lookup": {
+            "default": 0,
+            "index": "cha",
+            "table": [0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5]
+          }
+        }
+      },
+      "lvl_2": {
+        "bonus" : {
+          "table_lookup": {
+            "default": 0,
+            "index": "cha",
+            "table": [0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4]
+          }
+        }
+      },
+      "lvl_3": {
+        "bonus" : {
+          "table_lookup": {
+            "default": 0,
+            "index": "cha",
+            "table": [0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4]
+          }
+        }
+      },
+      "lvl_4": {
+        "bonus" : {
+          "table_lookup": {
+            "default": 0,
+            "index": "cha",
+            "table": [0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4]
+          }
+        }
+      }
+    },
+    "level_up" : {
+      "1" :  {
+        "+stats.bab.CHANGEME" : "class.CHANGEME.bab",
+        "+stats.bab_2.CHANGEME" : "class.CHANGEME.bab_2",
+        "+stats.bab_3.CHANGEME" : "class.CHANGEME.bab_3",
+        "+stats.bab_4.CHANGEME" : "class.CHANGEME.bab_4",
+        "+stats.save_fort.CHANGEME" : "class.CHANGEME.save_fort",
+        "+stats.save_ref.CHANGEME" : "class.CHANGEME.save_ref",
+        "+stats.save_will.CHANGEME" : "class.CHANGEME.save_will"
+      },
+      "2" : {},
+      "3" : {},
+      "4" : {},
+      "5" : {},
+      "6" : {},
+      "7" : {},
+      "8" : {},
+      "9" : {},
+      "10" : {},
+      "11" : {},
+      "12" : {},
+      "13" : {},
+      "14" : {},
+      "15" : {},
+      "16" : {},
+      "17" : {},
+      "18" : {},
+      "19" : {},
+      "20": {}
+    }
+  }
+}

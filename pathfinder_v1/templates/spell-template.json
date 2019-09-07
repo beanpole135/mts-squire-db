@@ -1,0 +1,34 @@
+{
+  "+spells.CHANGEME": {
+    "_description": "",
+    "_name": "",
+    "_icon" : "",
+    "level" : 0,
+    "damage" : {
+      "base" : 1,
+      "_suffix" : "d6",
+      "_bonus" : 0
+    },
+    "dc": { "base" : 10 },
+    "spell_failure" : {
+      "base" : "stats.spell_failure",
+      "_suffix" : "%"
+    },
+    "range": {
+      "base" : 10,
+      "_suffix" : "ft"
+    },
+    "cast_time" : "1 Standard Action",
+    "require": "VSM (material)",
+    "save" : "Will (1/2 damage)",
+    "duration" : {
+      "base" : 1,
+      "_suffix" : "rounds"
+    },
+    "prepared" : false,
+    "uses": {
+      "per_day" : "stats.spells"
+    },
+    "target" : "1 | Personal | Cone | Splash"
+  }
+}

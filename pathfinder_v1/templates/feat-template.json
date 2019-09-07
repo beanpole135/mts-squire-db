@@ -1,0 +1,16 @@
+{
+
+  "CHANGEME" : {
+    "_name" : "",
+    "_description" : "",
+    "_icon" : "",
+    "+feats.CHANGEME" : {
+      "_name" : "",
+      "_description" : "",
+      "_icon" : "",
+      "_requires" : ["",""]
+    },
+    "+skills.bluff.CHANGEME" : 2
+  }
+
+}

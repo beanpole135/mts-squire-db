@@ -1,0 +1,26 @@
+{
+  "CHANGEME-std" : {
+    "_name" : "CHANGEME (Standard)",
+    "_description" : "",
+    "_icon" : "",
+    "+info.race" : {
+       "_name" : "",
+       "_description" : "",
+       "physical description" : "",
+       "society" : "",
+       "relations" : "",
+       "alignment and religion" : "",
+       "adventurers" : "",
+       "ages" : "",
+       "male names" : "",
+       "female names" : "",
+       "male height" : "",
+       "male weight" : "",
+       "female height" : "",
+       "female weight" : "",
+       "languages_available" : []
+     },
+    "+info.type" : [],
+    "+stats.languages._suffix" : "Common"
+  }
+}

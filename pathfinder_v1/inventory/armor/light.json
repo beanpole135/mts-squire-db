@@ -1,0 +1,347 @@
+{
+  "+inventory.haramaki" : {
+    "_name" : "Haramaki",
+    "_description" : "Also called a belly-warmer, a haramaki is a simple silken sash lined with chainmail or articulated metal plates and tied about the stomach to protect it.",
+    "_icon" : "belt-armor",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "light",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 1
+    },
+    "weight" : {
+      "multiply" : [ 1, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.padded_armor" : {
+    "_name" : "Padded Armor",
+    "_description" : "More than simple clothing, padded armor combines heavy, quilted cloth and layers of densely packed stuffing to create a cheap and basic protection. It is typically worn by those not intending to face lethal combat or those who wish their maneuverability to be impacted as little as possible.",
+    "_icon" : "pirate-coat",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "light",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 1,
+      "+stats.spell_failure.armor" : 5,
+      "+stats.maxdex_ac.armor" : 8
+    },
+    "weight" : {
+      "multiply" : [ 10, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.quilted_armor" : {
+    "_name" : "Quilted Cloth Armor",
+    "_description" : "This enhanced form of padded armor has internal layers specifically designed to trap arrows, bolts, darts, shuriken, thrown daggers, and other small ranged piercing weapons. When these kinds of weapons strike you, they tend to become snagged in these layers and fail to harm you. Wearing quilted cloth armor gives you DR 3/— against attacks of this kind. The special layers of the armor have no effect on other kinds of weapons.",
+    "_icon" : "shirt",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "light",
+      "type" : "armor",
+      "special" : "-3 Damage from piercing weapons"
+    },
+    "equip" : {
+      "+stats.ac.armor" : 1,
+      "+stats.spell_failure.armor" : 10,
+      "+stats.maxdex_ac.armor" : 8
+    },
+    "weight" : {
+      "multiply" : [15, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.reinforced_tunic" : {
+    "_name" : "Reinforced Tunic",
+    "_description" : "Sometimes called a leine, this belted tunic has thick cords woven through it that cover vital areas. A reinforced tunic’s armor bonus is increased by 2 against attack rolls made to confirm critical hits against the wearer.",
+    "_icon" : "shirt",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "light",
+      "type" : "armor",
+      "special" : "AC+2 when confirming enemy critical hit"
+    },
+    "equip" : {
+      "+stats.ac.armor" : 1,
+      "+stats.spell_failure.armor" : 5,
+      "+stats.maxdex_ac.armor" : 5
+    },
+    "weight" : {
+      "multiply" : [ 5, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.silken_ceremonial" : {
+    "_name" : "Silken Ceremonial Armor",
+    "_description" : "Used for ceremonial displays or occasionally worn (albeit with no additional benefit) over heavier armor, these robes consist of several layers of cloth and an outer layer of silk intricately woven with gold brocade designs and covered with metal studs.",
+    "_icon" : "robe",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "light",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 1
+    },
+    "weight" : {
+      "multiply" : [ 8, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.lamellar_cuirass" : {
+    "_name" : "Lamellar Cuirass",
+    "_description" : "Lamellar is a type of armor in which small plates of various types of materials are strung together in parallel rows using fine cord. Lamellar plates can be constructed from lacquered leather, horn, or even stone, though suits of iron and steel are the most common. Lamellar armor can be crafted into various shapes, including partial pieces such as breastplates, greaves, or even entire coats. The properties of specific suits and pieces of lamellar armor are determined by their material. This armor consists of a light breastplate and shoulder guards made from lacquered leather plates bound together and fitted over a silk shirt.",
+    "_icon" : "lamellar",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "light",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 2,
+      "+stats.spell_failure.armor" : 5,
+      "+stats.maxdex_ac.armor" : 4
+    },
+    "weight" : {
+      "multiply" : [ 8, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.leather_armor" : {
+    "_name" : "Leather Armor",
+    "_description" : "Leather armor is made up of multiple overlapping pieces of leather, boiled to increase their natural toughness and then deliberately stitched together. Although not as sturdy as metal armor, the flexibility it allows wearers makes it among the most widely used types of armor.",
+    "_icon" : "leather-armor",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "light",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 2,
+      "+stats.spell_failure.armor" : 10,
+      "+stats.maxdex_ac.armor" : 6
+    },
+    "weight" : {
+      "multiply" : [ 15, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.rosewood_armor" : {
+    "_name" : "Rosewood Armor",
+    "_description" : "This suit of leather armor is wrapped in special rose vines. Treat this as leather armor with armor spikes. The vines must be watered with at least 1 gallon of water each day or they wither and die, turning the armor into normal leather armor.",
+    "_icon" : "rose",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "light",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 2,
+      "+stats.spell_failure.armor" : 10,
+      "+stats.maxdex_ac.armor" : 6
+    },
+    "weight" : {
+      "multiply" : [ 15, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.hell_knight_leather" : {
+    "_name" : "Hell Knight Leather Armor",
+    "_description" : "There are instances where wearing full plate armor can jeopardize a Hell Knight’s life. Primarily worn by Hell Knight sailors, this studded leather armor includes heavy gloves and a helm of sculpted leather designed to look like a skull-either a human’s or that of some aquatic creature. Hell Knight leather’s statistics are identical to those of studded leather, except it costs 5 gp more and weighs 5 pounds more.",
+    "_icon" : "saiyan-suit",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "light",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 3,
+      "+stats.armor_penalty.armor" : 1,
+      "+stats.spell_failure.armor" : 15,
+      "+stats.maxdex_ac.armor" : 5
+    },
+    "weight" : {
+      "multiply" : [ 25, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.hide_shirt" : {
+    "_name" : "Hide Shirt",
+    "_description" : "Made from animal hide and giant lizard scales over a shirt of interwoven cords, these chest and shoulder coverings protect without restricting mobility. The wearer of a hide shirt can make a DC 15 Strength check as a standard action. If he succeeds, the armor gains the broken condition and drops to the ground rather than requiring the usual 1 minute it would take to remove it. The armor must be repaired as though it had taken 8 points of damage before it can be used again; a broken hide shirt grants no bonus to Armor Class.",
+    "_icon" : "leather-vest",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "light",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 3,
+      "+stats.armor_penalty.armor" : 1,
+      "+stats.spell_failure.armor" : 15,
+      "+stats.maxdex_ac.armor" : 4
+    },
+    "weight" : {
+      "multiply" : [ 18, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.leaf_armor" : {
+    "_name" : "Leaf Armor",
+    "_description" : "Using alchemical compounds, elves or druidic orders treat special leaves for use in crafting armor. These leaves are stitched together in an overlapping pattern to create a leathery armor as strong and deflective as metal counterparts. Leaf armor jerkins, bracers, and leggings have been made through this process.",
+    "_icon" : "leaf-skeleton",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "light",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 3,
+      "+stats.spell_failure.armor" : 15,
+      "+stats.maxdex_ac.armor" : 5
+    },
+    "weight" : {
+      "multiply" : [ 20, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.parade_armor" : {
+    "_name" : "Parade Armor",
+    "_description" : "Most wealthy countries with standing armies have a different uniform for use in showy noncombat situations such as parades, coronation ceremonies, and so on. The appearance of this armor varies by the country of origin and the branch of the military, but still provides some protection in case the soldier needs to fight while in parade dress. For example, one country’s parade armor may be a chain shirt, tabard, leather greaves, and a winged helm. If you’re wearing a country’s parade armor, you gain a +2 circumstance bonus on Diplomacy and Intimidate checks to influence a person from that country. Depending on the country, parade armor may be crafted from leather, metal, or a mixture of both.",
+    "_icon" : "breastplate",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "light",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 3,
+      "+stats.armor_penalty.armor" : 1,
+      "+stats.spell_failure.armor" : 15,
+      "+stats.maxdex_ac.armor" : 5
+    },
+    "weight" : {
+      "multiply" : [ 20, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.spider_silk_bodysuit" : {
+    "_name" : "Spider Silk Bodysuit",
+    "_description" : "This exotic form-fitting garment is woven entirely from alchemically treated silk harvested from giant spiders or other arachnid creatures. If you have the drow’s weapon familiarity racial trait, you treat the spider-silk bodysuit’s maximum Dexterity bonus as 2 higher.",
+    "_icon" : "spider-web",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "light",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 3,
+      "+stats.armor_penalty.armor" : 1,
+      "+stats.spell_failure.armor" : 10,
+      "+stats.maxdex_ac.armor" : 6
+    },
+    "weight" : {
+      "multiply" : [ 4, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.studded_leather" : {
+    "_name" : "Studded Leather",
+    "_description" : "An improved form of leather armor, studded leather armor is covered with dozens of metal protuberances. While these rounded studs offer little defense individually, in the numbers they are arrayed in upon such armor, they help catch lethal edges and channel them away from vital spots. The rigidity caused by the additional metal does, however, result in less mobility than is afforded by a suit of normal leather armor.",
+    "_icon" : "fur-shirt",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "light",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 3,
+      "+stats.armor_penalty.armor" : 1,
+      "+stats.spell_failure.armor" : 15,
+      "+stats.maxdex_ac.armor" : 5
+    },
+    "weight" : {
+      "multiply" : [ 20, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.wooden_armor" : {
+    "_name" : "Wooden Armor",
+    "_description" : "This suit of leather armor has plates of fire-treated wood sewn over vital areas. Though not as effective as metal armor, it offers better protection than leather alone. Unlike metal armor, the wood is slightly buoyant, and the armor check penalty for swimming in this armor is 0.",
+    "_icon" : "wooden-helmet",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "light",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 3,
+      "+stats.armor_penalty.armor" : 1,
+      "+skills.swimming.wooden_armor" : 1,
+      "+stats.spell_failure.armor" : 15,
+      "+stats.maxdex_ac.armor" : 3
+    },
+    "weight" : {
+      "multiply" : [ 25, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.chain_shirt" : {
+    "_name" : "Chain Shirt",
+    "_description" : "Covering the torso, this shirt is made up of thousands of interlocking metal rings.",
+    "_icon" : "chain-mail",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "light",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 4,
+      "+stats.armor_penalty.armor" : 2,
+      "+stats.spell_failure.armor" : 20,
+      "+stats.maxdex_ac.armor" : 4
+    },
+    "weight" : {
+      "multiply" : [ 25, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.lamellar_leather" : {
+    "_name" : "Lamellar Leather Armor",
+    "_description" : "Lamellar is a type of armor in which small plates of various types of materials are strung together in parallel rows using fine cord. Lamellar plates can be constructed from lacquered leather, horn, or even stone, though suits of iron and steel are the most common. Lamellar armor can be crafted into various shapes, including partial pieces such as breastplates, greaves, or even entire coats. The properties of specific suits and pieces of lamellar armor are determined by their material.",
+    "_icon" : "lamellar",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "light",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 4,
+      "+stats.armor_penalty.armor" : 2,
+      "+stats.spell_failure.armor" : 20,
+      "+stats.maxdex_ac.armor" : 3
+    },
+    "weight" : {
+      "multiply" : [ 25, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  }
+}

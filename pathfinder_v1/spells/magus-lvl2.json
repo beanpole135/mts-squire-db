@@ -1,0 +1,124 @@
+{
+"+spells.fire_breath": {
+            "_active": false,
+            "_description": "Up to thrice during this spell’s duration, you can belch forth a cone of fire as a standard action. The first cone deals 4d6 points of fire damage to every creature in the area. The second cone of flame deals 2d6 points of fire damage to every creature in the area. The third cone of flame deals 1d6 points of fire damage to every creature in the area. A successful Reflex save halves this damage. After the third cone of flame, the spell ends",
+            "_name": "Fire Breath",
+	    "_icon" : "fire-breath",
+            "cast_time": "1 Standard Action",
+            "damage": "4d6/2d6/1d6",
+            "dc": {
+                "base": [
+                    "class.magus.spell_dc",
+                    "spells.fire_breath.level"
+                ]
+            },
+            "duration": {
+                "_suffix": " rounds or until discharged",
+                "rounds": "stats.caster_level"
+            },
+            "level": 2,
+            "prepared": true,
+            "range": {
+                "_suffix": "ft",
+                "base": 15
+            },
+            "require": "V,S,M (chili pepper)",
+            "save": "Reflex (1/2 damage)",
+            "spell_failure": {
+                "_suffix": "%",
+                "base": "stats.spell_failure"
+            },
+            "target": "cone",
+            "uses": {
+                "per_day": 1,
+                "used_today": 0
+            }
+        },
+        "+spells.invisibility": {
+            "_description": "The creature or object touched becomes invisible. If the recipient is a creature carrying gear, that vanishes, too. If you cast the spell on someone else, neither you nor your allies can see the subject, unless you can normally see invisible things or you employ magic to do so.\n\nItems dropped or put down by an invisible creature become visible; items picked up disappear if tucked into the clothing or pouches worn by the creature. Light, however, never becomes invisible, although a source of light can become so (thus, the effect is that of a light with no visible source). Any part of an item that the subject carries but that extends more than 10 feet from it becomes visible.\n\nOf course, the subject is not magically silenced, and certain other conditions can render the recipient detectable (such as swimming in water or stepping in a puddle). If a check is required, a stationary invisible creature has a +40 bonus on its Stealth checks. This bonus is reduced to +20 if the creature is moving. The spell ends if the subject attacks any creature. For purposes of this spell, an attack includes any spell targeting a foe or whose area or effect includes a foe. Exactly who is a foe depends on the invisible character’s perceptions. Actions directed at unattended objects do not break the spell. Causing harm indirectly is not an attack. Thus, an invisible being can open doors, talk, eat, climb stairs, summon monsters and have them attack, cut the ropes holding a rope bridge while enemies are on the bridge, remotely trigger traps, open a portcullis to release attack dogs, and so forth. If the subject attacks directly, however, it immediately becomes visible along with all its gear. Spells such as bless that specifically affect allies but not foes are not attacks for this purpose, even when they include foes in their area.\n\nInvisibility can be made permanent (on objects only) with a permanency spell.",
+            "_name": "Invisibility",
+	    "_icon" : "invisible",
+            "cast_time": "1 Standard Action",
+            "dc": {
+                "base": [
+                    "class.magus.spell_dc",
+                    "spells.invisibility.level"
+                ]
+            },
+            "duration": {
+                "_suffix": "minutes",
+                "scale": "stats.caster_level"
+            },
+            "level": 2,
+            "prepared": true,
+            "range": "Personal or Touch",
+            "require": "V,S,M (eyelash enacased in gum arabic)",
+            "save": "Will (Negates)",
+            "spell_failure": {
+                "_suffix": "%",
+                "base": "stats.spell_failure"
+            },
+            "target": "Self or creature/object weighing less than 100 lbs/level",
+            "uses": {
+                "per_day": 1
+            }
+        },
+  "+spells.flaming_sphere": {
+    "_description": "A burning globe of fire rolls in whichever direction you point and burns those it strikes. It moves 30 feet per round. As part of this movement, it can ascend or jump up to 30 feet to strike a target. If it enters a space with a creature, it stops moving for the round and deals 3d6 points of fire damage to that creature, though a successful Reflex save negates that damage. A flaming sphere rolls over barriers less than 4 feet tall. It ignites flammable substances it touches and illuminates the same area as a torch would. The sphere moves as long as you actively direct it (a move action for you); otherwise, it merely stays at rest and burns. It can be extinguished by any means that would put out a normal fire of its size. The surface of the sphere has a spongy, yielding consistency and so does not cause damage except by its flame. It cannot push aside unwilling creatures or batter down large obstacles. A flaming sphere winks out if it exceeds the spell’s range.",
+    "_name": "Flaming Sphere",
+    "_icon" : "fireball",
+    "level" : 2,
+    "damage" : {
+      "base" : 3,
+      "_suffix" : "d6",
+      "_bonus" : 0
+    },
+    "dc": { "base" : [10, "stats.caster_level", "int"] },
+    "spell_failure" : {
+      "base" : "stats.spell_failure",
+      "_suffix" : "%"
+    },
+    "range": {
+      "base" : 100,
+      "multiply" : [10, "stats.caster_level"],
+      "_suffix" : "ft"
+    },
+    "cast_time" : "1 Standard Action",
+    "require": "V,S,M/DF (tallow, brimstone, and powdered iron)",
+    "save" : "Reflex (Negates)",
+    "duration" : {
+      "base" : "stats.caster_level",
+      "_suffix" : "rounds"
+    },
+    "prepared" : false,
+    "uses": {
+      "per_day" : "stats.spells"
+    },
+    "target" : "5ft diameter sphere"
+  },
+  "+spells.bladed_dash": {
+    "_description": "When you cast this spell, you immediately move up to 30 feet in a straight line any direction, momentarily leaving a multi-hued cascade of images behind you. This movement does not provoke attacks of opportunity. You may make a single melee attack at your highest base attack bonus against any one creature you are adjacent to at any point along this 30 feet. You gain a circumstance bonus on your attack roll equal to your Intelligence or Charisma modifier, whichever is higher. You must end the bonus movement granted by this spell in an unoccupied square. If no such space is available along the trajectory, the spell fails. Despite the name, the spell works with any melee weapon.",
+    "_name": "Bladed Dash",
+    "_icon" : "blade-fall",
+    "level" : 2,
+    "damage" : "Weapon Damage",
+    "spell_failure" : {
+      "base" : "stats.spell_failure",
+      "_suffix" : "%"
+    },
+    "range": {
+      "base" : 30,
+      "_suffix" : "ft"
+    },
+    "cast_time" : "1 Standard Action",
+    "require": "V",
+    "save" : "Standard attack",
+    "duration" : "Instant",
+    "prepared" : false,
+    "uses": {
+      "per_day" : "1"
+    },
+    "target" : "Personal"
+  }
+
+}

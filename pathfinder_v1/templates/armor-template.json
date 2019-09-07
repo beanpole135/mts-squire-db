@@ -1,0 +1,28 @@
+{
+  "+inventory.CHANGEME" : {
+    "_name" : "",
+    "_description" : "",
+    "_icon" : "",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "light | medium | heavy",
+      "type" : "armor | hat | extra",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 0,
+      "+stats.maxdex_ac.armor" : 6,
+      "+stats.armor_penalty.armor" : 0,
+      "+stats.spell_failure.armor" : 5,
+      "+stats.speed.armor_penalty" : {
+          "if" : [ "size", ">", 0],
+          "then" : -5,
+          "else" : -10
+      }
+    },
+    "weight" : {
+      "multiply" : [ 0, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "+inventory.brass_knives" : {
+      "_name" : "Knives (Brass)",
+      "_description" : "Pirates often carry long brass knives for working aboard a ship. Though brass doesn’t hold as sharp an edge as steel, it isn’t vulnerable to rust like steel is. In a pinch, a pirate can use his brass knife as a weapon. Mostly, though, they are used for cutting ropes, cleaning fish, and other sundry tasks.",
+      "_icon" : "daggers",
+      "weight" : 1,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 10, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d4", "_bonus" : { "melee" : "str"} },
+        "_critical" : "20 (x2)",
+        "special" : "Fragile: Rolling a 1 will break/destroy it",
+        "uses" : "inventory.brass_knives.quantity",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "_hit_r01" : { "base" : ["stats.hit","dex"], "_suffix" : " Thrown < 10ft"},
+        "_hit_r02" : { "base" : ["inventory.brass_knives._hit_r01",-2], "_suffix" : " Thrown < 20ft"},
+        "_hit_r03" : { "base" : ["inventory.brass_knives._hit_r01",-4], "_suffix" : " Thrown < 30ft"},
+        "_hit_r04" : { "base" : ["inventory.brass_knives._hit_r01",-6], "_suffix" : " Thrown < 40ft"},
+        "_hit_r05" : { "base" : ["inventory.brass_knives._hit_r01",-8], "_suffix" : " Thrown < 50ft"},
+        "damage_type" : "Pierce | Slash",
+        "is_light" : true,
+        "is_ranged" : true
+      }
+    }
+}

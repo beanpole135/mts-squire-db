@@ -1,0 +1,32 @@
+{
+    "+inventory.WEAPON" : {
+      "_name" : "",
+      "_description" : "",
+      "weight" : 1,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple | Martial | Exotic",
+        "hands_needed" : 1,
+        "range" : { "base" : 20, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d8", "_bonus" : {} },
+        "_critical" : "20 (x2)",
+        "special" : "",
+        "uses" : "inventory.arrows",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","dex"] },
+        "_hit_r01" : { "base" : "inventory.WEAPON._hit", "_suffix" : "  < range"},
+        "_hit_r02" : { "base" : ["inventory.WEAPON._hit",-2], "_suffix" : "  < range x 2"},
+        "_hit_r03" : { "base" : ["inventory.WEAPON._hit",-4], "_suffix" : "  < range x 3"},
+        "_hit_r04" : { "base" : ["inventory.WEAPON._hit",-6], "_suffix" : "  < range x 4"},
+        "_hit_r05" : { "base" : ["inventory.WEAPON._hit",-8], "_suffix" : "  <  range x 5"},
+        "_hit_r06" : { "base" : ["inventory.WEAPON._hit",-10], "_suffix" : " < range x 6"},
+        "_hit_r07" : { "base" : ["inventory.WEAPON._hit",-12], "_suffix" : " < range x 7"},
+        "_hit_r08" : { "base" : ["inventory.WEAPON._hit",-14], "_suffix" : " < range x 8"},
+        "_hit_r09" : { "base" : ["inventory.WEAPON._hit",-16], "_suffix" : " < range x 9"},
+        "_hit_r10" : { "base" : ["inventory.WEAPON._hit",-18], "_suffix" : " < range x 10"},
+        "damage_type" : "Blunt | Pierce | Slash",
+        "is_light" : false,
+        "is_ranged" : true
+      }
+    }
+}

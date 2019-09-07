@@ -1,0 +1,143 @@
+{
+  "Aberrant" : {},
+  "Abyssal" : {},
+  "Aquatic" : {},
+  "Arcane" : {},
+  "Black Blood" : {},
+  "Celestial" : {},
+  "Destined" : {},
+  "Draconic" : {},
+  "Elemental" : {},
+  "Fey" : {},
+  "Hag" : {},
+  "Infernal" : {},
+  "Kyton" : {},
+  "Martyred" : {},
+  "Medusa" : {},
+  "Salamander" : {},
+  "Shadow" : {},
+  "Shapechanger" : {},
+  "Sphinx" : {},
+  "Undead" : {},
+  "Verdant" : {
+      "_name" : "Verdant",
+      "_description" : "Your body is suffused with raw plant life. When you bloodrage, your plantlike characteristics bolster your durability and grant you some control over vegetation. While bloodraging, you gain plantlike abilities and immunities as you become overgrown with jagged branches, rugged bark, and thick vines.",
+      "_icon" : "vine-flower",
+      "+class.bloodrager.bloodline" : {
+        "_name" : "Verdant",
+        "_description" : "Your body is suffused with raw plant life. When you bloodrage, your plantlike characteristics bolster your durability and grant you some control over vegetation. While bloodraging, you gain plantlike abilities and immunities as you become overgrown with jagged branches, rugged bark, and thick vines.",
+        "bloodline_feats" : ["Bolstered Resilience", "Diehard", "Endurance", "Great Fortitude", "Power Attack", "Raging Vitality", "Toughness"]
+      },
+      "+class.bloodrager.level_up.1.+feats.verdant_growth" : { "_name" : "Verdant Growth (Su)", "_description" : "At 1st level, you gain fast healing 1 while bloodraging. Your fast healing increases by 1 at 4th level and every 3 levels thereafter, to a maximum of fast healing 6 at 19th level. If you have a bloodrager class feature that also grants you fast healing (such as the spelleater’s blood of life class feature), you can stack up to half of your fast healing from such abilities with the fast healing gained from this ability, but you cannot do so by an amount that exceeds your Charisma bonus (minimum 0)." },
+      "+class.bloodrager.level_up.1.+stats.fast_healing.verdant_growth" : { "if" : "abilities.bloodrage._active", "else" : 0, "then" : { "base" : 1, "divide" : [["class.bloodrager.level",-1],3] } },
+      "+class.bloodrager.level_up.4.+feats.oaken_skin" : { "_name" : "Oaken Skin (Ex)", "_description" : "At 4th level, when entering a bloodrage, your skin thickens like bark and you gain a +2 enhancement bonus to your natural armor. At 8th level and every 4 levels thereafter, this bonus increases by 1." },
+      "+class.bloodrager.level_up.4.+stats.ac.oaken_skin" : { "if" : "abilities.bloodrage._active", "else" : 0, "then" : { "base" : 1, "divide" : ["class.bloodrager.level",4] } },
+      "+class.bloodrager.level_up.7.+spells.entangle" : {
+                "_description": "This spell causes tall grass, weeds, and other plants to wrap around creatures in the area of effect or those that enter the area. Creatures that fail their save gain the entangled condition. Creatures that make their save can move as normal, but those that remain in the area must save again at the end of your turn. Creatures that move into the area must save immediately. Those that fail must end their movement and gain the entangled condition. Entangled creatures can attempt to break free as a move action, making a Strength or Escape Artist check. The DC for this check is equal to the DC of the spell. The entire area of effect is considered difficult terrain while the effect lasts. If the plants in the area are covered in thorns, those in the area take 1 point of damage each time they fail a save against the entangle or fail a check made to break free. Other effects, depending on the local plants, might be possible at GM discretion.",
+		"prepared" : true,
+                "_name": "Entangle",
+		"level" : 1,
+                "dc": {
+		  "base" : [10, "class.bloodrager.level", "cha"]
+                },
+		"spell_failure" : {
+		  "base" : "stats.spell_failure",
+		  "_suffix" : "%"
+		},
+                "range": {
+		  "base" : 400,
+                 "multiply" : [ 40, "class.bloodrager.level"],
+		  "_suffix" : "ft"
+		},
+	        "cast_time" : "1 Standard Action",
+                "require": "V,S, DF",
+		"save" : "Reflex (See Text)",
+		"duration" : {
+		  "base" : "class.bloodrager.level",
+		  "_suffix" : "minutes"
+		},
+                "uses": "class.bloodrager.spells_per_day.lvl_1",
+		"target" : "Area: 40ft radius"
+      },
+      "+class.bloodrager.level_up.8.+feats.botanical_plasticity" : { "_name" : "Botanical Plasticity (Su)", "_description" : "At 8th level, as a swift action you can bend and twist the plant life within your body to elongate your limbs. Your reach increases by 5 feet until the end of your turn."},
+      "+class.bloodrager.level_up.10.+spells.greensight" : {
+                "_description": "The target of this spell gains the ability to see up to 60 feet through thick plant matter as though it were transparent. Greenery, leaves, and vines—even lichen, moss, and slime—offer no concealment to the recipient’s sight, though her vision still can be blocked by solid wood, such as trees or wooden structures. Undergrowth does not grant concealment to a creature against a target of the effects of greensight.",
+		"prepared" : true,
+                "_name": "Greensight",
+                "dc": {
+		  "base" : [10, "class.bloodrager.level", "cha"]
+                },
+		"level" : 2,
+		"spell_failure" : {
+		  "base" : "stats.spell_failure",
+		  "_suffix" : "%"
+		},
+                "range" : "Touch",
+	        "cast_time" : "1 Standard Action",
+                "require": "V,S,M (a leaf)",
+		"save" : "Will (negates)",
+		"duration" : {
+		  "multiply" : [10, "class.bloodrager.level"],
+		  "_suffix" : " minutes"
+		},
+                "uses": "class.bloodrager.spells_per_day.lvl_2",
+		"target" : "1"
+      },
+      "+class.bloodrager.level_up.12.+feats.verdant_call" : {"_name" : "Verdant Call (Sp)", "_description" : "At 12th level, when entering a bloodrage, as a swift action you can animate nearby plants to aid you in combat, functioning as wilderness soldiers, using your Charisma modifier instead of your Wisdom modifier. This effect lasts for as long as you continue bloodraging, regardless of the spell’s normal duration." },
+      "+class.bloodrager.level_up.13.+spells.burst_of_nettles" : {
+                "_description": "You release a burst of barbed, acid-filled nettles. Creatures caught in the burst take 3d6 points of damage plus 1d6 points of acid damage on the next round. Those that save take half damage from the initial burst and no damage on the next round.",
+		"prepared" : false,
+                "_name": "Burst of Nettles",
+		"level" : 3,
+		"damage" : "See text",
+                "dc": {
+		  "base" : [10, "class.bloodrager.level", "cha"]
+                },
+		"spell_failure" : {
+		  "base" : "stats.spell_failure",
+		  "_suffix" : "%"
+		},
+                "range": {
+		  "base" : 25,
+		  "multiply" : [5, {"divide" : ["class.bloodrager.level",2]}],
+		  "_suffix" : " ft"
+		},
+	        "cast_time" : "1 Standard Action",
+                "require": "V,S",
+		"save" : "Reflex (1/2 damage)",
+       "duration" : "Instant",
+       "uses": "class.bloodrager.spells_per_day.lvl_3",
+      "target" : "Area (10ft radius)"
+    },
+    "+class.bloodrager.level_up.16.+feats.natures_thorns" : {"_name" : "Natures Thorns (Su)", "_description" : "At 16th level, creatures that hit you in melee (other than those using manufactured reach weapons) take 4d6 points of piercing damage. A creature takes this damage only on its first successful attack against you in a combat round, and not on subsequent attacks in that round." },
+   "+class.bloodrager.level_up.16.+spells.command_plants" : {
+      "_description": "This spell allows you some degree of control over one or more plant creatures. Affected plant creatures can understand you, and they perceive your words and actions in the most favorable way (treat their attitude as friendly). They will not attack you while the spell lasts. You can try to give a subject orders, but you must win an opposed Charisma check to convince it to do anything it wouldn’t ordinarily do. (Retries are not allowed.) A commanded plant never obeys suicidal or obviously harmful orders, but it might be convinced that something very dangerous is worth doing. You can affect a number of plant creatures whose combined level or HD do not exceed twice your level.",
+      "prepared" : true,
+      "_name": "Command Plants",
+      "level" : 4,
+      "dc": {
+	 "base" : [10, "class.bloodrager.level", "cha"]
+      },
+      "spell_failure" : {
+	"base" : "stats.spell_failure",
+        "_suffix" : "%"
+      },
+      "range": {
+	"base" : 25,
+	"multiply" : [5, {"divide" : ["class.bloodrager.level",2]}],
+	"_suffix" : " ft"
+      },
+      "cast_time" : "1 Standard Action",
+      "require": "V",
+      "save" : "Will (Negates)",
+      "duration" : {
+	"base" : "spells.command_plants.level",
+        "_suffix" : " days"
+      },
+       "uses": "class.bloodrager.spells_per_day.lvl_4",
+      "target" : "See text"
+    },
+    "+class.bloodrager.level_up.20.+feats.verdant_apotheosis" : {"_name" : "Verdant Apotheosis (Su)", "_description" : "At 20th level, verdant power surges throughout your being. While bloodraging, you gain tremorsense out to 30 feet. In addition, you gain immunity to paralysis, poison, sleep, and stunning effects, even while you are not bloodraging." }
+  },
+  "Vestige" : {}
+}

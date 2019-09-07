@@ -1,0 +1,584 @@
+{
+    "01_standard" : {
+      "_name" : "Standard",
+      "_description" : "While many ferocious combatants can tap into a deep reservoir of buried rage, bloodragers have an intrinsic power that seethes within. Like sorcerers, bloodragers’ veins surge with arcane power. While sorcerers use this power for spellcasting, bloodragers enter an altered state in which their bloodline becomes manifest, where the echoes of their strange ancestry lash out with devastating power. In these states, bloodragers can cast some arcane spells instinctively. The bloodrager’s magic is as fast, violent, and seemingly unstoppable as their physical prowess.",
+      "_icon" : "enrage",
+      "choose_bloodline" : {
+        "_pick_num" : 1,
+        "_when" : "after",
+        "_from" : "$DB/misc/bloodrager-bloodlines"
+      },
+      "+class.bloodrager": {
+        "main_attributes": "Strength and Charisma",
+        "alignment_restrictions": "",
+            "_armor_notes": "A bloodrager can cast bloodrager spells while wearing light armor or medium armor without incurring the normal arcane spell failure chance. Like other arcane spellcasters, a bloodrager wearing heavy armor or wielding a shield incurs a chance of arcane spell failure if the spell in question has somatic components.",
+            "_armor_proficiency": [ "light", "medium", "shields (excluding tower)"],
+            "_description": "While many ferocious combatants can tap into a deep reservoir of buried rage, bloodragers have an intrinsic power that seethes within. Like sorcerers, bloodragers’ veins surge with arcane power. While sorcerers use this power for spellcasting, bloodragers enter an altered state in which their bloodline becomes manifest, where the echoes of their strange ancestry lash out with devastating power. In these states, bloodragers can cast some arcane spells instinctively. The bloodrager’s magic is as fast, violent, and seemingly unstoppable as their physical prowess.",
+            "_hit_dice": "1d10",
+            "_skill_ranks": {
+		"base" : 4,
+		"_suffix" : " per level"
+            },
+            "_name": "Bloodrager",
+            "_role": "Masters of the battlefield, bloodragers unleash fearful carnage on their enemies using their bloodlines and combat prowess. The bloodrager’s place is on the front lines, right in his enemies’ faces, supplying tremendous martial force bolstered by a trace of arcane magic.",
+            "_spell_notes": "",
+            "_starting_wealth": "3d6 × 10 gp (average 105 gp.) In addition, each character begins play with an outfit worth 10 gp or less.",
+            "_weapon_notes": "",
+            "_weapon_proficiency": [
+                "simple",
+                "martial"
+            ],
+            "archetype": "",
+            "bab": "class.bloodrager.level",
+	    "bab_2" : { "if" : ["class.bloodrager.level", ">=", 6], "then" : ["class.bloodrager.level",-5], "else" : 0 },
+	    "bab_3" : { "if" : ["class.bloodrager.level", ">=", 11], "then" : ["class.bloodrager.level",-10], "else" : 0 },
+	    "bab_4" : { "if" : ["class.bloodrager.level", ">=", 16], "then" : ["class.bloodrager.level",-15], "else" : 0 },
+            "level": 0,
+	    "caster_level" : {
+	      "table_lookup" : { "default" : 0, "index" : ["class.bloodrager.level",-4], "table" : [1,1,1,2,2,2,3,3,3,4,4,4,4,4,4,4,4] }
+	    },
+            "save_fort": {
+                "base": 2,
+                "divide": [
+                    "class.bloodrager.level",
+                    2
+                ]
+            },
+            "save_ref": {
+                "base": 0,
+                "divide": [
+                    "class.bloodrager.level",
+                    3
+                ]
+            },
+            "save_will": {
+                "base": 0,
+                "divide": [
+                    "class.bloodrager.level",
+                    3
+                ]
+            },
+            "spell_dc": {
+                "base": [
+                    10,
+                    "cha"
+                ]
+            },
+           "spells_known" : {
+               "lvl_1": {
+                    "table_lookup": {
+                        "default": 0,
+                        "index": ["class.bloodrager.level", -4],
+                        "table": [2,3,4,4,4,5,5,5,6,6,6,6,6,6,6,6,6]
+                    }
+                },
+                "lvl_2": {
+                    "table_lookup": {
+                        "default": 0,
+                        "index": ["class.bloodrager.level", -7],
+                        "table": [2,3,4,4,4,5,5,5,6,6,6,6,6,6]
+                    }
+                },
+                "lvl_3": {
+                    "table_lookup": {
+                        "default": 0,
+                        "index": ["class.bloodrager.level", -10],
+                        "table": [2,3,4,4,4,5,5,5,6,6,6]
+                    }
+                },
+                "lvl_4": {
+                    "table_lookup": {
+                        "default": 0,
+                        "index": ["class.bloodrager.level", -13],
+                        "table": [2,3,4,4,4,5,5,5]
+                    }
+                }
+           },
+            "spells_per_day": {
+                "lvl_1": {
+                    "table_lookup": {
+                        "default": 0,
+                        "index": ["class.bloodrager.level", -4],
+                        "table": [1,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4]
+                    },
+                    "bonus" : {
+                       "table_lookup": {
+                        "default": 0,
+                        "index": "cha",
+                        "table": [0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5]
+                    }
+                } },
+                "lvl_2": {
+                    "table_lookup": {
+                        "default": 0,
+                        "index": ["class.bloodrager.level", -7],
+                        "table": [1,1,1,1,1,2,2,2,2,3,3,3,3,4]
+                    },
+                    "bonus" : {
+                       "table_lookup": {
+                        "default": 0,
+                        "index": "cha",
+                        "table": [0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4]
+                    }
+                } },
+                "lvl_3": {
+                    "table_lookup": {
+                        "default": 0,
+                        "index": ["class.bloodrager.level", -10],
+                        "table": [1,1,1,1,1,2,2,2,2,3,3]
+                    },
+                    "bonus" : {
+                       "table_lookup": {
+                        "default": 0,
+                        "index": "cha",
+                        "table": [0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4]
+                    }
+                } },
+                "lvl_4": {
+                    "table_lookup": {
+                        "default": 0,
+                        "index": ["class.bloodrager.level", -13],
+                        "table": [1,1,1,1,1,2,2,2]
+                    },
+                    "bonus" : {
+                       "table_lookup": {
+                        "default": 0,
+                        "index": "cha",
+                        "table": [0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4]
+                    }
+                } }
+        },
+        "level_up" : {
+	  "1" : {
+	    "+skills.acrobatics.bloodrager" : 3,
+	    "+skills.appraise.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+skills.bluff.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+skills.climb.bloodrager" : 3,
+	    "+skills.craft_template.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 3},
+	    "+skills.diplomacy.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+skills.disable_device.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+skills.disguise.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+skills.escape_artist.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+skills.handle_animal.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 3},
+	    "+skills.intimidate.bloodrager" : 3,
+	    "+skills.knowledge_arcana.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 3},
+	    "+skills.linguistics.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 3},
+	    "+skills.perform_template.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+skills.perception.bloodrager" : 3,
+	    "+skills.ride.bloodrager" : 3,
+	    "+skills.sleight_of_hand.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+skills.spellcraft.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 3},
+	    "+skills.stealth.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+skills.survival.bloodrager" : 3,
+	    "+skills.swim.bloodrager" : 3,
+	    "+skills.use_magic_device.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+stats.ac.bloodrage" : { "if" : "abilities.bloodrage._active", "then" : -2 },
+	    "+stats.bab.bloodrager" : "class.bloodrager.bab",
+	    "+stats.save_will.bloodrager" : "class.bloodrager.save_will",
+	    "+stats.save_fort.bloodrager" : "class.bloodrager.save_fort",
+	    "+stats.save_ref.bloodrager" : "class.bloodrager.save_ref",
+	    "+stats.save_will.bloodrage" : { "if" : "abilities.bloodrage._active", "then" : 2 },
+	    "+stats.str.bloodrage" :{ "if" : "abilities.bloodrage._active", "then" : 4 },
+	    "+stats.con.bloodrage" :{ "if" : "abilities.bloodrage._active", "then" : 4 },
+	    "+stats.hp.bloodrage" :{ "if" : "abilities.bloodrage._active", "then" : {"multiply" : [2, "class.bloodrager.level"]} },
+	    "+stats.save_will.bloodrage" :{ "if" : "abilities.bloodrage._active", "then" : -2 },
+	    "+feats.fast_movement" : { "_name" : "Fast Movement (Ex)", "_description": "A bloodrager’s land speed is faster than is normal for his race by 10 feet. This benefit applies only when he is wearing no armor, light armor, or medium armor, and not carrying a heavy load. Apply this bonus before modifying the bloodrager’s speed due to any armor worn or load carried. This bonus stacks with any other bonuses to the bloodrager’s land speed." },
+	    "+stats.speed.fast_movement" : 10,
+	    "+stats.save_ref_trample" : { "_name" : "vs trample", "base" : "stats.save_ref", "indomitible_stance" : 1 },
+	    "+stats.ac_charge" : { "_name" : "vs charge", "base" : "stats.ac", "indomitible_stance" : 1 },
+	    "+abilities.bloodrage" : {"_name" : "BloodRage (Su)", "_description" : "The bloodrager’s source of internal power grants him the ability to bloodrage. At 1st level, a bloodrager can bloodrage for a number of rounds per day equal to 4 + his Constitution modifier. At each level after 1st, he can bloodrage for 2 additional rounds per day. Temporary increases to Constitution (such as those gained from bloodraging or spells like bear’s endurance) don’t increase the total number of rounds that a bloodrager can bloodrage per day. The total number of rounds of bloodrage per day is renewed after resting for 8 hours, although these hours need not be consecutive. A bloodrager can enter a bloodrage as a free action. While in a bloodrage, a bloodrager gains a +4 morale bonus to his Strength and Constitution, as well as a +2 morale bonus on Will saves. In addition, he takes a –2 penalty to Armor Class. The increase to Constitution grants the bloodrager 2 hit points per Hit Die, but these disappear when the bloodrage ends and are not lost first like temporary hit points. While bloodraging, a bloodrager cannot use any Charisma-, Dexterity-, or Intelligence-based skills (except Acrobatics, Fly, Intimidate, and Ride) or any ability that requires patience or concentration. A bloodrager can end his bloodrage as a free action. When the bloodrage ends, he’s fatigued for a number of rounds equal to twice the number of rounds spent in the bloodrage. A bloodrager cannot enter a new bloodrage while fatigued or exhausted, but can otherwise enter bloodrage multiple times during a single encounter or combat. If a bloodrager falls unconscious, his bloodrage immediately ends, placing him in peril of death. Bloodrage counts as the barbarian’s rage class feature for the purpose of feat prerequisites, feat abilities, magic item abilities, and spell effects.",
+	  	"_color" : "darkred", "_active" : false,
+		"uses" : { "base" : [2,"con"], "multiply" : [2, "class.bloodrager.level"],
+			"if" : "abilities.bloodrage._active","then" : { "table_lookup" : { "default" : -2, "index" : ["class.bloodrager.level",-11], "table" : [-3,-3,-3,-3,-3,-3,-3,-3,-3,-4] } }
+		}
+	    },
+	    "+info.play_shortcuts.combat_meters" : ["stats.hp", "abilities.bloodrage"]
+	  },
+          "2" : {
+            "+feats.uncanny_dodge" : { "_name" : "Uncanny Dodge (Ex)", "_description" : "At 2nd level, a bloodrager can react to danger before his senses would normally allow him to do so. He cannot be caught flat-footed, nor does he lose his Dexterity bonus to AC if the attacker is invisible. He still loses his Dexterity bonus to AC if immobilized. A bloodrager with this ability can still lose his Dexterity bonus to AC if an opponent successfully uses the feint action against him." },
+            "+stats.speed.armored_swiftness" : 5
+          },
+          "3" : {
+            "+feats.blood_sanctuary" : { "_name" : "Blood Sanctuary (Su)", "_description" : "At 3rd level, due to the power of his blood, a bloodrager can stand confidently amid the effects of spells cast by himself or his allies. He gains a +2 bonus on saving throws against spells that he or an ally casts."},
+            "+stats.save_will_fspells" : { "_name" : " vs Friendly Spells", "base" : "stats.save_will", "bloodsanctuary" : 2 },
+            "+stats.save_ref_fspells" : { "_name" : " vs Friendly Spells", "base" : "stats.save_ref", "bloodsanctuary" : 2 },
+            "+stats.save_fort_fspells" : { "_name" : " vs Friendly Spells", "base" : "stats.save_fort", "bloodsanctuary" : 2 }
+          },
+          "4" : {
+            "+feats.eschew_materials" : {"_name" : "Eschew Materials", "_description" : "At 4th level, the bloodrager gains Eschew Materials as a bonus feat. You can cast any spell with a material component costing 1 gp or less without needing that component. The casting of the spell still provokes attacks of opportunity as normal. If the spell requires a material component that costs more than 1 gp, you must have the material component on hand to cast the spell, as normal."},
+            "+feats.blood_casting" : {"_name" : "Blood Casting (Su)", "_description" : "At 4th level, the bloodrager gains the ability to cast spells even while bloodraging. He can also cast these spells defensively and can make concentration checks for these spells while bloodraging. While bloodraging, he can cast and concentrate on only his bloodrager spells (see below); spells from other classes cannot be cast during this state."},
+            "+todo[]" : "[Bloodrager Level 4] Learn two level-1 spells from the bloodrager spell list"
+          },
+          "5" : {
+            "+feats.improved_uncanny_dodge" : {"_name" : "Uncanny Dodge (Improved)", "_description" : "At 5th level, a bloodrager can no longer be flanked. This defense denies rogues (or other classes with the sneak attack ability) the ability to sneak attack the bloodrager by flanking him, unless the attacker has at least four more rogue levels (or levels in the class granting sneak attack) than the target has bloodrager levels."},
+            "+todo[]" : "[Bloodrager Level 5] Learn one new level-1 spell from the bloodrager spell list"
+          },
+          "6" : {
+            "+todo[a]" : "[Bloodrager Level 6] Pick one feat from your bloodline (feat dependencies still apply)",
+            "+todo[b]" : "[Bloodrager Level 6] Learn one new level-1 spell from the bloodrager spell list"
+          },
+          "7" : {
+            "+feats.damage_reduction" : {"_name" : "Damage Reduction (Ex)", "_description" : "At 7th level, a bloodrager gains damage reduction. Subtract 1 from the damage the bloodrager takes each time he is dealt damage from a weapon or a natural attack. At 10th level, and every 3 levels thereafter, this damage reduction increases by 1 point. Damage Reduction can reduce damage to 0, but not below 0."},
+            "+info.play_shortcuts.defence[]" : "feats.damage_reduction",
+            "+todo[]" : "[Bloodrager Level 7] Learn two new level-2 spells from the bloodrager spell list"
+          },
+          "8" : {
+            "+todo[a]" : "[Bloodrager Level 8] Learn one new level-2 spell from the bloodrager spell list",
+            "+todo[b]" : "[Bloodrager Level 8] Optional: Replace one known spell with a new spell of the same level from the bloodrager spell list (old spell is lost completely)"
+          },
+          "9" : {
+            "+todo[a]" : "[Bloodrager Level 9] Learn one new level-1 spell from the bloodrager spell list",
+            "+todo[b]" : "[Bloodrager Level 9] Learn one new level-2 spell from the bloodrager spell list",
+            "+todo[c]" : "[Bloodrager Level 9] Pick one feat from your bloodline (feat dependencies still apply)"
+          },
+          "10" : {
+            "+todo[]" : "[Bloodrager Level 10] Learn two new level-3 spells from the bloodrager spell list"
+          },
+          "11" : {
+            "+feats.greater_bloodrage" : {"_name" : "Greater Bloodrage (Su)", "_description" : "At 11th level, when a bloodrager enters a bloodrage, the morale bonus to his Strength and Constitution increases to +6 and the morale bonus on his Will saves increases to +3. In addition, upon entering a bloodrage, the bloodrager can apply the effects a bloodrager spell he knows of 2nd level or lower to himself. The spell must have a range of touch or personal. If the spell’s duration is greater than 1 round, it instead lasts for the duration of the bloodrage. This use consumes a bloodrager spell slot, as if he had cast the spell; he must have the spell slot available to take advantage of this effect. Greater bloodrage counts as the barbarian’s greater rage ability for the purposes of feat prerequisites, feat abilities, magic item abilities, and spell effects."},
+            "+stats.save_will.greater_bloodrage" : { "if" : "abilities.bloodrage._active", "then" : 1 },
+            "+stats.str.greater_bloodrage" :{ "if" : "abilities.bloodrage._active", "then" : 2 },
+            "+stats.con.greater_bloodrage" :{ "if" : "abilities.bloodrage._active", "then" : 2 },
+            "+todo[a]" : "[Bloodrager Level 11] Learn one new level-3 spell from the bloodrager spell list",
+            "+todo[b]" : "[Bloodrager Level 11] Optional: Replace one known spell with a new spell of the same level from the bloodrager spell list (old spell is lost completely)"
+          },
+          "12" : {
+            "+todo[a]" : "[Bloodrager Level 12] Learn one new level-1 spell from the bloodrager spell list",
+            "+todo[b]" : "[Bloodrager Level 12] Learn one new level-2 spell from the bloodrager spell list",
+            "+todo[c]" : "[Bloodrager Level 12] Learn one new level-3 spell from the bloodrager spell list",
+            "+todo[d]" : "[Bloodrager Level 12] Pick one feat from your bloodline (feat dependencies still apply)"
+          },
+          "13" : {
+            "+todo[]" : "[Bloodrager Level 13] Learn two new level-4 spells from the bloodrager spell list"
+          },
+          "14" : {
+            "+feats.indomitable_will" : {"_name" : "Indomitable Will (Ex)", "_description" : "At 14th level, a bloodrager gains a +4 bonus on Will saves to resist enchantment spells while bloodraging. This bonus stacks with all other modifiers, including the morale bonus on Will saves he also receives during his bloodrage."},
+            "+stats.save_will_enchantments.indomitable_will" :{ "if" : "abilities.bloodrage._active", "then" : 4 },
+            "+todo[a]" : "[Bloodrager Level 14] Learn one new level-4 spell from the bloodrager spell list",
+            "+todo[b]" : "[Bloodrager Level 14] Optional: Replace one known spell with a new spell of the same level from the bloodrager spell list (old spell is lost completely)"
+          },
+          "15" : {
+            "+todo[a]" : "[Bloodrager Level 15] Learn one new level-2 spell from the bloodrager spell list",
+            "+todo[b]" : "[Bloodrager Level 15] Learn one new level-3 spell from the bloodrager spell list",
+            "+todo[c]" : "[Bloodrager Level 15] Learn one new level-4 spell from the bloodrager spell list",
+            "+todo[d]" : "[Bloodrager Level 15] Pick one feat from your bloodline (feat dependencies still apply)"
+          },
+          "16" : {
+
+          },
+          "17" : {
+            "+feats.tireless_bloodrage" : {"_name" : "Tireless Bloodrage (Su)", "_description" : "At 17th level, a bloodrager no longer becomes fatigued at the end of his bloodrage."},
+            "+todo[]" : "[Bloodrager Level 17] Optional: Replace one known spell with a new spell of the same level from the bloodrager spell list (old spell is lost completely)"
+          },
+          "18" : {
+            "+todo[a]" : "[Bloodrager Level 18] Learn one new level-3 spell from the bloodrager spell list",
+            "+todo[b]" : "[Bloodrager Level 18] Learn one new level-4 spell from the bloodrager spell list",
+            "+todo[c]" : "[Bloodrager Level 18] Pick one feat from your bloodline (feat dependencies still apply)"
+          },
+          "19" : {
+
+          },
+          "20": {
+            "+feats.mighty_bloodrage" : {"_name" : "Mighty Bloodrage (Su)", "_description" : "At 20th level, when a bloodrager enters a bloodrage, the morale bonus to his Strength and Constitution increases to +8, and the morale bonus on his Will saves increases to +4. Furthermore, the spell he can apply to himself at the beginning of a bloodrage due to the greater bloodrage class feature is not limited to only spells of 2nd level or lower." },
+            "+stats.save_will.mighty_bloodrage" : { "if" : "abilities.bloodrage._active", "then" : 1 },
+            "+stats.str.mighty_bloodrage" :{ "if" : "abilities.bloodrage._active", "then" : 2 },
+            "+stats.con.mighty_bloodrage" :{ "if" : "abilities.bloodrage._active", "then" : 2 },
+            "+todo[]" : "[Bloodrager Level 20] Optional: Replace one known spell with a new spell of the same level from the bloodrager spell list (old spell is lost completely)"
+          }
+        }
+    }
+  },
+  "steelblood" : {
+  "_name" : "Steelblood",
+  "_description" : "Most bloodragers prefer light armor, but some learn the secret of using heavy armors. These steelbloods plod around the battlefield inspiring fear and delivering carnage from within a steel shell.",
+  "_icon" : "barbute",
+  "choose_bloodline" : {
+    "_pick_num" : 1,
+    "_when" : "after",
+    "_from" : "$DB/misc/bloodrager-bloodlines"
+  },
+  "+class.bloodrager": {
+      "main_attributes": "Strength and Charisma",
+      "alignment_restrictions": "",
+            "_armor_notes": "A steelblood gains proficiency in heavy armor. A steelblood can cast bloodrager spells while wearing heavy armor without incurring an arcane spell failure chance.",
+            "_armor_proficiency": [
+                "heavy"
+            ],
+            "_description": "While many ferocious combatants can tap into a deep reservoir of buried rage, bloodragers have an intrinsic power that seethes within. Like sorcerers, bloodragers’ veins surge with arcane power. While sorcerers use this power for spellcasting, bloodragers enter an altered state in which their bloodline becomes manifest, where the echoes of their strange ancestry lash out with devastating power. In these states, bloodragers can cast some arcane spells instinctively. The bloodrager’s magic is as fast, violent, and seemingly unstoppable as their physical prowess.",
+            "_hit_dice": "1d10",
+            "_skill_ranks": {
+		"base" : 4,
+		"_suffix" : " per level"
+            },
+            "_name": "Bloodrager",
+            "_role": "Masters of the battlefield, bloodragers unleash fearful carnage on their enemies using their bloodlines and combat prowess. The bloodrager’s place is on the front lines, right in his enemies’ faces, supplying tremendous martial force bolstered by a trace of arcane magic.",
+            "_spell_notes": "",
+            "_starting_wealth": "3d6 × 10 gp (average 105 gp.) In addition, each character begins play with an outfit worth 10 gp or less.",
+            "_weapon_notes": "",
+            "_weapon_proficiency": [
+                "simple",
+                "martial"
+            ],
+            "archetype": "Steelblood",
+            "bab": "class.bloodrager.level",
+	    "bab_2" : { "if" : ["class.bloodrager.level", ">=", 6], "then" : ["class.bloodrager.level",-5], "else" : 0 },
+	    "bab_3" : { "if" : ["class.bloodrager.level", ">=", 11], "then" : ["class.bloodrager.level",-10], "else" : 0 },
+	    "bab_4" : { "if" : ["class.bloodrager.level", ">=", 16], "then" : ["class.bloodrager.level",-15], "else" : 0 },
+            "level": 0,
+	    "caster_level" : {
+	      "table_lookup" : { "default" : 0, "index" : ["class.bloodrager.level",-4], "table" : [1,1,1,2,2,2,3,3,3,4,4,4,4,4,4,4,4] }
+	    },
+            "save_fort": {
+                "base": 2,
+                "divide": [
+                    "class.bloodrager.level",
+                    2
+                ]
+            },
+            "save_ref": {
+                "base": 0,
+                "divide": [
+                    "class.bloodrager.level",
+                    3
+                ]
+            },
+            "save_will": {
+                "base": 0,
+                "divide": [
+                    "class.bloodrager.level",
+                    3
+                ]
+            },
+            "spell_dc": {
+                "base": [
+                    10,
+                    "cha"
+                ]
+            },
+           "spells_known" : {
+               "lvl_1": {
+                    "table_lookup": {
+                        "default": 0,
+                        "index": ["class.bloodrager.level", -4],
+                        "table": [2,3,4,4,4,5,5,5,6,6,6,6,6,6,6,6,6]
+                    }
+                },
+                "lvl_2": {
+                    "table_lookup": {
+                        "default": 0,
+                        "index": ["class.bloodrager.level", -7],
+                        "table": [2,3,4,4,4,5,5,5,6,6,6,6,6,6]
+                    }
+                },
+                "lvl_3": {
+                    "table_lookup": {
+                        "default": 0,
+                        "index": ["class.bloodrager.level", -10],
+                        "table": [2,3,4,4,4,5,5,5,6,6,6]
+                    }
+                },
+                "lvl_4": {
+                    "table_lookup": {
+                        "default": 0,
+                        "index": ["class.bloodrager.level", -13],
+                        "table": [2,3,4,4,4,5,5,5]
+                    }
+                }
+           },
+            "spells_per_day": {
+                "lvl_1": {
+                    "table_lookup": {
+                        "default": 0,
+                        "index": ["class.bloodrager.level", -4],
+                        "table": [1,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4]
+                    },
+                    "bonus" : {
+                       "table_lookup": {
+                        "default": 0,
+                        "index": "cha",
+                        "table": [0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5]
+                    }
+                } },
+                "lvl_2": {
+                    "table_lookup": {
+                        "default": 0,
+                        "index": ["class.bloodrager.level", -7],
+                        "table": [1,1,1,1,1,2,2,2,2,3,3,3,3,4]
+                    },
+                    "bonus" : {
+                       "table_lookup": {
+                        "default": 0,
+                        "index": "cha",
+                        "table": [0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4]
+                    }
+                } },
+                "lvl_3": {
+                    "table_lookup": {
+                        "default": 0,
+                        "index": ["class.bloodrager.level", -10],
+                        "table": [1,1,1,1,1,2,2,2,2,3,3]
+                    },
+                    "bonus" : {
+                       "table_lookup": {
+                        "default": 0,
+                        "index": "cha",
+                        "table": [0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4]
+                    }
+                } },
+                "lvl_4": {
+                    "table_lookup": {
+                        "default": 0,
+                        "index": ["class.bloodrager.level", -13],
+                        "table": [1,1,1,1,1,2,2,2]
+                    },
+                    "bonus" : {
+                       "table_lookup": {
+                        "default": 0,
+                        "index": "cha",
+                        "table": [0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4]
+                    }
+                } }
+        },
+        "level_up" : {
+	  "1" : {
+	    "+skills.acrobatics.bloodrager" : 3,
+	    "+skills.appraise.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+skills.bluff.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+skills.climb.bloodrager" : 3,
+	    "+skills.craft_template.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 3},
+	    "+skills.diplomacy.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+skills.disable_device.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+skills.disguise.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+skills.escape_artist.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+skills.handle_animal.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 3},
+	    "+skills.intimidate.bloodrager" : 3,
+	    "+skills.knowledge_arcana.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 3},
+	    "+skills.linguistics.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 3},
+	    "+skills.perform_template.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+skills.perception.bloodrager" : 3,
+	    "+skills.ride.bloodrager" : 3,
+	    "+skills.sleight_of_hand.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+skills.spellcraft.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 3},
+	    "+skills.stealth.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+skills.survival.bloodrager" : 3,
+	    "+skills.swim.bloodrager" : 3,
+	    "+skills.use_magic_device.bloodrager" : { "if" : "abilities.bloodrage._active", "then" : -999, "else" : 0},
+	    "+stats.ac.bloodrage" : { "if" : "abilities.bloodrage._active", "then" : -2 },
+	    "+stats.bab.bloodrager" : "class.bloodrager.bab",
+	    "+stats.save_will.bloodrager" : "class.bloodrager.save_will",
+	    "+stats.save_fort.bloodrager" : "class.bloodrager.save_fort",
+	    "+stats.save_ref.bloodrager" : "class.bloodrager.save_ref",
+	    "+stats.save_will.bloodrage" : { "if" : "abilities.bloodrage._active", "then" : 2 },
+	    "+stats.str.bloodrage" :{ "if" : "abilities.bloodrage._active", "then" : 4 },
+	    "+stats.con.bloodrage" :{ "if" : "abilities.bloodrage._active", "then" : 4 },
+	    "+stats.hp.bloodrage" :{ "if" : "abilities.bloodrage._active", "then" : {"multiply" : [2, "class.bloodrager.level"]} },
+	    "+stats.save_will.bloodrage" :{ "if" : "abilities.bloodrage._active", "then" : -2 },
+	    "+feats.indomitable_stance" : { "_name" : "Indomitable Stance (Ex)", "_description": "At 1st level, a steelblood gains a +1 bonus on combat maneuver checks, to CMD against overrun combat maneuvers, and on Reflex saving throws against trample attacks. He also gains a +1 bonus to his AC against charge attacks and on attack and damage rolls against charging creatures." },
+	    "+stats.cmb.indomitable_stance" : 1,
+	    "+stats.cmd_overrun.indomitable_stance" : 1,
+	    "+stats.save_ref_trample" : { "_name" : "vs trample", "base" : "stats.save_ref", "indomitible_stance" : 1 },
+	    "+stats.ac_charge" : { "_name" : "vs charge", "base" : "stats.ac", "indomitible_stance" : 1 },
+	    "+abilities.bloodrage" : {"_name" : "BloodRage (Su)", "_description" : "The bloodrager’s source of internal power grants him the ability to bloodrage. At 1st level, a bloodrager can bloodrage for a number of rounds per day equal to 4 + his Constitution modifier. At each level after 1st, he can bloodrage for 2 additional rounds per day. Temporary increases to Constitution (such as those gained from bloodraging or spells like bear’s endurance) don’t increase the total number of rounds that a bloodrager can bloodrage per day. The total number of rounds of bloodrage per day is renewed after resting for 8 hours, although these hours need not be consecutive. A bloodrager can enter a bloodrage as a free action. While in a bloodrage, a bloodrager gains a +4 morale bonus to his Strength and Constitution, as well as a +2 morale bonus on Will saves. In addition, he takes a –2 penalty to Armor Class. The increase to Constitution grants the bloodrager 2 hit points per Hit Die, but these disappear when the bloodrage ends and are not lost first like temporary hit points. While bloodraging, a bloodrager cannot use any Charisma-, Dexterity-, or Intelligence-based skills (except Acrobatics, Fly, Intimidate, and Ride) or any ability that requires patience or concentration. A bloodrager can end his bloodrage as a free action. When the bloodrage ends, he’s fatigued for a number of rounds equal to twice the number of rounds spent in the bloodrage. A bloodrager cannot enter a new bloodrage while fatigued or exhausted, but can otherwise enter bloodrage multiple times during a single encounter or combat. If a bloodrager falls unconscious, his bloodrage immediately ends, placing him in peril of death. Bloodrage counts as the barbarian’s rage class feature for the purpose of feat prerequisites, feat abilities, magic item abilities, and spell effects.",
+	  	"_color" : "darkred", "_active" : false,
+		"uses" : { "base" : [2,"con"], "multiply" : [2, "class.bloodrager.level"],
+			"if" : "abilities.bloodrage._active","then" : { "table_lookup" : { "default" : -2, "index" : ["class.bloodrager.level",-11], "table" : [-3,-3,-3,-3,-3,-3,-3,-3,-3,-4] } }
+		}
+	    },
+	    "+info.play_shortcuts.combat_meters" : ["stats.hp", "abilities.bloodrage"]
+	  },
+          "2" : {
+            "+feats.armored_swiftness" : { "_name" : "Armored Swiftness (Ex)", "_description" : "At 2nd level, a steelblood moves faster in medium and heavy armor. When wearing medium or heavy armor, a steelblood can move 5 feet faster than normal in that armor, to a maximum of his unencumbered speed." },
+            "+stats.speed.armored_swiftness" : 5
+          },
+          "3" : {
+            "+feats.blood_sanctuary" : { "_name" : "Blood Sanctuary (Su)", "_description" : "At 3rd level, due to the power of his blood, a bloodrager can stand confidently amid the effects of spells cast by himself or his allies. He gains a +2 bonus on saving throws against spells that he or an ally casts."},
+            "+stats.save_will_fspells" : { "_name" : " vs Friendly Spells", "base" : "stats.save_will", "bloodsanctuary" : 2 },
+            "+stats.save_ref_fspells" : { "_name" : " vs Friendly Spells", "base" : "stats.save_ref", "bloodsanctuary" : 2 },
+            "+stats.save_fort_fspells" : { "_name" : " vs Friendly Spells", "base" : "stats.save_fort", "bloodsanctuary" : 2 }
+          },
+          "4" : {
+            "+feats.eschew_materials" : {"_name" : "Eschew Materials", "_description" : "At 4th level, the bloodrager gains Eschew Materials as a bonus feat. You can cast any spell with a material component costing 1 gp or less without needing that component. The casting of the spell still provokes attacks of opportunity as normal. If the spell requires a material component that costs more than 1 gp, you must have the material component on hand to cast the spell, as normal."},
+            "+feats.blood_casting" : {"_name" : "Blood Casting (Su)", "_description" : "At 4th level, the bloodrager gains the ability to cast spells even while bloodraging. He can also cast these spells defensively and can make concentration checks for these spells while bloodraging. While bloodraging, he can cast and concentrate on only his bloodrager spells (see below); spells from other classes cannot be cast during this state."},
+            "+todo[]" : "[Bloodrager Level 4] Learn two level-1 spells from the bloodrager spell list"
+          },
+          "5" : {
+            "+feats.armor_training" : {"_name" : "Armor Training (Ex)", "_description" : "At 5th level, a steelblood learns to be more maneuverable while wearing armor. Whenever he is wearing armor, he reduces the armor check penalty by 1 (to a maximum of 0) and increases the maximum Dexterity bonus allowed by his armor by 1. Every 4 levels thereafter (9th, 13th, and 17th), these bonuses increase by 1, to a maximum 4-point reduction of the armor check penalty and a +4 increase of the maximum Dexterity bonus. This ability stacks with the fighter class feature of the same name."},
+            "+stats.maxdex_ac.armor_training" : { "divide" : [["class.bloodrager.level",-1],4] },
+            "+stats.armor_penalty.armor_training" : { "divide" : [["class.bloodrager.level",-1],-4] },
+            "+todo[]" : "[Bloodrager Level 5] Learn one new level-1 spell from the bloodrager spell list"
+          },
+          "6" : {
+            "+todo[a]" : "[Bloodrager Level 6] Pick one feat from your bloodline (feat dependencies still apply)",
+            "+todo[b]" : "[Bloodrager Level 6] Learn one new level-1 spell from the bloodrager spell list"
+          },
+          "7" : {
+            "+feats.blood_deflection" : {"_name" : "Blood Deflection (Su)", "_description" : "At 7th level, as an immediate action a steelblood can sacrifice a bloodrager spell slot to gain a deflection bonus to AC equal to the level of the spell sacrificed. The deflection bonus lasts until the start of his next turn. This ability can be applied after an attack roll is made against the steelblood, allowing the steelblood to convert a hit into a miss if the deflection bonus is high enough."},
+            "+todo[]" : "[Bloodrager Level 7] Learn two new level-2 spells from the bloodrager spell list"
+          },
+          "8" : {
+            "+todo[a]" : "[Bloodrager Level 8] Learn one new level-2 spell from the bloodrager spell list",
+            "+todo[b]" : "[Bloodrager Level 8] Optional: Replace one known spell with a new spell of the same level from the bloodrager spell list (old spell is lost completely)"
+          },
+          "9" : {
+            "+todo[a]" : "[Bloodrager Level 9] Learn one new level-1 spell from the bloodrager spell list",
+            "+todo[b]" : "[Bloodrager Level 9] Learn one new level-2 spell from the bloodrager spell list",
+            "+todo[c]" : "[Bloodrager Level 9] Pick one feat from your bloodline (feat dependencies still apply)"
+          },
+          "10" : {
+            "+todo[]" : "[Bloodrager Level 10] Learn two new level-3 spells from the bloodrager spell list"
+          },
+          "11" : {
+            "+feats.greater_bloodrage" : {"_name" : "Greater Bloodrage (Su)", "_description" : "At 11th level, when a bloodrager enters a bloodrage, the morale bonus to his Strength and Constitution increases to +6 and the morale bonus on his Will saves increases to +3. In addition, upon entering a bloodrage, the bloodrager can apply the effects a bloodrager spell he knows of 2nd level or lower to himself. The spell must have a range of touch or personal. If the spell’s duration is greater than 1 round, it instead lasts for the duration of the bloodrage. This use consumes a bloodrager spell slot, as if he had cast the spell; he must have the spell slot available to take advantage of this effect. Greater bloodrage counts as the barbarian’s greater rage ability for the purposes of feat prerequisites, feat abilities, magic item abilities, and spell effects."},
+            "+stats.save_will.greater_bloodrage" : { "if" : "abilities.bloodrage._active", "then" : 1 },
+            "+stats.str.greater_bloodrage" :{ "if" : "abilities.bloodrage._active", "then" : 2 },
+            "+stats.con.greater_bloodrage" :{ "if" : "abilities.bloodrage._active", "then" : 2 },
+            "+todo[a]" : "[Bloodrager Level 11] Learn one new level-3 spell from the bloodrager spell list",
+            "+todo[b]" : "[Bloodrager Level 11] Optional: Replace one known spell with a new spell of the same level from the bloodrager spell list (old spell is lost completely)"
+          },
+          "12" : {
+            "+todo[a]" : "[Bloodrager Level 12] Learn one new level-1 spell from the bloodrager spell list",
+            "+todo[b]" : "[Bloodrager Level 12] Learn one new level-2 spell from the bloodrager spell list",
+            "+todo[c]" : "[Bloodrager Level 12] Learn one new level-3 spell from the bloodrager spell list",
+            "+todo[d]" : "[Bloodrager Level 12] Pick one feat from your bloodline (feat dependencies still apply)"
+          },
+          "13" : {
+            "+todo[]" : "[Bloodrager Level 13] Learn two new level-4 spells from the bloodrager spell list"
+          },
+          "14" : {
+            "+feats.indomitable_will" : {"_name" : "Indomitable Will (Ex)", "_description" : "At 14th level, a bloodrager gains a +4 bonus on Will saves to resist enchantment spells while bloodraging. This bonus stacks with all other modifiers, including the morale bonus on Will saves he also receives during his bloodrage."},
+            "+stats.save_will_enchantments.indomitable_will" :{ "if" : "abilities.bloodrage._active", "then" : 4 },
+            "+todo[a]" : "[Bloodrager Level 14] Learn one new level-4 spell from the bloodrager spell list",
+            "+todo[b]" : "[Bloodrager Level 14] Optional: Replace one known spell with a new spell of the same level from the bloodrager spell list (old spell is lost completely)"
+          },
+          "15" : {
+            "+todo[a]" : "[Bloodrager Level 15] Learn one new level-2 spell from the bloodrager spell list",
+            "+todo[b]" : "[Bloodrager Level 15] Learn one new level-3 spell from the bloodrager spell list",
+            "+todo[c]" : "[Bloodrager Level 15] Learn one new level-4 spell from the bloodrager spell list",
+            "+todo[d]" : "[Bloodrager Level 15] Pick one feat from your bloodline (feat dependencies still apply)"
+          },
+          "16" : {
+
+          },
+          "17" : {
+            "+feats.tireless_bloodrage" : {"_name" : "Tireless Bloodrage (Su)", "_description" : "At 17th level, a bloodrager no longer becomes fatigued at the end of his bloodrage."},
+            "+todo[]" : "[Bloodrager Level 17] Optional: Replace one known spell with a new spell of the same level from the bloodrager spell list (old spell is lost completely)"
+          },
+          "18" : {
+            "+todo[a]" : "[Bloodrager Level 18] Learn one new level-3 spell from the bloodrager spell list",
+            "+todo[b]" : "[Bloodrager Level 18] Learn one new level-4 spell from the bloodrager spell list",
+            "+todo[c]" : "[Bloodrager Level 18] Pick one feat from your bloodline (feat dependencies still apply)"
+          },
+          "19" : {
+
+          },
+          "20": {
+            "+feats.mighty_bloodrage" : {"_name" : "Mighty Bloodrage (Su)", "_description" : "At 20th level, when a bloodrager enters a bloodrage, the morale bonus to his Strength and Constitution increases to +8, and the morale bonus on his Will saves increases to +4. Furthermore, the spell he can apply to himself at the beginning of a bloodrage due to the greater bloodrage class feature is not limited to only spells of 2nd level or lower." },
+            "+stats.save_will.mighty_bloodrage" : { "if" : "abilities.bloodrage._active", "then" : 1 },
+            "+stats.str.mighty_bloodrage" :{ "if" : "abilities.bloodrage._active", "then" : 2 },
+            "+stats.con.mighty_bloodrage" :{ "if" : "abilities.bloodrage._active", "then" : 2 },
+            "+todo[]" : "[Bloodrager Level 20] Optional: Replace one known spell with a new spell of the same level from the bloodrager spell list (old spell is lost completely)"
+          }
+        }
+    }
+  }
+}

@@ -1,0 +1,281 @@
+{
+"+spells.burning_hands": {
+            "_description": "A cone of searing flame shoots from your fingertips.\n\nAny creature in the area of the flames takes 1d4 points of fire damage per caster level (maximum 5d4).\n\nFlammable materials burn if the flames touch them. A character can extinguish burning items as a full-round action.",
+            "_name": "Burning Hands",
+	    "_icon" : "fire-spell-cast",
+            "cast_time": "1 Standard Action",
+            "damage": {
+                "_bonus": 0,
+                "_suffix": "d4",
+                "min": [
+                    "stats.caster_level",
+                    5
+                ]
+            },
+            "dc": {
+                "base": [
+                    "class.magus.spell_dc",
+                    "spells.burning_hands.level"
+                ]
+            },
+            "duration": "Instant",
+            "level": 1,
+            "prepared": false,
+            "range": {
+                "_suffix": "ft",
+                "base": 15
+            },
+            "require": "V, S",
+            "save": "Reflex (1/2 damage)",
+            "spell_failure": {
+                "_suffix": "%",
+                "base": "stats.spell_failure"
+            },
+            "target": "cone",
+            "uses": {
+                "per_day": 1
+            }
+        },
+      "+spells.chill_touch": {
+            "_description": "A touch from your hand, which glows with blue energy, disrupts the life force of living creatures. Each touch channels negative energy that deals 1d6 points of damage. The touched creature also takes 1 point of Strength damage unless it makes a successful Fortitude saving throw. You can use this melee touch attack up to one time per level.\n\nAn undead creature you touch takes no damage of either sort, but it must make a successful Will saving throw or flee as if panicked for 1d4 rounds + 1 round per caster level.",
+            "_name": "Chill Touch",
+	    "_icon" : "ice-spell-cast",
+            "cast_time": "1 Standard Action",
+            "damage": {
+                "_bonus": 0,
+                "_suffix": "d6",
+                "dice": 1
+            },
+            "dc": {
+                "base": [
+                    "class.magus.spell_dc",
+                    "spells.chill_touch.level"
+                ]
+            },
+            "duration": "Instant - Charges persist until used",
+            "level": 1,
+            "prepared": false,
+            "range": {
+                "_suffix": "ft",
+                "base": 5
+            },
+            "require": "V,S",
+            "save": "Fort or Will: See text",
+            "spell_failure": {
+                "_suffix": "%",
+                "base": "stats.spell_failure"
+            },
+            "target": {
+                "_suffix": " Charges",
+                "base": "stats.caster_level"
+            },
+            "uses": {
+                "per_day": 1
+            }
+        },
+        "+spells.corrosive_touch": {
+            "_description": "Your successful melee touch attack deals 1d4 points of acid damage per caster level (maximum 5d4).",
+            "_name": "Corrosive Touch",
+	    "_icon" : "gooey-sword",
+            "cast_time": "1 Standard Action",
+            "damage": {
+                "_bonus": 0,
+                "_suffix": "d4",
+                "min": [
+                    "stats.caster_level",
+                    5
+                ]
+            },
+            "dc": {
+                "base": [
+                    "class.magus.spell_dc",
+                    "spells.corrosive_touch.level"
+                ]
+            },
+            "duration": {
+                "_suffix": "rounds",
+                "base": 1
+            },
+            "level": 1,
+            "prepared": true,
+            "range": {
+                "_suffix": "ft",
+                "base": 5
+            },
+            "require": "V, S",
+            "save": "None",
+            "spell_failure": {
+                "_suffix": "%",
+                "base": "stats.spell_failure"
+            },
+            "target": "1",
+            "uses": {
+                "per_day": 1,
+                "used_today": 0
+            }
+        },
+        "+spells.line_in_the_sand": {
+            "_description": "You create a glowing crimson line around the area. Against creatures in the area, you can attempt a number of additional attacks of opportunity per round equal to your spellcasting ability score modifier (Intelligence for magi and wizards, Charisma for bloodragers and sorcerers), although this does not allow you to make more than one attack against a creature per action that provokes.",
+            "_name": "Line in the Sand",
+	    "_icon" : "spinning-blades",
+            "cast_time": "1 Standard Action",
+            "duration": {
+                "_suffix": "rounds",
+                "rounds": "stats.caster_level"
+            },
+            "level": 1,
+            "prepared": false,
+            "range": {
+                "_suffix": "ft radius",
+                "base": 5
+            },
+            "require": "V, S",
+            "save": "None",
+            "spell_failure": {
+                "_suffix": "%",
+                "base": "stats.spell_failure"
+            },
+            "target": "Area",
+            "uses": {
+                "per_day": 1
+            }
+        },
+        "+spells.magic_missile": {
+            "_description": "A missile of magical energy darts forth from your fingertip and strikes its target, dealing 1d4+1 points of force damage.\n\nThe missile strikes unerringly, even if the target is in melee combat, so long as it has less than total cover or total concealment. Specific parts of a creature can’t be singled out. Objects are not damaged by the spell.\n\nFor every two caster levels beyond 1st, you gain an additional missile – two at 3rd level, three at 5th, four at 7th, and the maximum of five missiles at 9th level or higher. If you shoot multiple missiles, you can have them strike a single creature or several creatures. A single missile can strike only one creature. You must designate targets before you check for spell resistance or roll damage.",
+            "_name": "Magic Missile",
+	    "_icon" : "missile-swarm",
+            "cast_time": "1 Standard Action",
+            "damage": {
+                "_bonus": 1,
+                "_suffix": "d4",
+                "dice": 1
+            },
+            "dc": {
+                "base": [
+                    "class.magus.spell_dc",
+                    "spells.magic_missile.level"
+                ]
+            },
+            "duration": {
+                "_suffix": "rounds",
+                "base": 1
+            },
+            "level": 1,
+            "prepared": true,
+            "range": {
+                "_suffix": "ft",
+                "base": 100,
+                "multiply": [
+                    "stats.caster_level",
+                    10
+                ]
+            },
+            "require": "V, S",
+            "save": "None",
+            "spell_failure": {
+                "_suffix": "%",
+                "base": "stats.spell_failure"
+            },
+            "target": {
+                "base": 1,
+                "min": [
+                    5,
+                    {
+                        "divide": [
+                            [
+                                "stats.caster_level",
+                                -1
+                            ],
+                            2
+                        ]
+                    }
+                ]
+            },
+            "uses": {
+                "per_day": 1,
+                "used_today": 0
+            }
+        },
+        "+spells.mirror_strike": {
+            "_description": "You briefly alter the flow of time to split a melee attack into two attacks. Before the end of your next turn, when you make your next melee attack roll, compare the result to the AC of two opponents within your reach. If the selected opponents are flanking you, you gain a +2 bonus on your attack roll (and confirmation attack roll, see below). If you hit both enemies, you can deal half damage to each. Hitting only one opponent allows you to deal that opponent normal damage for your attack. On a critical threat, you can make only one attack roll to confirm the critical hit against both opponents. If you confirm against both, you deal half your critical hit damage to each. Your hit is a normal hit rather than a critical if you confirm against only one opponent. If you fail to use the effect before the end of your next turn, the spell ends.",
+            "_name": "Mirror Strike",
+	    "_icon" : "mirror-mirror",
+            "cast_time": "1 Standard Action",
+            "duration": "1 attack before end of next turn",
+            "level": 1,
+            "prepared": true,
+            "range": "Personal",
+            "require": "V,S,M (shard of mirror)",
+            "save": "None",
+            "spell_failure": {
+                "_suffix": "%",
+                "base": "stats.spell_failure"
+            },
+            "target": "Self",
+            "uses": {
+                "per_day": 1
+            }
+        },
+        "+spells.obscuring_mist": {
+            "_description": "A misty vapor arises around you. It is stationary. The vapor obscures all sight, including darkvision, beyond 5 feet. A creature 5 feet away has concealment (attacks have a 20% miss chance). Creatures farther away have total concealment (50% miss chance, and the attacker cannot use sight to locate the target).\n\nA moderate wind (11+ mph), such as from a gust of wind spell, disperses the fog in 4 rounds. A strong wind (21+ mph) disperses the fog in 1 round. A fireball, flame strike, or similar spell burns away the fog in the explosive or fiery spell’s area. A wall of fire burns away the fog in the area into which it deals damage.\n\nThis spell does not function underwater.",
+            "_name": "Obscuring Mist",
+	    "_icon" : "fog",
+            "cast_time": "1 Standard Action",
+            "duration": {
+                "_suffix": "minutes",
+                "scale": "stats.caster_level"
+            },
+            "level": 1,
+            "prepared": false,
+            "range": {
+                "_suffix": "ft radius",
+                "base": 20
+            },
+            "require": "V, S",
+            "save": "None",
+            "spell_failure": {
+                "_suffix": "%",
+                "base": "stats.spell_failure"
+            },
+            "target": "Area",
+            "uses": {
+                "per_day": 1
+            }
+        },
+        "+spells.shocking_grasp": {
+            "_description": "Your successful melee touch attack deals 1d6 points of electricity damage per caster level (maximum 5d6). When delivering the jolt, you gain a +3 bonus on attack rolls if the opponent is wearing metal armor (or is carrying a metal weapon or is made of metal).",
+            "_name": "Shocking Grasp",
+	    "_icon" : "bolt-spell-cast",
+            "cast_time": "1 Standard Action",
+            "damage": {
+                "_bonus": 0,
+                "_suffix": "d6",
+                "min": [
+                    "stats.caster_level",
+                    5
+                ]
+            },
+            "dc": {
+                "base": [
+                    "class.magus.spell_dc",
+                    "spells.shocking_grasp.level"
+                ]
+            },
+            "duration": "Instant",
+            "level": 1,
+            "prepared": true,
+            "range": "touch",
+            "require": "V, S",
+            "save": "None",
+            "spell_failure": {
+                "_suffix": "%",
+                "base": "stats.spell_failure"
+            },
+            "target": "1",
+            "uses": {
+                "per_day": 1,
+                "used_today": 0
+            }
+        }
+
+}

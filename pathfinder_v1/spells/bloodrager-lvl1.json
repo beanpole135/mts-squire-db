@@ -1,0 +1,72 @@
+{
+  "+spells.shocking_grasp": {
+    "_description": "Your successful melee touch attack deals 1d6 points of electricity damage per caster level (maximum 5d6). When delivering the jolt, you gain a +3 bonus on attack rolls if the opponent is wearing metal armor (or is carrying a metal weapon or is made of metal).",
+    "_name": "Shocking Grasp",
+    "_icon" : "bolt-spell-cast",
+    "level" : 1,
+    "damage" : {
+      "base" : "stats.caster_level",
+      "_suffix" : "d6",
+      "_bonus" : 0
+    },
+    "dc": { "base" : [ 10, "spells.shocking_grasp.level", "cha"] },
+    "spell_failure" : {
+      "base" : "stats.spell_failure",
+      "_suffix" : "%"
+    },
+    "range": "Touch",
+    "cast_time" : "1 Standard Action",
+    "require": "V,S",
+    "save" : "None",
+    "duration" : "Instant",
+    "prepared" : true,
+    "uses": "class.bloodrager.spells_per_day.lvl_1",
+    "target" : "1"
+  },
+  "+spells.phantom_blood": {
+    "_description": "You bolster your life energy. If the loss of hit points at the end of a temporary effect that modifies your Constitution (such as barbarian’s rage or bloodrager‘s bloodrage) would cause you to become unconscious or kill you, you gain temporary hit points equal to your caster level (maximum 10). Each casting of this spell grants you temporary hit points only once.",
+    "_name": "Phantom Blood",
+    "_icon" : "bleeding-heart",
+    "level" : 1,
+    "spell_failure" : {
+      "base" : "stats.spell_failure",
+      "_suffix" : "%"
+    },
+    "range": "Personal",
+    "cast_time" : "1 Standard Action",
+    "require": "V,S",
+    "duration" : {
+      "multiply" : [1, "class.bloodrager.level"],
+      "_suffix" : " minutes"
+    },
+    "prepared" : true,
+    "uses": "class.bloodrager.spells_per_day.lvl_1",
+    "target" : "Personal"
+  },
+  "+spells.tracking_mark": {
+    "_description": "You gain a supernatural ability to detect tracks and other clues left behind by the target. You treat the DCs of all Survival checks made to track the target as if they were 5 lower than normal, and you gain a +5 bonus on Perception checks made to notice the target if it is using Stealth or recognize it if it is using Disguise.",
+    "_name": "Tracking Mark",
+    "_icon" : "footsteps",
+    "level" : 1,
+    "dc": { "base" : [ 10, "spells.tracking_mark.level", "cha"] },
+    "spell_failure" : {
+      "base" : "stats.spell_failure",
+      "_suffix" : "%"
+    },
+    "range": {
+      "base" : 400,
+      "multiply" : [40, "class.bloodrager.level"],
+      "_suffix" : "ft"
+    },
+    "cast_time" : "1 Standard Action",
+    "require": "S, DF",
+    "save" : "Will (Negates)",
+    "duration" : {
+      "multiply" : [10, "class.bloodrager.level"],
+      "_suffix" : " minutes"
+    },
+    "prepared" : true,
+    "uses": "class.bloodrager.spells_per_day.lvl_1",
+    "target" : "1 Creature"
+  }
+}

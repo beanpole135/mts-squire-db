@@ -1,0 +1,368 @@
+{
+  "+inventory.armored_coat" : {
+    "_name" : "Armored Coat",
+    "_description" : "This sturdy leather coat is reinforced with metal plates sewn into the lining. An armored coat is more cumbersome than light armor but less effective than most medium armors. The advantage of it is that a person can don it or remove it as a move action (there is no “don hastily” option for an armored coat). If worn over other armor, use the better AC bonus and worse value in all other categories; an armored coat has no effect if worn with heavy armor. The only magic effects that apply are those of armor, clothing, or items worn on top.",
+    "_icon" : "pirate-coat",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "medium",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 4,
+      "+stats.maxdex_ac.armor" : 3,
+      "+stats.armor_penalty.armor" : 2,
+      "+stats.spell_failure.armor" : 20,
+      "+stats.speed.armor_penalty" : {
+          "if" : [ "size", ">", 0],
+          "then" : -5,
+          "else" : -10
+      }
+    },
+    "weight" : {
+      "multiply" : [ 20, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.chain_coat" : {
+    "_name" : "Chain Coat",
+    "_description" : "This relatively simple armor consists of heavy chains that wrap around your body and limbs. While it weighs more and provides less protection than other medium armors, it is also less of a hindrance. In addition, if you are wielding a spiked chain, you can affix it to one hand. This functions as a locked gauntlet, and if you are proficient with spiked chains, you can treat the spiked chain as a one-handed weapon while it is attached. You can affix a spiked chain to each hand this way, but you can’t wear locked gauntlets while wearing a chain coat, and you can’t attach any weapon to a chain coat except spiked chains.",
+    "_icon" : "chain-mail",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "medium",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 4,
+      "+stats.maxdex_ac.armor" : 5,
+      "+stats.armor_penalty.armor" : 2,
+      "+stats.spell_failure.armor" : 30,
+      "+stats.speed.armor_penalty" : {
+          "if" : [ "size", ">", 0],
+          "then" : -5,
+          "else" : -10
+      }
+    },
+    "weight" : {
+      "multiply" : [ 40, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.hide_armor" : {
+    "_name" : "Hide Armor",
+    "_description" : "Hide armor is made from the tanned skin of particularly thick-hided beasts, stitched with either multiple overlapping layers of crude leather or exterior pieces of leather stuffed with padding or fur. Damage to the armor is typically repaired by restitching gashes or adding new pieces of hide, giving the most heavily used suits a distinctively patchwork quality.",
+    "_icon" : "animal-hide",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "medium",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 4,
+      "+stats.maxdex_ac.armor" : 4,
+      "+stats.armor_penalty.armor" : 3,
+      "+stats.spell_failure.armor" : 20,
+      "+stats.speed.armor_penalty" : {
+          "if" : [ "size", ">", 0],
+          "then" : -5,
+          "else" : -10
+      }
+    },
+    "weight" : {
+      "multiply" : [ 25, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.ice_coat" : {
+    "_name" : "Ice Coat",
+    "_description" : "Used by natives to the arctic tundra, this heavy parka is treated as an armored coat. It provides the benefits of a cold-weather outfit, and it can be donned or removed as a move action. In addition, the fluffy white fur of the parka blends into arctic landscapes, providing a +2 circumstance bonus on Stealth checks in snowy environments.",
+    "_icon" : "eskimo",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "medium",
+      "type" : "armor",
+      "special" : "+2 Stealth in snowy environments"
+    },
+    "equip" : {
+      "+stats.ac.armor" : 4,
+      "+stats.maxdex_ac.armor" : 3,
+      "+stats.armor_penalty.armor" : 2,
+      "+stats.spell_failure.armor" : 20,
+      "+stats.speed.armor_penalty" : {
+          "if" : [ "size", ">", 0],
+          "then" : -5,
+          "else" : -10
+      }
+    },
+    "weight" : {
+      "multiply" : [ 24, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.do-maru" : {
+    "_name" : "Do-maru",
+    "_description" : "The lightest of armors typically favored by samurai, do-maru wraps around the wearer’s body like a short armored coat. It consists primarily of lamellar and lacks a solid breastplate or sleeves, leaving the shoulders and upper body somewhat exposed, but permitting the wearer greater flexibility than do the majority of heavier armors.",
+    "_icon" : "ninja-armor",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "medium",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 5,
+      "+stats.maxdex_ac.armor" : 4,
+      "+stats.armor_penalty.armor" : 4,
+      "+stats.spell_failure.armor" : 25,
+      "+stats.speed.armor_penalty" : {
+          "if" : [ "size", ">", 0],
+          "then" : -5,
+          "else" : -10
+      }
+    },
+    "weight" : {
+      "multiply" : [ 30, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.kikko" : {
+    "_name" : "Kikko",
+    "_description" : "Kikko armor consists of a clever arrangement of hexagonal plates made from iron and sewn to cloth, granting the wearer greater flexibility than that provided by many armors that afford similar defense. The plates may be left exposed or hidden by a layer of cloth.",
+    "_icon" : "kimono",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "medium",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 5,
+      "+stats.maxdex_ac.armor" : 4,
+      "+stats.armor_penalty.armor" : 3,
+      "+stats.spell_failure.armor" : 25,
+      "+stats.speed.armor_penalty" : {
+          "if" : [ "size", ">", 0],
+          "then" : -5,
+          "else" : -10
+      }
+    },
+    "weight" : {
+      "multiply" : [ 25, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.lamellar_horn" : {
+    "_name" : "Lamellar Armor (Horn)",
+    "_description" : "Lamellar is a type of armor in which small plates of various types of materials are strung together in parallel rows using fine cord. Lamellar plates can be constructed from lacquered leather, horn, or even stone, though suits of iron and steel are the most common. Lamellar armor can be crafted into various shapes, including partial pieces such as breastplates, greaves, or even entire coats. The properties of specific suits and pieces of lamellar armor are determined by their material.",
+    "_icon" : "lamellar",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "medium",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 5,
+      "+stats.maxdex_ac.armor" : 3,
+      "+stats.armor_penalty.armor" : 4,
+      "+stats.spell_failure.armor" : 25,
+      "+stats.speed.armor_penalty" : {
+          "if" : [ "size", ">", 0],
+          "then" : -5,
+          "else" : -10
+      }
+    },
+    "weight" : {
+      "multiply" : [ 30, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.scale_mail" : {
+    "_name" : "Scale Mail",
+    "_description" : "Scale mail is made up of dozens of small, overlapping metal plates. Similar to both splint mail and banded mail, scalemail has a flexible arrangement of scales in an attempt to avoid hindering the wearer’s mobility, but at the expense of omitting additional protective layers of armor. A suit of scale mail includes gauntlets.",
+    "_icon" : "scale-mail",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "medium",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 5,
+      "+stats.maxdex_ac.armor" : 3,
+      "+stats.armor_penalty.armor" : 4,
+      "+stats.spell_failure.armor" : 25,
+      "+stats.speed.armor_penalty" : {
+          "if" : [ "size", ">", 0],
+          "then" : -5,
+          "else" : -10
+      }
+    },
+    "weight" : {
+      "multiply" : [ 30, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.breastplate" : {
+    "_name" : "Breastplate",
+    "_description" : "A breastplate protects a wearer’s torso with a single piece of sculpted metal, similar to the core piece of a suit of full plate. Despite its sturdiness, its inflexibility and open back make it inferior to complete suits of metal armor, but still an improvement over most non-metal armors.",
+    "_icon" : "saiyan-suit",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "medium",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 6,
+      "+stats.maxdex_ac.armor" : 3,
+      "+stats.armor_penalty.armor" : 4,
+      "+stats.spell_failure.armor" : 25,
+      "+stats.speed.armor_penalty" : {
+          "if" : [ "size", ">", 0],
+          "then" : -5,
+          "else" : -10
+      }
+    },
+    "weight" : {
+      "multiply" : [ 30, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.breastplate_agile" : {
+    "_name" : "Agile Breastplate",
+    "_description" : "This breastplate is specially crafted in a manner that allows extra maneuverability for some physical activities. The armor check penalty for Climb checks and Acrobatics checks made to jump is only –1 (masterwork and mithral versions of this armor reduce this penalty as well as the normal penalty).",
+    "_icon" : "saiyan-suit",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "medium",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 6,
+      "+stats.maxdex_ac.armor" : 3,
+      "+stats.armor_penalty.armor" : 4,
+      "+stats.spell_failure.armor" : 25,
+      "+stats.speed.armor_penalty" : {
+          "if" : [ "size", ">", 0],
+          "then" : -5,
+          "else" : -10
+      },
+      "+skills.acrobatics.agile_breastplate" : 3,
+      "+skills.climb.agile_breastplate" : 3
+    },
+    "weight" : {
+      "multiply" : [ 25, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.chainmail" : {
+    "_name" : "Chainmail",
+    "_description" : "Unlike a chain shirt, which covers only the chest, chainmail protects the wearer with a complete mesh of chain links that cover the torso and arms, and extends below the waist. Multiple interconnected pieces offer additional protection over vital areas. The suit includes gauntlets.",
+    "_icon" : "chain-mail",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "medium",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 6,
+      "+stats.maxdex_ac.armor" : 2,
+      "+stats.armor_penalty.armor" : 5,
+      "+stats.spell_failure.armor" : 30,
+      "+stats.speed.armor_penalty" : {
+          "if" : [ "size", ">", 0],
+          "then" : -5,
+          "else" : -10
+      }
+    },
+    "weight" : {
+      "multiply" : [ 40, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.four_mirror" : {
+    "_name" : "Four Mirror Armor",
+    "_description" : "This armor consists of four plates harnessed together with leather shoulder straps. Two round plates protect your front and back, while two smaller rectangular plates cover the sides of the torso. Four-mirror armor is worn over chainmail to provide added protection, and comes with a spiked helmet with a chainmail hood.",
+    "_icon" : "plastron",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "medium",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 6,
+      "+stats.maxdex_ac.armor" : 2,
+      "+stats.armor_penalty.armor" : 5,
+      "+stats.spell_failure.armor" : 30,
+      "+stats.speed.armor_penalty" : {
+          "if" : [ "size", ">", 0],
+          "then" : -5,
+          "else" : -10
+      }
+    },
+    "weight" : {
+      "multiply" : [ 45, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.lamellar_steel" : {
+    "_name" : "Lamellar Steel Armor",
+    "_description" : "Lamellar is a type of armor in which small plates of various types of materials are strung together in parallel rows using fine cord. Lamellar plates can be constructed from lacquered leather, horn, or even stone, though suits of iron and steel are the most common. Lamellar armor can be crafted into various shapes, including partial pieces such as breastplates, greaves, or even entire coats. The properties of specific suits and pieces of lamellar armor are determined by their material.",
+    "_icon" : "lamellar",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "medium",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 6,
+      "+stats.maxdex_ac.armor" : 3,
+      "+stats.armor_penalty.armor" : 5,
+      "+stats.spell_failure.armor" : 25,
+      "+stats.speed.armor_penalty" : {
+          "if" : [ "size", ">", 0],
+          "then" : -5,
+          "else" : -10
+      }
+    },
+    "weight" : {
+      "multiply" : [ 35, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  },
+  "+inventory.mountain_pattern" : {
+    "_name" : "Mountain Pattern Armor",
+    "_description" : "This medium armor consists of hundreds of small, interlocking pieces of steel shaped to resemble an ancient symbol for the word “mountain.” The mail is then riveted to a cloth or leather backing. It is worn like a mail coat and covers your torso, shoulders, and thighs.",
+    "_icon" : "armor-vest",
+    "type" : "armor",
+    "quantity" : 1,
+    "armor" : {
+      "class" : "medium",
+      "type" : "armor",
+      "special" : ""
+    },
+    "equip" : {
+      "+stats.ac.armor" : 6,
+      "+stats.maxdex_ac.armor" : 3,
+      "+stats.armor_penalty.armor" : 4,
+      "+stats.spell_failure.armor" : 30,
+      "+stats.speed.armor_penalty" : {
+          "if" : [ "size", ">", 0],
+          "then" : -5,
+          "else" : -10
+      }
+    },
+    "weight" : {
+      "multiply" : [ 40, { "if" : ["size", "=",0], "then" : 1, "else" : { "if" : ["size","<",0], "then" : 2, "else" : 0.5 } } ]
+    }
+  }
+}

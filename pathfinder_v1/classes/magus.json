@@ -1,0 +1,733 @@
+{
+  "01_std" : {
+    "_name" : "Standard",
+    "_description" : "There are those who spend their lives poring over ancient tomes and texts, unlocking the power of magic, and there are those who spend their time perfecting the use of individual weapons, becoming masters without equal. The magus is at once a student of both philosophies, blending magical ability and martial prowess into something entirely unique, a discipline in which both spell and steel are used to devastating effect. As he grows in power, the magus unlocks powerful forms of arcana that allow him to merge his talents further, and at the pinnacle of his art, the magus becomes a blur of steel and magic, a force that few foes would dare to stand against.",
+    "_icon" : "lightning-saber",
+  "+class.magus": {
+    "main_attributes": "INT",
+    "alignment_restrictions": "",
+    "_armor_notes": "No magus spell failure from armor that user is proficient with (excluding shields).",
+    "_armor_proficiency": ["light"],
+    "_description": "There are those who spend their lives poring over ancient tomes and texts, unlocking the power of magic, and there are those who spend their time perfecting the use of individual weapons, becoming masters without equal. The magus is at once a student of both philosophies, blending magical ability and martial prowess into something entirely unique, a discipline in which both spell and steel are used to devastating effect. As he grows in power, the magus unlocks powerful forms of arcana that allow him to merge his talents further, and at the pinnacle of his art, the magus becomes a blur of steel and magic, a force that few foes would dare to stand against.",
+    "_hit_dice": "1d8",
+    "_skill_ranks": {
+	"base" : 2,
+	"_suffix" : " per level"
+    },
+    "_name": "Magus",
+    "_role": "Magi spend much of their time traveling the world, learning whatever martial or arcane secrets they can find. They might spend months learning a new sword-fighting style from a master warrior, while simultaneously moonlighting in the local library, poring through tomes of ancient lore. Most who take this path dabble in all sorts of lore, picking up anything that might aid them in their search for perfection.",
+    "_spell_notes": "Must prepare spells ahead of time with 8-hours rest and 1-hour study. To learn, prepare, or cast a spell, the magus must have an Intelligence score equal to at least 10 + the spell level. The Difficulty Class for a saving throw against a magus’s spell is 10 + the spell level + the magus’s Intelligence modifier.",
+    "_starting_wealth": "4d6 × 10 gp (average 140 gp)",
+    "_weapon_notes": "",
+    "_weapon_proficiency": ["simple", "martial"],
+    "archetype": "",
+    "bab": {
+      "table_lookup" : {
+        "index" : "class.magus.level",
+        "table" : [0,1,2,3,3,4,5,6,6,7,8,9,9,10,11,12,12,13,14,15]
+      }
+    },
+    "level": 0,
+    "save_fort": {
+      "base" : 2,
+      "divide" : ["class.magus.level",2]
+    },
+    "save_ref": {
+      "base" : 0,
+      "divide" : ["class.magus.level",3]
+    },
+    "save_will": {
+      "base" : 2,
+      "divide" : ["class.magus.level",2]
+    },
+    "spell_dc": {
+        "base": [ 10, "int" ]
+    },
+    "caster_level" : {
+      "min" : [ ["stats.int",-10],  {"table_lookup" : {
+        "index" : "class.magus.level",
+        "table" : [0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6,6,6]
+      }
+      }]
+    },
+    "spells_per_day": {
+      "lvl_0": {
+        "table_lookup": {
+          "default": 5,
+          "index": "class.magus.level",
+          "table": [0,3,4,4,4,4]
+        }
+      },
+      "lvl_1": {
+        "table_lookup": {
+          "default": 5,
+          "index": "class.magus.level",
+          "table": [0,1,2,3,3,4,4,4,4]
+        },
+        "bonus" : {
+          "table_lookup": {
+            "default": 0,
+            "index": "int",
+            "table": [0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5]
+          }
+        }
+      },
+      "lvl_2": {
+        "table_lookup": {
+          "default": 5,
+          "index": "class.magus.level",
+          "table": [0,0,0,0,1,2,3,3,4,4,4,4]
+        },
+        "bonus" : {
+          "table_lookup": {
+            "default": 0,
+            "index": "int",
+            "table": [0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4]
+          }
+        }
+      },
+      "lvl_3": {
+        "table_lookup": {
+          "default": 5,
+          "index": "class.magus.level",
+          "table": [0,0,0,0,0,0,0,1,2,3,3,4,4,4,4]
+        },
+        "bonus" : {
+          "table_lookup": {
+            "default": 0,
+            "index": "int",
+            "table": [0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4]
+          }
+        }
+      },
+      "lvl_4": {
+        "table_lookup": {
+          "default": 0,
+          "index": ["class.magus.level",-10],
+          "table": [1,2,3,3,4,4,4,4,5,5,5]
+        },
+        "bonus" : {
+          "table_lookup": {
+            "default": 0,
+            "index": "int",
+            "table": [0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4]
+          }
+        }
+      },
+      "lvl_5": {
+        "table_lookup": {
+          "default": 0,
+          "index": ["class.magus.level",-13],
+          "table": [1,2,3,3,4,4,5,5]
+        },
+        "bonus" : {
+          "table_lookup": {
+            "default": 0,
+            "index": "int",
+            "table": [0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4]
+          }
+        }
+      },
+      "lvl_6": {
+        "table_lookup": {
+          "default": 0,
+          "index": ["class.magus.level",-16],
+          "table": [1,2,3,4,5]
+        },
+        "bonus" : {
+          "table_lookup": {
+            "default": 0,
+            "index": "int",
+            "table": [0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4]
+          }
+        }
+      }
+    },
+    "level_up" : {
+      "1" :  {
+        "+stats.bab.magus" : "class.magus.bab",
+        "+stats.save_fort.magus" : "class.magus.save_fort",
+        "+stats.save_ref.magus" : "class.magus.save_ref",
+        "+stats.save_will.magus" : "class.magus.save_will",
+        "+skills.climb.magus" : 3,
+        "+skills.craft_template.magus" : 3,
+        "+skills.fly.magus" : 3,
+        "+skills.intimidate.magus" : 3,
+        "+skills.knowledge_arcana.magus" : 3,
+        "+skills.knowledge_dungeoneering.magus" : 3,
+        "+skills.knowledge_planes.magus" : 3,
+        "+skills.profession_template.magus" : 3,
+        "+skills.ride.magus" : 3,
+        "+skills.spellcraft.magus" : 3,
+        "+skills.swim.magus" : 3,
+        "+skills.use_magic_device.magus" : 3,
+        "+stats.arcane_pool" : {
+          "_name" : "Arcane Pool",
+          "max" : [1, {"divide" : ["class.magus.level", 2]}],
+          "base" : "int",
+          "_color": "purple"
+        },
+        "+info.play_shortcuts.combat_meters[]" : "stats.arcane_pool",
+        "+todo[a]" : "[Magus Level 1] Learn all level 0 Magus spells",
+        "+todo[b]" : "[Magus Level 1] Learn 3 (+INT bonus) level 1 Magus spells",
+        "+abilities.arcane_pool": {
+          "_description": "The pool refreshes once per day when the magus prepares his spells. At 1st level, a magus can expend 1 point from his arcane pool as a swift action to grant any weapon he is holding a +1 enhancement bonus for 1 minute. For every four levels beyond 1st, the weapon gains another +1 enhancement bonus, to a maximum of +5 at 17th level. These bonuses can be added to the weapon, stacking with existing weapon enhancement to a maximum of +5. Multiple uses of this ability do not stack with themselves. At 5th level, these bonuses can be used to add any of the following weapon properties: dancing, flaming, flaming burst, frost, icy burst, keen, shock, shocking burst, speed, or vorpal. Adding these properties consumes an amount of bonus equal to the property’s base price modifier. These properties are added to any the weapon already has, but duplicates do not stack. If the weapon is not magical, at least a +1 enhancement bonus must be added before any other properties can be added. These bonuses and properties are decided when the arcane pool point is spent and cannot be changed until the next time the magus uses this ability. These bonuses do not function if the weapon is wielded by anyone other than the magus. A magus can only enhance one weapon in this way at one time. If he uses this ability again, the first use immediately ends.",
+          "_name": "Arcane Pool",
+          "_icon" : "sparkling-sabre",
+          "level" : 0,
+          "damage" : {
+            "_bonus" : { "divide" : [ ["class.magus.level",-1],4], "base" : 1 }
+          },
+          "cast_time" : "1 Swift Action",
+          "duration" : {
+            "base" : 1,
+            "_suffix" : " minute"
+          },
+	  "_active" : false,
+          "uses": "stats.arcane_pool",
+          "target" : "Single Weapon"
+        },
+        "+feats.cantrips": {
+            "_description": "A magus can prepare a number of cantrips, or 0-level spells, each day, as noted on Table: Magus under “Spells per Day.” These spells are cast like any other spell, but they are not expended when cast and may be used again.",
+            "_name": "Cantrips",
+            "_icon" : "brainstorm"
+        },
+        "+feats.spellbooks" : {
+          "_name" : "Spellbooks",
+          "_description" : "A magus must study his spellbook each day to prepare his spells. He cannot prepare any spell not recorded in his spellbook except for read magic, which all magi can prepare from memory. A magus begins play with a spellbook containing all 0-level magus spells plus three 1st-level magus spells of his choice. The magus also selects a number of additional 1st-level magus spells equal to his Intelligence modifier to add to his spellbook. At each new magus level, he gains two new magus spells of any spell level or levels that he can cast (based on his new magus level) for his spellbook. At any time, a magus can also add spells found in other spellbooks to his own. A magus can learn spells from a wizard’s spellbook, just as a wizard can from a magus’s spellbook. The spells learned must be on the magus spell list, as normal. An alchemist can learn formulae from a magus’s spellbook, if the spells are also on the alchemist spell list. A magus cannot learn spells from an alchemist.",
+          "_icon" : "spell-book"
+        },
+        "+feats.spell_combat": {
+            "_description": "At 1st level, a magus learns to cast spells and wield his weapons at the same time. This functions much like two-weapon fighting, but the off-hand weapon is a spell that is being cast. To use this ability, the magus must have one hand free (even if the spell being cast does not have somatic components), while wielding a light or one-handed melee weapon in the other hand. As a full-round action, he can make all of his attacks with his melee weapon at a –2 penalty and can also cast any spell from the magus spell list with a casting time of 1 standard action (any attack roll made as part of this spell also takes this penalty). If he casts this spell defensively, he can decide to take an additional penalty on his attack rolls, up to his Intelligence bonus, and add the same amount as a circumstance bonus on his concentration check. If the check fails, the spell is wasted, but the attacks still take the penalty. A magus can choose to cast the spell first or make the weapon attacks first, but if he has more than one attack, he cannot cast the spell between weapon attacks.",
+            "_name": "Spell Combat",
+            "type": "Ex",
+            "_icon" : "sparkling-sabre"
+        }
+      },
+      "2" : {
+        "+todo[]" : "[Magus Level 2] Learn 2 additional Magus spells (level 1)",
+        "+feats.spellstrike": {
+            "_description": "At 2nd level, whenever a magus casts a spell with a range of “touch” from the magus spell list, he can deliver the spell through any weapon he is wielding as part of a melee attack. Instead of the free melee touch attack normally allowed to deliver the spell, a magus can make one free melee attack with his weapon (at his highest base attack bonus) as part of casting this spell. If successful, this melee attack deals its normal damage as well as the effects of the spell. If the magus makes this attack in concert with spell combat, this melee attack takes all the penalties accrued by spell combat melee attacks. This attack uses the weapon’s critical range (20, 19–20, or 18–20 and modified by the keen weapon property or similar effects), but the spell effect only deals ×2 damage on a successful critical hit, while the weapon damage uses its own critical modifier.",
+            "_name": "Spellstrike",
+            "_icon" : "flaming-trident"
+        }
+      },
+      "3" : {
+        "+todo[a]" : "[Magus Level 3] Learn 2 additional Magus spells (level 1)",
+        "+todo[b]" : "[Magus Level 3] Learn 1 Magus Arcana Feat"
+      },
+      "4" : {
+        "+todo[a]" : "Magus Caster Level Increase: Level 2 spells unlocked!",
+        "+todo[b]" : "[Magus Level 4] Learn 2 additional Magus spells (level 1 or 2)",
+        "+abilities.spell_recall" : {
+          "_name" : "Spell Recall",
+          "_description" : "At 4th level, the magus learns to use his arcane pool to recall spells he has already cast. With a swift action he can recall any single magus spell that he has already prepared and cast that day by expending a number of points from his arcane pool equal to the spell’s level (minimum 1). The spell is prepared again, just as if it had not been cast.",
+          "_icon" : "brain",
+          "uses" : "stats.arcane_pool",
+          "cast_time" : "1 Swift Action"
+        }
+      },
+      "5" : {
+        "+todo[a]" : "[Magus Level 5] Learn 2 additional Magus spells (level 1 or 2)",
+        "+todo[b]" : "[Magus Level 5] Bonus Feat! Must be a combat, metamagic, or item creation feat."
+      },
+      "6" : {
+        "+todo[a]" : "[Magus Level 6] Learn 2 additional Magus spells (level 1 or 2)",
+        "+todo[b]" : "[Magus Level 6] Learn 1 Magus Arcana Feat"
+      },
+      "7" : {
+        "+todo[a]" : "Magus Caster Level Increase: Level 3 spells unlocked!",
+        "+todo[b]" : "[Magus Level 7] Learn 2 additional Magus spells (level 1, 2, or 3)",
+        "+feats.knowledge_pool" : {
+          "_name" : "Knowledge Pool",
+          "_description" : "At 7th level, when a magus prepares his magus spells, he can decide to expend 1 or more points from his arcane pool, up to his Intelligence bonus. For each point he expends, he can treat any one spell from the magus spell list as if it were in his spellbook and can prepare that spell as normal that day. If he does not cast spells prepared in this way before the next time he prepares spells, he loses those spells. He can also cast spells added in this way using his spell recall ability, but only until he prepares spells again.",
+          "_icon" : "book-pile"
+        },
+        "+feats.medium_armor" : {
+          "_name" : "Medium Armor",
+          "_description" : "At 7th level, a magus gains proficiency with medium armor. A magus can cast magus spells while wearing medium armor without incurring the normal arcane spell failure chance. Like any other arcane spellcaster, a magus wearing heavy armor or using a shield incurs a chance of arcane spell failure if the spell in question has a somatic component.",
+          "_icon" : "chain-mail"
+        },
+        "+class.magus._armor_proficiency[]" : "medium"
+      },
+      "8" : {
+        "+todo[]" : "[Magus Level 8] Learn 2 additional Magus spells (level 1, 2, or 3)",
+        "+feats.spell_combat_improved" : {
+          "_name" : "Spell Combat (Improved)",
+          "_description" : "At 8th level, the magus’s ability to cast spells and make melee attacks improves. When using the spell combat ability, the magus receives a +2 circumstance bonus on concentration checks, in addition to any bonus granted by taking an additional penalty on the attack roll.",
+          "_icon" : "sparkling-sabre"
+        }
+      },
+      "9" : {
+        "+todo[a]" : "[Magus Level 9] Learn 2 additional Magus spells (level 1, 2, or 3)",
+        "+todo[b]" : "[Magus Level 9] Learn 1 Magus Arcana Feat"
+      },
+      "10" : {
+        "+todo[a]" : "Magus Caster Level Increase: Level 4 spells unlocked!",
+        "+todo[b]" : "[Magus Level 10] Learn 2 additional Magus spells (levels 1 - 4)",
+        "+feats.fighter_training" : {
+          "_name" : "Fighter Training",
+          "_description" : "Starting at 10th level, a magus counts 1/2 his total magus level as his fighter level for the purpose of qualifying for feats. If he has levels in fighter, these levels stack.",
+          "_icon" : "muscle-up"
+        }
+      },
+      "11" : {
+        "+todo[a]" : "[Magus Level 11] Learn 2 additional Magus spells (level 1 - 4)",
+        "+abilities.spell_recall._description" : "At 11th level, the magus’s ability to recall spells using his arcane pool becomes more efficient. Whenever he recalls a spell with spell recall, he expends a number of points from his arcane pool equal to 1/2 the spell’s level (minimum 1). Furthermore, instead of recalling a used spell, as a swift action the magus can prepare a spell of the same level that he has in his spellbook. He does so by expending a number of points from his arcane pool equal to the spell’s level (minimum 1). The magus cannot apply metamagic feats to a spell prepared in this way. The magus does not need to reference his spellbook to prepare a spell in this way."
+      },
+      "12" : {
+        "+todo[a]" : "[Magus Level 12] Learn 2 additional Magus spells (level 1 - 4)",
+        "+todo[b]" : "[Magus Level 12] Learn 1 Magus Arcana Feat"
+      },
+      "13" : {
+        "+todo[a]" : "Magus Caster Level Increase: Level 5 spells unlocked!",
+        "+todo[b]" : "[Magus Level 13] Learn 2 additional Magus spells (level 1 - 5)",
+        "+feats.heavy_armor" : {
+          "_name" : "Heavy Armor",
+          "_description" : "At 13th level, a magus gains proficiency with heavy armor. A magus can cast magus spells while wearing heavy armor without incurring the normal arcane spell failure chance. Like any other arcane spellcaster, a magus using a shield incurs a chance of arcane spell failure if the spell in question has a somatic component.",
+          "_icon" : "breastplate"
+        },
+        "+class.magus._armor_proficiency[]" : "heavy"
+      },
+      "14" : {
+        "+todo[]" : "[Magus Level 14] Learn 2 additional Magus spells (level 1 - 5)",
+        "+feats.spell_combat_greater" : {
+          "_name" : "Spell Combat (Greater)",
+          "_description" : "At 14th level, the magus gains the ability to seamlessly cast spells and make melee attacks. Whenever he uses the spell combat ability, his concentration check bonus equals double the amount of the attack penalty taken.",
+          "_icon" : "sparkling-sabre"
+        }
+      },
+      "15" : {
+        "+todo[a]" : "[Magus Level 15] Learn 2 additional Magus spells (level 1 - 5)",
+        "+todo[b]" : "[Magus Level 15] Learn 1 Magus Arcana Feat"
+      },
+      "16" : {
+        "+todo[a]" : "Magus Caster Level Increase: Level 6 spells unlocked!",
+        "+todo[b]" : "[Magus Level 16] Learn 2 additional Magus spells (level 1 - 6)",
+        "+feats.counterstrike" : {
+          "_name" : "Counterstrike",
+          "_description" : "At 16th level, whenever an enemy within reach of the magus successfully casts a spell defensively, that enemy provokes an attack of opportunity from the magus after the spell is complete. This attack of opportunity cannot disrupt the spell.",
+          "_icon" : "quick-slash"
+        }
+      },
+      "17" : {
+        "+todo[]" : "[Magus Level 17] Learn 2 additional Magus spells (level 1 - 6)"
+      },
+      "18" : {
+        "+todo[a]" : "[Magus Level 18] Learn 2 additional Magus spells (level 1 - 6)",
+        "+todo[b]" : "[Magus Level 18] Learn 1 Magus Arcana Feat"
+      },
+      "19" : {
+        "+todo[]" : "[Magus Level 19] Learn 2 additional Magus spells (level 1 - 6)",
+        "+feats.spell_access_greater" : {
+          "_name" : "Spell Access (Greater)",
+          "_description" : "At 19th level, the magus gains access to an expanded spell list. He learns and places 14 spells from the wizard’s spell list into his spellbook as magus spells of their wizard level. He gains two of each of the following wizard spells not on the magus spell list: 0-level, 1st-level, 2nd-level, 3rd-level, 4th-level, 5th-level, and 6th-level. He can ignore the somatic component of these spells, casting them without the normal chance of spell failure.",
+          "_icon" : "book-aura"
+        },
+        "+todo[]" : "[Magus Level 19] Learn 2 Wizard spells for EACH spell level: 0 -> 6. Somatic components of these spells are removed"
+      },
+      "20": {
+        "+todo[]" : "[Magus Level 20] Learn 2 additional Magus spells (level 1 - 6)",
+        "+feats.true_magus" : {
+          "_name" : "True Magus",
+          "_description" : "At 20th level, the magus becomes a master of spells and combat. Whenever he uses his spell combat ability, he does not need to make a concentration check to cast the spell defensively. Whenever the magus uses spell combat and his spell targets the same creature as his melee attacks, he can choose to either increase the DC to resist the spell by +2, grant himself a +2 circumstance bonus on any checks made to overcome spell resistance, or grant himself a +2 circumstance bonus on all attack rolls made against the target during his turn.",
+          "_icon" : "laurel-crown"
+        }
+      }
+    }
+  }
+  },
+  "bladebound" : {
+    "_name" : "Bladebound",
+    "_description" : "A select group of magi are called to carry a black blade—a sentient weapon of often unknown and possibly unknowable purpose. These weapons become valuable tools and allies, as both the magus and weapon typically crave arcane power, but as a black blade becomes more aware, its true motivations manifest, and as does its ability to influence its wielder with its ever-increasing ego.",
+    "_icon" : "blade-fall",
+  "+class.magus": {
+    "main_attributes": "INT",
+    "alignment_restrictions": "",
+    "_armor_notes": "No magus spell failure from armor that user is proficient with (excluding shields).",
+    "_armor_proficiency": ["light"],
+    "_description": "There are those who spend their lives poring over ancient tomes and texts, unlocking the power of magic, and there are those who spend their time perfecting the use of individual weapons, becoming masters without equal. The magus is at once a student of both philosophies, blending magical ability and martial prowess into something entirely unique, a discipline in which both spell and steel are used to devastating effect. As he grows in power, the magus unlocks powerful forms of arcana that allow him to merge his talents further, and at the pinnacle of his art, the magus becomes a blur of steel and magic, a force that few foes would dare to stand against.",
+    "_hit_dice": "1d8",
+    "_skill_ranks": {
+	"base" : 2,
+	"_suffix" : " per level"
+    },
+    "_name": "Magus",
+    "_role": "Magi spend much of their time traveling the world, learning whatever martial or arcane secrets they can find. They might spend months learning a new sword-fighting style from a master warrior, while simultaneously moonlighting in the local library, poring through tomes of ancient lore. Most who take this path dabble in all sorts of lore, picking up anything that might aid them in their search for perfection.",
+    "_spell_notes": "Must prepare spells ahead of time with 8-hours rest and 1-hour study. To learn, prepare, or cast a spell, the magus must have an Intelligence score equal to at least 10 + the spell level. The Difficulty Class for a saving throw against a magus’s spell is 10 + the spell level + the magus’s Intelligence modifier.",
+    "_starting_wealth": "4d6 × 10 gp (average 140 gp)",
+    "_weapon_notes": "",
+    "_weapon_proficiency": ["simple", "martial"],
+    "archetype": "",
+    "bab": {
+      "table_lookup" : {
+        "index" : "class.magus.level",
+        "table" : [0,1,2,3,3,4,5,6,6,7,8,9,9,10,11,12,12,13,14,15]
+      }
+    },
+    "level": 0,
+    "save_fort": {
+      "base" : 2,
+      "divide" : ["class.magus.level",2]
+    },
+    "save_ref": {
+      "base" : 0,
+      "divide" : ["class.magus.level",3]
+    },
+    "save_will": {
+      "base" : 2,
+      "divide" : ["class.magus.level",2]
+    },
+    "spell_dc": {
+        "base": [ 10, "int" ]
+    },
+    "caster_level" : {
+      "min" : [ ["stats.int",-10],  {"table_lookup" : {
+        "index" : "class.magus.level",
+        "table" : [0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6,6,6]
+      }
+      }]
+    },
+    "spells_per_day": {
+      "lvl_0": {
+        "table_lookup": {
+          "default": 5,
+          "index": "class.magus.level",
+          "table": [0,3,4,4,4,4]
+        }
+      },
+      "lvl_1": {
+        "table_lookup": {
+          "default": 5,
+          "index": "class.magus.level",
+          "table": [0,1,2,3,3,4,4,4,4]
+        },
+        "bonus" : {
+          "table_lookup": {
+            "default": 0,
+            "index": "int",
+            "table": [0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5]
+          }
+        }
+      },
+      "lvl_2": {
+        "table_lookup": {
+          "default": 5,
+          "index": "class.magus.level",
+          "table": [0,0,0,0,1,2,3,3,4,4,4,4]
+        },
+        "bonus" : {
+          "table_lookup": {
+            "default": 0,
+            "index": "int",
+            "table": [0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4]
+          }
+        }
+      },
+      "lvl_3": {
+        "table_lookup": {
+          "default": 5,
+          "index": "class.magus.level",
+          "table": [0,0,0,0,0,0,0,1,2,3,3,4,4,4,4]
+        },
+        "bonus" : {
+          "table_lookup": {
+            "default": 0,
+            "index": "int",
+            "table": [0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4]
+          }
+        }
+      },
+      "lvl_4": {
+        "table_lookup": {
+          "default": 0,
+          "index": ["class.magus.level",-10],
+          "table": [1,2,3,3,4,4,4,4,5,5,5]
+        },
+        "bonus" : {
+          "table_lookup": {
+            "default": 0,
+            "index": "int",
+            "table": [0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4]
+          }
+        }
+      },
+      "lvl_5": {
+        "table_lookup": {
+          "default": 0,
+          "index": ["class.magus.level",-13],
+          "table": [1,2,3,3,4,4,5,5]
+        },
+        "bonus" : {
+          "table_lookup": {
+            "default": 0,
+            "index": "int",
+            "table": [0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4]
+          }
+        }
+      },
+      "lvl_6": {
+        "table_lookup": {
+          "default": 0,
+          "index": ["class.magus.level",-16],
+          "table": [1,2,3,4,5]
+        },
+        "bonus" : {
+          "table_lookup": {
+            "default": 0,
+            "index": "int",
+            "table": [0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4]
+          }
+        }
+      }
+    },
+    "level_up" : {
+      "1" :  {
+        "+stats.bab.magus" : "class.magus.bab",
+        "+stats.save_fort.magus" : "class.magus.save_fort",
+        "+stats.save_ref.magus" : "class.magus.save_ref",
+        "+stats.save_will.magus" : "class.magus.save_will",
+        "+skills.climb.magus" : 3,
+        "+skills.craft_template.magus" : 3,
+        "+skills.fly.magus" : 3,
+        "+skills.intimidate.magus" : 3,
+        "+skills.knowledge_arcana.magus" : 3,
+        "+skills.knowledge_dungeoneering.magus" : 3,
+        "+skills.knowledge_planes.magus" : 3,
+        "+skills.profession_template.magus" : 3,
+        "+skills.ride.magus" : 3,
+        "+skills.spellcraft.magus" : 3,
+        "+skills.swim.magus" : 3,
+        "+skills.use_magic_device.magus" : 3,
+        "+stats.arcane_pool" : {
+          "_name" : "Arcane Pool",
+          "max" : [1, {"divide" : ["class.magus.level", 3]}],
+          "base" : "int",
+          "_color": "purple"
+        },
+        "+info.play_shortcuts.combat_meters[]" : "stats.arcane_pool",
+        "+todo[a]" : "[Magus Level 1] Learn ALL level 0 Magus spells",
+        "+todo[b]" : "[Magus Level 1] Learn 3 (+INT bonus) level 1 Magus spells",
+        "+abilities.arcane_pool": {
+          "_description": "The pool refreshes once per day when the magus prepares his spells. At 1st level, a magus can expend 1 point from his arcane pool as a swift action to grant any weapon he is holding a +1 enhancement bonus for 1 minute. For every four levels beyond 1st, the weapon gains another +1 enhancement bonus, to a maximum of +5 at 17th level. These bonuses can be added to the weapon, stacking with existing weapon enhancement to a maximum of +5. Multiple uses of this ability do not stack with themselves. At 5th level, these bonuses can be used to add any of the following weapon properties: dancing, flaming, flaming burst, frost, icy burst, keen, shock, shocking burst, speed, or vorpal. Adding these properties consumes an amount of bonus equal to the property’s base price modifier. These properties are added to any the weapon already has, but duplicates do not stack. If the weapon is not magical, at least a +1 enhancement bonus must be added before any other properties can be added. These bonuses and properties are decided when the arcane pool point is spent and cannot be changed until the next time the magus uses this ability. These bonuses do not function if the weapon is wielded by anyone other than the magus. A magus can only enhance one weapon in this way at one time. If he uses this ability again, the first use immediately ends.",
+          "_name": "Arcane Pool",
+          "_icon" : "sparkling-sabre",
+          "level" : 0,
+          "damage" : {
+            "_bonus" : { "divide" : [ ["class.magus.level",-1],4], "base" : 1 }
+          },
+          "cast_time" : "1 Swift Action",
+          "duration" : {
+            "base" : 1,
+            "_suffix" : " minute"
+          },
+	  "_active" : false,
+          "uses": "stats.arcane_pool",
+          "target" : "Single Weapon"
+        },
+        "+feats.cantrips": {
+            "_description": "A magus can prepare a number of cantrips, or 0-level spells, each day, as noted on Table: Magus under “Spells per Day.” These spells are cast like any other spell, but they are not expended when cast and may be used again.",
+            "_name": "Cantrips",
+            "_icon" : "brainstorm"
+        },
+        "+feats.spellbooks" : {
+          "_name" : "Spellbooks",
+          "_description" : "A magus must study his spellbook each day to prepare his spells. He cannot prepare any spell not recorded in his spellbook except for read magic, which all magi can prepare from memory. A magus begins play with a spellbook containing all 0-level magus spells plus three 1st-level magus spells of his choice. The magus also selects a number of additional 1st-level magus spells equal to his Intelligence modifier to add to his spellbook. At each new magus level, he gains two new magus spells of any spell level or levels that he can cast (based on his new magus level) for his spellbook. At any time, a magus can also add spells found in other spellbooks to his own. A magus can learn spells from a wizard’s spellbook, just as a wizard can from a magus’s spellbook. The spells learned must be on the magus spell list, as normal. An alchemist can learn formulae from a magus’s spellbook, if the spells are also on the alchemist spell list. A magus cannot learn spells from an alchemist.",
+          "_icon" : "spell-book"
+        },
+        "+feats.spell_combat": {
+            "_description": "At 1st level, a magus learns to cast spells and wield his weapons at the same time. This functions much like two-weapon fighting, but the off-hand weapon is a spell that is being cast. To use this ability, the magus must have one hand free (even if the spell being cast does not have somatic components), while wielding a light or one-handed melee weapon in the other hand. As a full-round action, he can make all of his attacks with his melee weapon at a –2 penalty and can also cast any spell from the magus spell list with a casting time of 1 standard action (any attack roll made as part of this spell also takes this penalty). If he casts this spell defensively, he can decide to take an additional penalty on his attack rolls, up to his Intelligence bonus, and add the same amount as a circumstance bonus on his concentration check. If the check fails, the spell is wasted, but the attacks still take the penalty. A magus can choose to cast the spell first or make the weapon attacks first, but if he has more than one attack, he cannot cast the spell between weapon attacks.",
+            "_name": "Spell Combat",
+            "type": "Ex",
+            "_icon" : "sparkling-sabre"
+        }
+      },
+      "2" : {
+        "+todo[]" : "[Magus Level 2] Learn 2 additional Magus spells (level 1)",
+        "+feats.spellstrike": {
+            "_description": "At 2nd level, whenever a magus casts a spell with a range of “touch” from the magus spell list, he can deliver the spell through any weapon he is wielding as part of a melee attack. Instead of the free melee touch attack normally allowed to deliver the spell, a magus can make one free melee attack with his weapon (at his highest base attack bonus) as part of casting this spell. If successful, this melee attack deals its normal damage as well as the effects of the spell. If the magus makes this attack in concert with spell combat, this melee attack takes all the penalties accrued by spell combat melee attacks. This attack uses the weapon’s critical range (20, 19–20, or 18–20 and modified by the keen weapon property or similar effects), but the spell effect only deals ×2 damage on a successful critical hit, while the weapon damage uses its own critical modifier.",
+            "_name": "Spellstrike",
+            "_icon" : "flaming-trident"
+        }
+      },
+      "3" : {
+        "+todo[a]" : "[Magus Level 3] Learn 2 additional Magus spells (level 1)",
+        "+todo[b]" : "[Magus Level 3] Convert a one-handed slahing weapon, rapier, or sword cane into a black blade.",
+        "+stats.bb_arcane_pool" : {
+          "_name" : "Arcane Pool (Black Blade)",
+          "_color" : "darkblue",
+          "base" : 1,
+          "table_lookup" :{ "index" : "class.magus.level", "table" : [0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4] }
+        },
+        "+info.play_shortcuts.combat_meters[]" : "stats.bb_arcane_pool",
+        "+abilities.black_blade_strike" : {
+          "_name" : "Black Blade Strike",
+          "_description" : "As a free action, the magus can spend a point from the black blade’s arcane pool to grant the black blade a +1 bonus on damage rolls for 1 minute. For every four levels beyond 1st, this ability gives the black blade another +1 on damage rolls.",
+          "_icon" : "bloody-sword",
+          "_active" : false,
+          "uses" : "stats.bb_arcane_pool"
+        },
+        "+feats.telepathy" : {
+          "_name" : "Telepathy",
+          "_description" : "While a magus is wielding or carrying his black blade, he can communicate telepathically with the blade in a language that the magus and the black blade share.",
+          "_icon" : "awareness"
+        },
+        "+feats.unbreakable" : {
+          "_name" : "Unbreakable",
+          "_description" : "As long as it has at least 1 point in its arcane pool, a black blade is immune to the broken condition. If broken, the black blade is unconscious and powerless until repaired. If destroyed, the black blade can be reforged 1 week later through a special ritual that costs 200 gp per magus level. The ritual takes 24 hours to complete.",
+          "_icon" : "auto-repair"
+        }
+
+      },
+      "4" : {
+        "+todo[a]" : "Magus Caster Level Increase: Level 2 spells unlocked!",
+        "+todo[b]" : "[Magus Level 4] Learn 2 additional Magus spells (level 1 or 2)",
+        "+abilities.spell_recall" : {
+          "_name" : "Spell Recall",
+          "_description" : "At 4th level, the magus learns to use his arcane pool to recall spells he has already cast. With a swift action he can recall any single magus spell that he has already prepared and cast that day by expending a number of points from his arcane pool equal to the spell’s level (minimum 1). The spell is prepared again, just as if it had not been cast.",
+          "_icon" : "brain",
+          "uses" : "stats.arcane_pool",
+          "cast_time" : "1 Swift Action"
+        }
+      },
+      "5" : {
+        "+todo[a]" : "[Magus Level 5] Learn 2 additional Magus spells (level 1 or 2)",
+        "+todo[b]" : "[Magus Level 5] Bonus Feat! Must be a combat, metamagic, or item creation feat.",
+        "+abilities.energy_attunement" : {
+          "_name" : "Energy Attunement",
+          "_description" : "At 5th level, as a free action, a magus can spend a point of his black blade’s arcane pool to have it deal one of the following types of damage instead of weapon damage: cold, electricity, or fire. He can spend 2 points from the black blade’s arcane pool to deal sonic or force damage instead of weapon damage. This effect lasts until the start of the magus’s next turn.",
+          "_icon" : "lightning-blade",
+          "_active" : false,
+          "uses" : "stats.bb_arcane_pool"
+        }
+      },
+      "6" : {
+        "+todo[a]" : "[Magus Level 6] Learn 2 additional Magus spells (level 1 or 2)",
+        "+todo[b]" : "[Magus Level 6] Learn 1 Magus Arcana Feat"
+      },
+      "7" : {
+        "+todo[a]" : "Magus Caster Level Increase: Level 3 spells unlocked!",
+        "+todo[b]" : "[Magus Level 7] Learn 2 additional Magus spells (level 1, 2, or 3)",
+        "+feats.knowledge_pool" : {
+          "_name" : "Knowledge Pool",
+          "_description" : "At 7th level, when a magus prepares his magus spells, he can decide to expend 1 or more points from his arcane pool, up to his Intelligence bonus. For each point he expends, he can treat any one spell from the magus spell list as if it were in his spellbook and can prepare that spell as normal that day. If he does not cast spells prepared in this way before the next time he prepares spells, he loses those spells. He can also cast spells added in this way using his spell recall ability, but only until he prepares spells again.",
+          "_icon" : "book-pile"
+        },
+        "+feats.medium_armor" : {
+          "_name" : "Medium Armor",
+          "_description" : "At 7th level, a magus gains proficiency with medium armor. A magus can cast magus spells while wearing medium armor without incurring the normal arcane spell failure chance. Like any other arcane spellcaster, a magus wearing heavy armor or using a shield incurs a chance of arcane spell failure if the spell in question has a somatic component.",
+          "_icon" : "chain-mail"
+        },
+        "+class.magus._armor_proficiency[]" : "medium"
+      },
+      "8" : {
+        "+todo[]" : "[Magus Level 8] Learn 2 additional Magus spells (level 1, 2, or 3)",
+        "+feats.spell_combat_improved" : {
+          "_name" : "Spell Combat (Improved)",
+          "_description" : "At 8th level, the magus’s ability to cast spells and make melee attacks improves. When using the spell combat ability, the magus receives a +2 circumstance bonus on concentration checks, in addition to any bonus granted by taking an additional penalty on the attack roll.",
+          "_icon" : "sparkling-sabre"
+        }
+      },
+      "9" : {
+        "+todo[a]" : "[Magus Level 9] Learn 2 additional Magus spells (level 1, 2, or 3)",
+        "+todo[b]" : "[Magus Level 9] Learn 1 Magus Arcana Feat",
+        "+abilities.teleport_blade" : {
+          "_name" : "Teleport Blade",
+          "_description" : "As a standard action, a magus of 9th level or higher can expend an arcane point from his or his black blade’s arcane pool, and can call his black blade from as far as 1 mile away, causing it to instantaneously teleport to his hand.",
+          "_icon" : "teleport",
+          "uses" : "stats.bb_arcane_pool"
+        }
+      },
+      "10" : {
+        "+todo[a]" : "Magus Caster Level Increase: Level 4 spells unlocked!",
+        "+todo[b]" : "[Magus Level 10] Learn 2 additional Magus spells (levels 1 - 4)",
+        "+feats.fighter_training" : {
+          "_name" : "Fighter Training",
+          "_description" : "Starting at 10th level, a magus counts 1/2 his total magus level as his fighter level for the purpose of qualifying for feats. If he has levels in fighter, these levels stack.",
+          "_icon" : "muscle-up"
+        }
+      },
+      "11" : {
+        "+todo[]" : "[Magus Level 11] Learn 2 additional Magus spells (level 1 - 4)",
+        "+abilities.spell_recall._description" : "At 11th level, the magus’s ability to recall spells using his arcane pool becomes more efficient. Whenever he recalls a spell with spell recall, he expends a number of points from his arcane pool equal to 1/2 the spell’s level (minimum 1). Furthermore, instead of recalling a used spell, as a swift action the magus can prepare a spell of the same level that he has in his spellbook. He does so by expending a number of points from his arcane pool equal to the spell’s level (minimum 1). The magus cannot apply metamagic feats to a spell prepared in this way. The magus does not need to reference his spellbook to prepare a spell in this way."
+      },
+      "12" : {
+        "+todo[a]" : "[Magus Level 12] Learn 2 additional Magus spells (level 1 - 4)",
+        "+todo[b]" : "[Magus Level 12] Learn 1 Magus Arcana Feat"
+      },
+      "13" : {
+        "+todo[a]" : "Magus Caster Level Increase: Level 5 spells unlocked!",
+        "+todo[b]" : "[Magus Level 13] Learn 2 additional Magus spells (level 1 - 5)",
+        "+feats.heavy_armor" : {
+          "_name" : "Heavy Armor",
+          "_description" : "At 13th level, a magus gains proficiency with heavy armor. A magus can cast magus spells while wearing heavy armor without incurring the normal arcane spell failure chance. Like any other arcane spellcaster, a magus using a shield incurs a chance of arcane spell failure if the spell in question has a somatic component.",
+          "_icon" : "breastplate"
+        },
+        "+class.magus._armor_proficiency[]" : "heavy",
+        "+abilities.transfer_arcana" : {
+          "_name" : "Transfer Arcana",
+          "_description" : "At 13th level, once per day, a magus can attempt to siphon points from his black blade’s arcane pool into his own arcane pool. Doing so takes a full-round action and the magus must succeed at a Will saving throw with a DC equal to the black blade’s ego. If the magus succeeds, he regains 1 point to his arcane pool for every 2 points he saps from his black blade. If he fails the saving throw, the magus becomes fatigued (but can try again). If he is fatigued, he becomes exhausted instead. He cannot use this ability if he is exhausted.",
+          "_icon" : "transform",
+          "uses" : "stats.bb_arcane_pool"
+        }
+      },
+      "14" : {
+        "+todo[]" : "[Magus Level 14] Learn 2 additional Magus spells (level 1 - 5)",
+        "+feats.spell_combat_greater" : {
+          "_name" : "Spell Combat (Greater)",
+          "_description" : "At 14th level, the magus gains the ability to seamlessly cast spells and make melee attacks. Whenever he uses the spell combat ability, his concentration check bonus equals double the amount of the attack penalty taken.",
+          "_icon" : "sparkling-sabre"
+        }
+      },
+      "15" : {
+        "+todo[a]" : "[Magus Level 15] Learn 2 additional Magus spells (level 1 - 5)",
+        "+todo[b]" : "[Magus Level 15] Learn 1 Magus Arcana Feat"
+      },
+      "16" : {
+        "+todo[a]" : "Magus Caster Level Increase: Level 6 spells unlocked!",
+        "+todo[b]" : "[Magus Level 16] Learn 2 additional Magus spells (level 1 - 6)",
+        "+feats.counterstrike" : {
+          "_name" : "Counterstrike",
+          "_description" : "At 16th level, whenever an enemy within reach of the magus successfully casts a spell defensively, that enemy provokes an attack of opportunity from the magus after the spell is complete. This attack of opportunity cannot disrupt the spell.",
+          "_icon" : "quick-slash"
+        }
+      },
+      "17" : {
+        "+todo[]" : "[Magus Level 17] Learn 2 additional Magus spells (level 1 - 6)",
+        "+abilities.spell_defence" : {
+          "_name" : "Spell Defence",
+          "_description" : "A magus of 17th level or higher can expend an arcane point from his weapon’s arcane pool as a free action; he then gains SR equal to his black blade’s ego until the start of his next turn.",
+          "_icon" : "transform",
+          "uses" : "stats.bb_arcane_pool"
+        }
+      },
+      "18" : {
+        "+todo[a]" : "[Magus Level 18] Learn 2 additional Magus spells (level 1 - 6)",
+        "+todo[b]" : "[Magus Level 18] Learn 1 Magus Arcana Feat"
+      },
+      "19" : {
+        "+todo[]" : "[Magus Level 19] Learn 2 additional Magus spells (level 1 - 6)",
+        "+feats.spell_access_greater" : {
+          "_name" : "Spell Access (Greater)",
+          "_description" : "At 19th level, the magus gains access to an expanded spell list. He learns and places 14 spells from the wizard’s spell list into his spellbook as magus spells of their wizard level. He gains two of each of the following wizard spells not on the magus spell list: 0-level, 1st-level, 2nd-level, 3rd-level, 4th-level, 5th-level, and 6th-level. He can ignore the somatic component of these spells, casting them without the normal chance of spell failure.",
+          "_icon" : "book-aura"
+        },
+        "+todo[]" : "[Magus Level 19] Learn 2 Wizard spells for EACH spell level: 0 -> 6. Somatic components of these spells are removed",
+        "+feats.life_drinker" : {
+          "_name" : "Life Drinker",
+          "_description" : "At 19th level, each time the magus kills a living creature with the black blade, he can pick one of the following effects: the black blade restores 2 points to its arcane pool; the black blade restores 1 point to its arcane pool and the magus restores 1 point to his arcane pool; the magus gains a number of temporary hit points equal to the black blade’s ego (these temporary hit points last until spent or 1 minute, whichever is shorter). The creature killed must have a number of Hit Dice equal to half the magus’s character level for this to occur.",
+          "_icon" : "dripping-blade"
+        }
+      },
+      "20": {
+        "+todo[]" : "[Magus Level 20] Learn 2 additional Magus spells (level 1 - 6)",
+        "+feats.true_magus" : {
+          "_name" : "True Magus",
+          "_description" : "At 20th level, the magus becomes a master of spells and combat. Whenever he uses his spell combat ability, he does not need to make a concentration check to cast the spell defensively. Whenever the magus uses spell combat and his spell targets the same creature as his melee attacks, he can choose to either increase the DC to resist the spell by +2, grant himself a +2 circumstance bonus on any checks made to overcome spell resistance, or grant himself a +2 circumstance bonus on all attack rolls made against the target during his turn.",
+          "_icon" : "laurel-crown"
+        }
+      }
+    }
+  }
+  }
+}

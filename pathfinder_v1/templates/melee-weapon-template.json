@@ -1,0 +1,21 @@
+{
+    "+inventory.WEAPON" : {
+      "_name" : "",
+      "_description" : "",
+      "weight" : 1,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple | Martial | Exotic",
+        "hands_needed" : 1,
+        "range" : { "base" : 5, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d6", "_bonus" : { "melee" : "str"} },
+        "_critical" : "20 (x2)",
+        "special" : "",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "damage_type" : "Blunt | Pierce | Slash",
+        "is_light" : false,
+        "is_ranged" : false
+      }
+    }
+}

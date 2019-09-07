@@ -1,0 +1,21 @@
+{
+    "+inventory.orc_double_axe" : {
+      "_name" : "Orc Double Axe",
+      "_description" : "A cruel weapon with blades placed at opposite ends of a long haft, an orc double axe is a double weapon. Though invented by and traditionally associated with orcs, the double axe can be crafted and wielded by other races as well, though many disdain it for its extreme weight and clumsiness. Because of the blades at either end of the axe, the wielder must hold an orc double axe in the middle of its haft, and utilize a weaving, slashing fighting style more akin to that of a quarterstaff than to that of a greataxe or battleaxe.",
+      "weight" : 15,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Exotic",
+        "hands_needed" : 2,
+        "range" : { "base" : 5, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d8", "_bonus" : { "multiply" : [1.5,"str"]} },
+        "_critical" : "20 (x3)",
+        "special" : "Can attack twice in a single round",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "damage_type" : "Slash",
+        "is_light" : false,
+        "is_ranged" : false
+      }
+    }
+}

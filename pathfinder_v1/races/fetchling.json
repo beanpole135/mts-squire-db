@@ -1,0 +1,68 @@
+{
+  "fetchling-std" : {
+    "_name" : "Fetchling (Standard)",
+    "_description" : "Descended from humans trapped on the Shadow Plane, fetchlings are creatures of darkness and light intertwined. Generations of contact with that strange plane and its denizens have made fetchlings a race apart from humanity. While fetchlings acknowledge their origins, they exhibit little physical or cultural resemblance to their ancestors on the Material Plane, and are often insulted when compared to humans. Some members of the race also take offense at the name fetchling, as it was given to them by humans who saw them as little more than fetchers of rare materials from the Shadow Plane. Most fetchlings instead prefer to be called kayal, a word borrowed from Aklo that roughly translates to “shadow people” or “dusk dwellers.” Infused with the essence of the Shadow Plane and possessing human blood commingled with that of the Shadow Plane’s natives, fetchlings have developed traits and abilities that complement their native plane’s bleak and colorless terrain. Though most fetchlings treat the Shadow Plane as home, they often trade and deal with creatures of the Material Plane. Some fetchlings go so far as to create enclaves on the Material Plane in order to establish alliances and trade routes in areas where the boundary between the two planes is less distinct. These fetchlings often serve as merchants, middlemen, and guides for races on both sides of the planar boundary.",
+    "_icon" : "dark-squad",
+    "+info.race" : {
+      "_name" : "Fetchling",
+      "_description" : "Descended from humans trapped on the Shadow Plane, fetchlings are creatures of darkness and light intertwined. Generations of contact with that strange plane and its denizens have made fetchlings a race apart from humanity. While fetchlings acknowledge their origins, they exhibit little physical or cultural resemblance to their ancestors on the Material Plane, and are often insulted when compared to humans. Some members of the race also take offense at the name fetchling, as it was given to them by humans who saw them as little more than fetchers of rare materials from the Shadow Plane. Most fetchlings instead prefer to be called kayal, a word borrowed from Aklo that roughly translates to “shadow people” or “dusk dwellers.” Infused with the essence of the Shadow Plane and possessing human blood commingled with that of the Shadow Plane’s natives, fetchlings have developed traits and abilities that complement their native plane’s bleak and colorless terrain. Though most fetchlings treat the Shadow Plane as home, they often trade and deal with creatures of the Material Plane. Some fetchlings go so far as to create enclaves on the Material Plane in order to establish alliances and trade routes in areas where the boundary between the two planes is less distinct. These fetchlings often serve as merchants, middlemen, and guides for races on both sides of the planar boundary.",
+      "physical description" : "Superficially, fetchlings resemble unnaturally lithe—bordering on fragile—humans. Their adopted home has drained their skin and hair of bright colors. Their complexion ranges from stark white to deep black, and includes all the various shades of gray between those two extremes. Their eyes are pupilless and pronounced, and they typically glow a luminescent shade of yellow or greenish yellow, though rare individuals possess blue-green eyes. While their hair tends to be stark white or pale gray, many fetchlings dye their hair black. Some members of higher station or those who dwell on the Material Plane dye their hair with more striking colors, often favoring deep shades of violet, blue, and crimson.",
+      "society" : "Fetchlings are adaptable creatures, and as such display no singular preference for moral philosophy or the rule of law. Most mimic the cultural norms and governmental structures of those they live near or the creatures they serve. While fetchlings are arguably the most populous race on the Shadow Plane, they rarely rule over their own kind; most serve as vassals or subjects to the great umbral dragons of their homeland, or the bizarre nihiloi who dwell in the deeper darkness. Above all, fetchlings are survivors. Their tenacity, versatility, and devious pragmatism have helped them survive the harsh environs of the Shadow Plane and plots of the powerful creatures dwelling within it. On the Material Plane, especially if unable to return to their home plane at will, fetchlings tend to cluster in small, insular communities of their own kind, mimicking the cultural norms and political structures of those they trade with.",
+      "relations" : "Because of their shared ancestry, fetchlings interact most easily with humans, though they also find kinship with gnomes and other races that were cut off from their home planes or are not native to the Material Plane. Their pragmatism and adaptable nature put them at odds with warlike or destructive races, and when they do have to deal with orcs, goblinoids, or other savage cultures, fetchlings will often play the part of the fawning sycophant, a tactic learned from serving umbral dragons and one they see as key to their race’s survival. Strangely, their relationship with dwarves and elves are rather strained. Dwarves find fetchlings duplicitous and creepy, while the tension with elves is so subtle and inexplicable that both races find it difficult to explain.",
+      "alignment and religion" : "Fetchlings—especially those living outside the Shadow Plane—worship a wide variety of gods. A small number of evil fetchlings worship demon lords of darkness and lust.",
+      "adventurers" : "The Shadow Plane’s ever-present hazards pose great danger to fetchling adventurers, but also great opportunity. Because of their servile status on their home plane, however, most fetchlings prefer to adventure on the Material Plane, which often offers more freedom and trading opportunities between the two planes. Fetchlings make excellent ninjas, oracles, rangers, rogues, and summoners.",
+      "ages" : "Adulthood: 20 years, Lifespan: 70-100 years",
+      "male names" : "Arim, Drosil, Jegan, Somar, Yetar, Zoka.",
+      "female names" : "Acera, Amelisce, Inva, Renza, Zaitherin.",
+       "male height" : "5ft 6in to 6ft 4in",
+       "male weight" : "96 to 126 lbs",
+       "female height" : "5ft 4in to 6ft 2in",
+       "female weight" : "86 to 116 lbs",
+      "languages_available" : ["aklo","aquan", "auran", "draconic","d\"ziriak (no speak)", "ignan", "terran","any regional human language"]
+    },
+    "+info.type" : ["outsiders", "native"],
+    "+stats.languages._suffix" : "Common",
+    "+stats.dex.fetchling" : 2,
+    "+stats.wis.fetchling" : -2,
+    "+stats.cha.fetchling" : 2,
+    "+stats.size.fetchling" : 0,
+    "+stats.speed.base" : 30,
+    "+stats.vision_dark.base" : 60,
+    "+stats.vision_dim.base" : { "multiply" : [2, "stats.vision"] },
+    "+stats.vision_dim.description" : "Light sources allow sight 2x farther than normal",
+    "+stats.resist_cold" : { "base" : 0, "fetchling" : 5, "_name" : "Cold Resistance" },
+    "+stats.resist_electricity" : { "base" : 0, "fetchling" : 5, "_name" : "Electricity Resistance" },
+    "+skills.stealth.fetchling" : 2,
+    "+skills.knowledge_planes.fetchling" : 2,
+    "+feats.shadow_blending" : { "_name" : "Shadow Blending", "type" : "Su", "_description" : "Attacks against a fetchling in dim light have a 50% miss chance instead of the normal 20% miss chance. This ability does not grant total concealment; it just increases the miss chance." },
+    "+abilities.disguise_self": {
+            "_description": "You make yourself – including clothing, armor, weapons, and equipment – look different. You can seem 1 foot shorter or taller, thin, fat, or in between. You cannot change your creature type (although you can appear as another subtype). Otherwise, the extent of the apparent change is up to you. You could add or obscure a minor feature or look like an entirely different person or gender.\n\nThe spell does not provide the abilities or mannerisms of the chosen form, nor does it alter the perceived tactile (touch) or audible (sound) properties of you or your equipment. If you use this spell to create a disguise, you get a +10 bonus on the Disguise check. A creature that interacts with the glamer gets a Will save to recognize it as an illusion.",
+            "_name": "Disguise Self",
+            "cast_time": "1 Standard Action",
+            "dc": {
+                "base": ["10", "stats.total_level"   ]
+            },
+            "duration": {
+                "_suffix": " minutes",
+                "multiply": [ 10,  "stats.total_level" ]
+            },
+            "level": 0,
+            "prepared": true,
+            "range": "Personal",
+            "require": "V, S",
+            "save": "Will (Recognize illusion)",
+            "spell_failure": {
+                "_suffix": "%",
+                "base": "stats.spell_failure"
+            },
+            "target": "Self",
+            "uses": {
+                "per_day": 1,
+                "used_today": 0
+            }
+        },
+    "+abilities.shadow_walk" : { "_name" : "Shadow Walk", "type" : "Sp", "required_level" : 9,  "_description" : "When a fetchling reaches 9th level in any combination of classes, he gains shadow walk (self only) as a spell-like ability usable once per day as a spell-like ability.  A fetchling’s caster level is equal to his total Hit Dice." },
+    "+abilities.plane_shift" : { "_name" : "Plane Shift", "type" : "Sp", "required_level" : 13, "_description" : "When a fetchling reaches 13th level in any combination of classes, he gains plane shift (self only, to the Shadow Plane or the Material Plane only) usable once per day as a spell-like ability. A fetchling’s caster level is equal to his total Hit Dice." },
+    "+info.play_shortcuts.combat_defence[]" : "feats.shadow_blending"
+  }
+}
