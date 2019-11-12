@@ -1,6 +1,7 @@
 {
 "pathfinder_v1/feats/combat.json" : { "name" : "Combat Feats", "icon" : "" },
 "pathfinder_v1/feats/general.json" : { "name" : "General Feats", "icon" : "" },
+"pathfinder_v1/feats/magus-arcana.json" : { "name" : "Magus Arcana", "icon" : "" },
 "pathfinder_v1/misc/bloodrager-bloodlines.json" : { "name" : "", "icon" : "" },
 "pathfinder_v1/races/fetchling.json" : { "name" : "", "icon" : "" },
 "pathfinder_v1/races/halfling.json" : { "name" : "", "icon" : "" },
