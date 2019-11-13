@@ -5,5 +5,131 @@
     "_icon" : "bouncing-sword",
     "_requires" : [],
     "_copyright" : "The Secrets of the Magus. Copyright 2011, Steven D. Russell. Author: Steven D. Russell."
+  },
+  "+feats.accurate_strike" : {
+    "_name" : "Accurate Strike (Ex)",
+    "_description" : "<p>The magus can expend 2 points from his arcane pool as a swift action to resolve all of his melee weapon attacks until the end of his turn as melee touch attacks.</p>",
+    "_icon" : "",
+    "_requires" : ["Magus Level 9+"],
+    "_copyright" : "Pathfinder Roleplaying Game Ultimate Combat. © 2011, Paizo Publishing, LLC; Authors: Jason Bulmahn, Tim Hitchcock, Colin McComb, Rob McCreary, Jason Nelson, Stephen Radney-MacFarland, Sean K Reynolds, Owen K.C. Stephens, and Russ Taylor."
+  },
+  "+feats.aquatic_agility" : {
+    "_name" : "Aquatic Agility (Su)",
+    "_description" : "<p>As an immediate action, the magus can spend 1 point from his arcane pool to gain the benefits of water breathing for 1 round per level. During this time, he can ignore the effects of rough water and underwater combat on his attacks and movement.</p>",
+    "_icon" : "",
+    "_requires" : ["Magus Level 6+"],
+    "_copyright" : "Pathfinder Player Companion: Blood of the Moon © 2013, Paizo Publishing, LLC; Authors: Tim Akers, Neal Litherland, David N. Ross, and Tork Shaw."
+  },
+  "+feats.arcane_accuracy" : {
+    "_name" : "Arcane Accuracy (Su)",
+    "_description" : "<p>The magus can expend 1 point from his arcane pool as a swift action to grant himself an insight bonus equal to his Intelligence bonus on all attack rolls until the end of his turn.</p>",
+    "_icon" : "",
+    "_requires" : [],
+    "_copyright" : "Pathfinder Roleplaying Game: Ultimate Magic. © 2011, Paizo Publishing, LLC; Authors: Jason Bulmahn, Tim Hitchcock, Colin McComb, Rob McCreary, Jason Nelson, Stephen Radney-MacFarland, Sean K Reynolds, Owen K.C. Stephens, and Russ Taylor."
+  },
+  "+feats.arcane_cloak" : {
+    "_name" : "Arcane Cloak (Su)",
+    "_description" : "<p>The magus can expend 1 point from his arcane pool to add his Intelligence bonus to Stealth checks and Bluff checks to create a diversion in order to hide. This bonus lasts for 1 minute.</p>",
+    "_icon" : "",
+    "_requires" : [],
+    "_copyright" : "Pathfinder Roleplaying Game Ultimate Combat. © 2011, Paizo Publishing, LLC; Authors: Jason Bulmahn, Tim Hitchcock, Colin McComb, Rob McCreary, Jason Nelson, Stephen Radney-MacFarland, Sean K Reynolds, Owen K.C. Stephens, and Russ Taylor."
+  },
+  "+feats.arcane_dealer" : {
+    "_name" : "Arcane Dealer (Su)",
+    "_description" : "<p>The magus gains the Deadly Dealer feat, even if he does not meet the prerequisites.<br>He can use his arcane pool to grant a deck of cards an enhancement bonus as though it were a ranged weapon with 54 pieces of ammunition. The magus must use either Arcane Strike or his arcane pool to enhance the cards in order to use them as weapons.</p>",
+    "_icon" : "",
+    "_requires" : ["Magus Level 6+"],
+    "_copyright" : "Pathfinder Player Companion: The Harrow Handbook © 2014, Paizo Inc.; Authors: Crystal Frasier, Will McCardell, and David Schwartz."
+  },
+  "+feats.arcane_deed" : {
+    "_name" : "Arcane Deed (Ex)",
+    "_description" : "<p>When a magus takes this arcana, he can pick any one deed from the swashbuckler class feature as long as that deed can be used by a swashbuckler of his magus level. The magus can use that deed by using points from his arcane pool as the panache points required for that deed. Even if he gains a panache pool through another means, the magus is not considered to have at least 1 point in his panache pool for the purpose of deeds selected with arcane deed, and his effective swashbuckler level for determining such a deed’s effect is 0.<br>A magus can take this arcana multiple times, each time gaining a new deed.</p>",
+    "_icon" : "",
+    "_requires" : ["Flamboyant Arcana"],
+    "_copyright" : "Pathfinder Roleplaying Game: Advanced Class Guide © 2014, Paizo Inc.; Authors: Dennis Baker, Ross Byers, Jesse Benner, Savannah Broadway, Jason Bulmahn, Jim Groves, Tim Hitchcock, Tracy Hurley, Jonathan H. Keith, Will McCardell, Dale C. McCoy, Jr., Tom Phillips, Stephen Radney-MacFarland, Thomas M. Reid, Sean K Reynolds, Tork Shaw, Owen K.C. Stephens, and Russ Taylor."
+  },
+  "+feats.arcane_edge" : {
+    "_name" : "Arcane Edge (Su)",
+    "_description" : "<p>The magus can expend 1 point from his arcane pool as an immediate action after hitting a target with a slashing or piercing weapon in order to deal an amount of bleed damage equal to his Intelligence modifier (minimum 0).</p>",
+    "_icon" : "bleeding-sword",
+    "_requires" : ["Magus Level 9+"],
+    "_copyright" : "Pathfinder Roleplaying Game Ultimate Combat. © 2011, Paizo Publishing, LLC; Authors: Jason Bulmahn, Tim Hitchcock, Colin McComb, Rob McCreary, Jason Nelson, Stephen Radney-MacFarland, Sean K Reynolds, Owen K.C. Stephens, and Russ Taylor."
+  },
+  "+feats.arcane_redoubt" : {
+    "_name" : "Arcane Redoubt (Su)",
+    "_description" : "<p>As a swift action, the magus can expend 1 point from his arcane pool to treat his shield bonus to AC (including any enhancement bonus) as a bonus to touch AC until the beginning of his next turn.</p>",
+    "_icon" : "",
+    "_requires" : [],
+    "_copyright" : "Pathfinder Roleplaying Game Ultimate Combat. © 2011, Paizo Publishing, LLC; Authors: Jason Bulmahn, Tim Hitchcock, Colin McComb, Rob McCreary, Jason Nelson, Stephen Radney-MacFarland, Sean K Reynolds, Owen K.C. Stephens, and Russ Taylor."
+  },
+  "+feats.arcane_redoubt_greater" : {
+    "_name" : "Arcane Redoubt (Greater) (Su)",
+    "_description" : "<p>Whenever the magus uses his arcane redoubt magus arcana, he may spend an additional point from his arcane pool in order to apply his shield bonus to AC (including any enhancement bonus) as a bonus on Reflex saves until the beginning of his next turn. If he is targeted with an effect requiring a Reflex save while using this power, he may spend 2 points from his arcane pool as an immediate action to grant himself evasion, or 4 points to grant himself improved evasion.</p>",
+    "_icon" : "",
+    "_requires" : ["Magus Level 12+", "Arcane Redoubt"],
+    "_copyright" : "Pathfinder Roleplaying Game Ultimate Combat. © 2011, Paizo Publishing, LLC; Authors: Jason Bulmahn, Tim Hitchcock, Colin McComb, Rob McCreary, Jason Nelson, Stephen Radney-MacFarland, Sean K Reynolds, Owen K.C. Stephens, and Russ Taylor."
+  },
+  "+feats.arcane_scent" : {
+    "_name" : "Arcane Scent (Ex)",
+    "_description" : "<p>The magus can sniff out other spellcasters. By spending 1 point from his arcane pool, the magus gains the scent special quality for 1 hour per magus level. This scent can only detect creatures capable of casting spells or using spell-like abilities. Additionally, while this effect persists, the magus can attempt a Spellcraft check as a move action to determine the highest level spell a detected creature is capable of casting (DC = 10 + the creature’s caster level). The magus can only attempt this Spellcraft check once per creature per 24 hours.</p>",
+    "_icon" : "",
+    "_requires" : [],
+    "_copyright" : "Pathfinder Player Companion: Blood of the Moon © 2013, Paizo Publishing, LLC; Authors: Tim Akers, Neal Litherland, David N. Ross, and Tork Shaw."
+  },
+  "+feats.CHANGEME" : {
+    "_name" : "CHANGEME (Su)",
+    "_description" : "<p></p>",
+    "_icon" : "",
+    "_requires" : [],
+    "_copyright" : "Pathfinder Roleplaying Game Ultimate Combat. © 2011, Paizo Publishing, LLC; Authors: Jason Bulmahn, Tim Hitchcock, Colin McComb, Rob McCreary, Jason Nelson, Stephen Radney-MacFarland, Sean K Reynolds, Owen K.C. Stephens, and Russ Taylor."
+  },
+  "+feats.bane_blade" : {
+    "_name" : "Bane Blade (Su)",
+    "_description" : "<p>Whenever the magus enhances his weapon using his arcane pool, he may spend 1 additional point from his arcane pool to add the bane special ability to the weapon.</p>",
+    "_icon" : "",
+    "_requires" : ["Magus Level 15+"],
+    "_copyright" : "Pathfinder Roleplaying Game Ultimate Combat. © 2011, Paizo Publishing, LLC; Authors: Jason Bulmahn, Tim Hitchcock, Colin McComb, Rob McCreary, Jason Nelson, Stephen Radney-MacFarland, Sean K Reynolds, Owen K.C. Stephens, and Russ Taylor."
+  },
+  "+feats.book_bound" : {
+    "_name" : "Book Bound (Su)",
+    "_description" : "<p>As long as he wields his spellbook in his off hand, the magus can take an immediate action to gain a +4 bonus on a concentration check he attempts within the next round. This bonus stacks with other bonuses, including the bonus from the concentrate arcana. The magus can use this ability three times per day.</p>",
+    "_icon" : "",
+    "_requires" : [],
+    "_copyright" : "Pathfinder Player Companion: Disciple’s Doctrine © 2018, Paizo Inc.; Authors: Saif Ansari, Mara Lynn Butler, Jeffrey Hersh, Andrew Hoskins, Lyz Liddell, Luis Loza, and Linda Zayas-Palmer."
+  },
+  "+feats.broad_study" : {
+    "_name" : "Broad Study (Ex)",
+    "_description" : "<p>The magus selects another one of his spellcasting classes. The magus can use his spellstrike and spell combat abilities while casting or using spells from the spell list of that class. This does not allow him to cast arcane spells from that class’s spell list without suffering the normal chances of arcane spell failure, unless the spell lacks somatic components.</p>",
+    "_icon" : "",
+    "_requires" : ["Magus Level 6+", "Level(s) in another spellcasting class"],
+    "_copyright" : "Pathfinder Roleplaying Game: Ultimate Magic. © 2011, Paizo Publishing, LLC; Authors: Jason Bulmahn, Tim Hitchcock, Colin McComb, Rob McCreary, Jason Nelson, Stephen Radney-MacFarland, Sean K Reynolds, Owen K.C. Stephens, and Russ Taylor."
+  },
+  "+feats.circle_of_order" : {
+    "_name" : "Circle of Order (Su)",
+    "_description" : "<p>As a swift action, the magus can spend 1 point from his arcane pool to fortify his defenses against chaotic attacks. This grants him a dodge bonus to his AC equal to half his magus level (maximum +10 at 20th level) against chaotic-aligned attacks and effects and outsiders with the chaotic subtype until the beginning of his next turn. (For example, the magus would gain the dodge bonus against attacks from an anarchic weapon or a glabrezu’s pincers.)</p>",
+    "_icon" : "",
+    "_requires" : ["Magus Level 9+"],
+    "_copyright" : "Pathfinder Player Companion: Disciple’s Doctrine © 2018, Paizo Inc.; Authors: Saif Ansari, Mara Lynn Butler, Jeffrey Hersh, Andrew Hoskins, Lyz Liddell, Luis Loza, and Linda Zayas-Palmer."
+  },
+  "+feats.close_range" : {
+    "_name" : "Close Range (Ex)",
+    "_description" : "<p>The magus can deliver ray spells that feature a ranged touch attack as melee touch spells. He can use a ranged touch attack spell that targets more than one creature (such as scorching ray), but he makes only one melee touch attack to deliver one of these ranged touch effects; additional ranged touch attacks from that spell are wasted and have no effect. These spells can be used with the spellstrike class feature.</p>",
+    "_icon" : "",
+    "_requires" : [],
+    "_copyright" : "Pathfinder Roleplaying Game: Ultimate Magic. © 2011, Paizo Publishing, LLC; Authors: Jason Bulmahn, Tim Hitchcock, Colin McComb, Rob McCreary, Jason Nelson, Stephen Radney-MacFarland, Sean K Reynolds, Owen K.C. Stephens, and Russ Taylor."
+  },
+  "+feats.concentrate" : {
+    "_name" : "Concentrate (Ex)",
+    "_description" : "<p>The magus can reroll any concentration check he has just made with a +4 bonus. He must use this ability after the roll is made, but before the roll’s outcome is determined. The magus must take the second roll, even if it is worse. The magus can use this ability once per day.</p>",
+    "_icon" : "",
+    "_requires" : [],
+    "_copyright" : "Pathfinder Roleplaying Game: Ultimate Magic. © 2011, Paizo Publishing, LLC; Authors: Jason Bulmahn, Tim Hitchcock, Colin McComb, Rob McCreary, Jason Nelson, Stephen Radney-MacFarland, Sean K Reynolds, Owen K.C. Stephens, and Russ Taylor."
+  },
+  "+feats.critical_strike" : {
+    "_name" : "Critical Strike (Su)",
+    "_description" : "<p>Whenever the magus scores a critical hit with a melee weapon, he may cast a spell with a range of touch as a swift action, then make a touch attack with that spell against the target of the critical hit as a free action. The magus can use this ability once per day.</p>",
+    "_icon" : "",
+    "_requires" : ["Magus Level 12+"],
+    "_copyright" : "Pathfinder Roleplaying Game: Ultimate Magic. © 2011, Paizo Publishing, LLC; Authors: Jason Bulmahn, Tim Hitchcock, Colin McComb, Rob McCreary, Jason Nelson, Stephen Radney-MacFarland, Sean K Reynolds, Owen K.C. Stephens, and Russ Taylor."
   }
 }
