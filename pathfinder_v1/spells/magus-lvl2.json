@@ -116,7 +116,58 @@
     "duration" : "Instant",
     "prepared" : false,
     "uses": {
-      "per_day" : "1"
+      "per_day" : 1
+    },
+    "target" : "Personal"
+  },
+  "+spells.ravens_flight": {
+    "_description": "You can cast this spell only if it is the first action you take on your turn. In a burst of shadowy feathers, you turn into a Tiny blurred shape reminiscent of a black raven until the beginning of your next turn. You gain a fly speed of 50 feet with good maneuverability, and apply appropriate size modifiers (though your ability scores don’t change). Until the beginning of your next turn, you can take only the 5-foot step, move, run, or withdraw actions. If the spell is dispelled while you are still aloft, the power of flight dissipates slowly; you float downward 60 feet on your next turn, then fall any remaining distance.",
+    "_name": "Raven's Flight",
+    "_icon" : "raven",
+    "level" : 2,
+    "range": "personal",
+    "cast_time" : "1 Swift Action",
+    "require": "V",
+    "save" : "None",
+    "duration" : {
+      "base" : 1,
+      "_suffix" : " round"
+    },
+    "prepared" : false,
+    "uses": {
+      "per_day" : 1
+    },
+    "target" : "Personal"
+  },
+  "+spells.fires_friend": {
+    "_description": "You cloak yourself in flames that do not harm you or your carried equipment but damage other creatures and objects. The flames cast light as a torch. Any creature that attacks you with a non-reach melee weapon or that begins its turn engaged in a grapple with you takes 1d6 points of fire damage and must succeed at a Reflex save or catch fire. The creature can negate the damage (and avoid catching fire) with spell resistance. Any time you end your movement in the same square as a flammable object or creature, that creature or object must succeed at a Reflex save or catch fire.",
+    "_name": "Fire's Friend",
+    "_icon" : "fire-silhouette",
+    "level" : 2,
+    "damage" : {
+      "base" : 1,
+      "_suffix" : "d6",
+      "_bonus" : 0
+    },
+    "dc": { "base" : [10, "stats.caster_level", "int"] },
+    "spell_failure" : {
+      "base" : "stats.spell_failure",
+      "_suffix" : "%"
+    },
+    "range": {
+      "base" : 5,
+      "_suffix" : "ft"
+    },
+    "cast_time" : "1 Standard Action",
+    "require": "V,S, M (flame of any size)",
+    "save" : "Reflex (Dont catch fire)",
+    "duration" : {
+      "base" : "stats.caster_level",
+      "_suffix" : " rounds"
+    },
+    "prepared" : false,
+    "uses": {
+      "per_day" : 1
     },
     "target" : "Personal"
   }
