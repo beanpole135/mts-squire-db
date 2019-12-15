@@ -318,13 +318,13 @@
         "+todo[b]" : "[Magus Level 18] Learn 1 Magus Arcana Feat"
       },
       "19" : {
-        "+todo[]" : "[Magus Level 19] Learn 2 additional Magus spells (level 1 - 6)",
+        "+todo[a]" : "[Magus Level 19] Learn 2 additional Magus spells (level 1 - 6)",
         "+feats.spell_access_greater" : {
           "_name" : "Spell Access (Greater)",
           "_description" : "At 19th level, the magus gains access to an expanded spell list. He learns and places 14 spells from the wizard’s spell list into his spellbook as magus spells of their wizard level. He gains two of each of the following wizard spells not on the magus spell list: 0-level, 1st-level, 2nd-level, 3rd-level, 4th-level, 5th-level, and 6th-level. He can ignore the somatic component of these spells, casting them without the normal chance of spell failure.",
           "_icon" : "book-aura"
         },
-        "+todo[]" : "[Magus Level 19] Learn 2 Wizard spells for EACH spell level: 0 -> 6. Somatic components of these spells are removed"
+        "+todo[b]" : "[Magus Level 19] Learn 2 Wizard spells for EACH spell level: 0 -> 6. Somatic components of these spells are removed"
       },
       "20": {
         "+todo[]" : "[Magus Level 20] Learn 2 additional Magus spells (level 1 - 6)",

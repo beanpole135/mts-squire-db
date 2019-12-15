@@ -1,0 +1,257 @@
+{
+    "01_standard" : {
+      "_name" : "Standard",
+      "_description" : "In faith and the miracles of the divine, many find a greater purpose. Called to serve powers beyond most mortal understanding, all priests preach wonders and provide for the spiritual needs of their people. Clerics are more than mere priests, though; these emissaries of the divine work the will of their deities through strength of arms and the magic of their gods. Devoted to the tenets of the religions and philosophies that inspire them, these ecclesiastics quest to spread the knowledge and influence of their faith. Yet while they might share similar abilities, clerics prove as different from one another as the divinities they serve, with some offering healing and redemption, others judging law and truth, and still others spreading conflict and corruption. The ways of the cleric are varied, yet all who tread these paths walk with the mightiest of allies and bear the arms of the gods themselves.",
+      "_icon" : "prayer",
+      "choose_domain" : {
+        "_pick_num" : 2,
+        "_when" : "after",
+        "_from" : "$DB/misc/cleric-domains"
+      },
+      "+class.cleric": {
+        "main_attributes": "Strength and Wisdom",
+        "alignment_restrictions": "",
+            "_armor_notes": "",
+            "_armor_proficiency": [ "light", "medium", "shields (excluding tower)"],
+            "_description": "In faith and the miracles of the divine, many find a greater purpose. Called to serve powers beyond most mortal understanding, all priests preach wonders and provide for the spiritual needs of their people. Clerics are more than mere priests, though; these emissaries of the divine work the will of their deities through strength of arms and the magic of their gods. Devoted to the tenets of the religions and philosophies that inspire them, these ecclesiastics quest to spread the knowledge and influence of their faith. Yet while they might share similar abilities, clerics prove as different from one another as the divinities they serve, with some offering healing and redemption, others judging law and truth, and still others spreading conflict and corruption. The ways of the cleric are varied, yet all who tread these paths walk with the mightiest of allies and bear the arms of the gods themselves.",
+            "_hit_dice": "1d8",
+            "_skill_ranks": {
+		"base" : 2,
+		"_suffix" : " per level"
+            },
+            "_name": "Cleric",
+            "_role": "More than capable of upholding the honor of their deities in battle, clerics often prove stalwart and capable combatants. Their true strength lies in their capability to draw upon the power of their deities, whether to increase their own and their allies’ prowess in battle, to vex their foes with divine magic, or to lend healing to companions in need. As their powers are influenced by their faith, all clerics must focus their worship upon a divine source. While the vast majority of clerics revere a specific deity, a small number dedicate themselves to a divine concept worthy of devotion—such as battle, death, justice, or knowledge—free of a deific abstraction. (Work with your GM if you prefer this path to selecting a specific deity.)",
+            "_spell_notes": "",
+            "_starting_wealth": "4d6 × 10 gp (average 140 gp.) In addition, each character begins play with an outfit worth 10 gp or less.",
+            "_weapon_notes": "",
+            "_weapon_proficiency": [
+                "simple",
+                "favored weapon of deity"
+            ],
+            "archetype": "",
+            "bab": {
+              "table_lookup" : { "default" : 0, "index" : "class.cleric.level", "table" : [0,0,1,2,3,3,4,5,6,6,7,8,9,9,10,11,12,12,13,14,15] }
+            },
+            "level": 0,
+	    "caster_level" : {
+	      "table_lookup" : { "default" : 0, "index" : "class.cleric.level", "table" : [0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,9,9] }
+	    },
+            "save_fort": {
+                "base": 2,
+                "divide": [
+                    "class.cleric.level",
+                    2
+                ]
+            },
+            "save_ref": {
+                "base": 0,
+                "divide": [
+                    "class.cleric.level",
+                    3
+                ]
+            },
+            "save_will": {
+                "base": 2,
+                "divide": [
+                    "class.cleric.level",
+                    2
+                ]
+            },
+            "spell_dc": {
+                "base": [
+                    10,
+                    "wis"
+                ]
+            },
+            "spells_per_day": {
+               "lvl_0": {
+                    "table_lookup": {
+                        "default": 4,
+                        "index": "class.cleric.level",
+                        "table": [0,3,4]
+                    }
+                },
+               "lvl_1": {
+                    "table_lookup": {
+                        "default": 4,
+                        "index": "class.cleric.level",
+                        "table": [0,1,2,2,3,3,3,4]
+                    }
+                },
+               "lvl_2": {
+                    "table_lookup": {
+                        "default": 4,
+                        "index": "class.cleric.level",
+                        "table": [0,0,0,1,2,2,3,3,3,4]
+                    }
+                },
+               "lvl_3": {
+                    "table_lookup": {
+                        "default": 4,
+                        "index": "class.cleric.level",
+                        "table": [0,0,0,0,0,1,2,2,3,3,3,4]
+                    }
+                },
+               "lvl_4": {
+                    "table_lookup": {
+                        "default": 4,
+                        "index": "class.cleric.level",
+                        "table": [0,0,0,0,0,0,0,1,2,2,3,3,3,4]
+                    }
+                },
+               "lvl_5": {
+                    "table_lookup": {
+                        "default": 4,
+                        "index": "class.cleric.level",
+                        "table": [0,0,0,0,0,0,0,0,0,1,2,2,3,3,3,4]
+                    }
+                },
+               "lvl_6": {
+                    "table_lookup": {
+                        "default": 4,
+                        "index": "class.cleric.level",
+                        "table": [0,0,0,0,0,0,0,0,0,0,0,1,2,2,3,3,3,4]
+                    }
+                },
+               "lvl_7": {
+                    "table_lookup": {
+                        "default": 4,
+                        "index": "class.cleric.level",
+                        "table": [0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,2,3,3,3,4]
+                    }
+                },
+               "lvl_8": {
+                    "table_lookup": {
+                        "default": 4,
+                        "index": "class.cleric.level",
+                        "table": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,2,3,3,3,4]
+                    }
+                },
+               "lvl_9": {
+                    "table_lookup": {
+                        "default": 4,
+                        "index": "class.cleric.level",
+                        "table": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,2,3,3,3,4]
+                    }
+                }
+            }
+        },
+        "level_up" : {
+	  "1" : {
+	    "+info.bonus_languages_available" : ["Celestial", "Abyssal", "Infernal"],
+	    "+stats.domain_spells_per_day" : { "base" : 1 },
+	    "+skills.appraise.cleric" : 3,
+	    "+skills.craft_template.cleric" : 3,
+	    "+skills.diplomacy.cleric" : 3,
+	    "+skills.heal.cleric" : 3,
+	    "+skills.knowledge_arcana.cleric" : 3,
+	    "+skills.knowledge_history.cleric" : 3,
+	    "+skills.knowledge_nobility.cleric" : 3,
+	    "+skills.knowledge_planes.cleric" : 3,
+	    "+skills.knowledge_religion.cleric" : 3,
+	    "+skills.linguistics.cleric" : 3,
+	    "+skills.profession_template.cleric" : 3,
+	    "+skills.sense_motive.cleric" : 3,
+	    "+skills.spellcraft.cleric" : 3,
+	    "+info.play_shortcuts.combat_meters" : ["stats.hp"],
+	    "+feats.cleric_aura" : {
+	      "_name" : "Aura (Ex)", "_icon" : "aura",
+	      "_description" : "A cleric of a chaotic, evil, good, or lawful deity has a particularly powerful aura corresponding to the deity’s alignment."
+	    },
+	    "+feats.spellcasting" : {
+	      "_name" : "Spellcasting", "_icon" : "spell-book",
+	      "_description" : "Clerics meditate or pray for their spells. Each cleric must choose a time at which she must spend 1 hour each day in quiet contemplation or supplication to regain her daily allotment of spells. Time spent resting has no effect on whether a cleric can prepare spells. A cleric may prepare and cast any spell on the cleric spell list, provided that she can cast spells of that level, but she must choose which spells to prepare during her daily meditation. A cleric can’t cast spells of an alignment opposed to her own or her deity’s (if she has one). Spells associated with particular alignments are indicated by the chaotic, evil, good, and lawful descriptors in their spell descriptions."
+	    },
+	    "+feats.orisons" : {
+	      "_name" : "Orisons", "_icon" : "brain",
+	      "_description" : "Clerics can prepare a number of orisons, or 0-level spells, each day, as noted on Table: Cleric under “Spells per day.” These spells are treated like any other spell, but they are not expended when cast and may be used again."
+	    },
+	    "+feats.spontaneous_casting" : {
+	      "_name" : "Spontaneous Casting", "_icon" : "brainstorm",
+	      "_description" : "A good cleric (or a neutral cleric of a good deity) can channel stored spell energy into healing spells that she did not prepare ahead of time. The cleric can “lose” any prepared spell that is not an orison or domain spell in order to cast any cure spell of the same spell level or lower (a cure spell is any spell with “cure” in its name). An evil cleric (or a neutral cleric of an evil deity) can’t convert prepared spells to cure spells but can convert them to inflict spells (an inflict spell is one with “inflict” in its name). A cleric who is neither good nor evil and whose deity is neither good nor evil can convert spells to either cure spells or inflict spells (player’s choice). Once the player makes this choice, it cannot be reversed. This choice also determines whether the cleric channels positive or negative energy (see channel energy)."
+	    },
+	    "abilities.channel_energy" : {
+	      "_description": "Any cleric can release a wave of energy by channeling the power of her faith through her holy (or unholy) symbol. This energy can be used to cause or heal damage, depending on the type of energy channeled and the creatures targeted. A good cleric (or a neutral cleric who worships a good deity) channels positive energy and can choose to deal damage to undead creatures or to heal living creatures. An evil cleric (or a neutral cleric who worships an evil deity) channels negative energy and can choose to deal damage to living creatures or to heal undead creatures. A neutral cleric of a neutral deity (or one who is not devoted to a particular deity) must choose whether she channels positive or negative energy. <br>Once this choice is made, it cannot be reversed. Channeling energy causes a burst that affects all creatures of one type (either undead or living) in a 30-foot radius centered on the cleric. The amount of damage dealt or healed is equal to 1d6 points of damage plus 1d6 points of damage for every two cleric levels beyond 1st. Creatures that take damage from channeled energy receive a Will save to halve the damage. The DC of this save is equal to 10 + 1/2 the cleric’s level + the cleric’s Charisma modifier. Creatures healed by channel energy cannot exceed their maximum hit point total—all excess healing is lost. A cleric may channel energy a number of times per day equal to 3 + her Charisma modifier. This is a standard action that does not provoke an attack of opportunity. A cleric can choose whether or not to include herself in this effect.<br>A cleric must be able to present her holy symbol to use this ability.",
+	      "_name": "Channel Energy (Cleric)",
+	      "_icon" : "embrassed-energy",
+	      "level" : 0,
+	      "damage" : {
+	        "divide" :  [ ["class.cleric.level", 1], 2],
+	        "_suffix" : "d6",
+	        "_bonus" : 0
+	      },
+	      "dc": { "base" : [10, "cha"], "divide" : ["class.cleric.level",2] },
+	      "spell_failure" : {
+	        "base" : "stats.spell_failure",
+	        "_suffix" : "%"
+	      },
+	      "range": {
+	        "base" : 30,
+	        "_suffix" : "ft radius"
+	      },
+	      "cast_time" : "1 Standard Action",
+	      "require": "S (Holy Symbol)",
+	      "save" : "Will (1/2 damage)",
+	      "duration" : "instant",
+	      "prepared" : true,
+	      "uses": {
+	        "per_day" : [3, "cha"]
+	      },
+	      "target" : "Sphere around player"
+	    },
+	    "+todo[a]" : "[Cleric Level 1] You can prepare any spells from the level 1 cleric spell list."
+	  },
+          "2" : {
+          },
+          "3" : {
+		"+todo[]" : "[Cleric Level 3] You can now prepare any spells from the level 2 cleric spell list."
+          },
+          "4" : {
+          },
+          "5" : {
+		"+todo[]" : "[Cleric Level 5] You can now prepare any spells from the level 3 cleric spell list."
+          },
+          "6" : {
+          },
+          "7" : {
+		"+todo[]" : "[Cleric Level 7] You can now prepare any spells from the level 4 cleric spell list."
+          },
+          "8" : {
+          },
+          "9" : {
+		"+todo[]" : "[Cleric Level 9] You can now prepare any spells from the level 5 cleric spell list."
+          },
+          "10" : {
+          },
+          "11" : {
+		"+todo[]" : "[Cleric Level 11] You can now prepare any spells from the level 6 cleric spell list."
+          },
+          "12" : {
+          },
+          "13" : {
+		"+todo[]" : "[Cleric Level 13] You can now prepare any spells from the level 7 cleric spell list."
+          },
+          "14" : {
+
+          },
+          "15" : {
+		"+todo[]" : "[Cleric Level 15] You can now prepare any spells from the level 8 cleric spell list."
+          },
+          "16" : {
+
+          },
+          "17" : {
+		"+todo[]" : "[Cleric Level 17] You can now prepare any spells from the level 9 cleric spell list."
+          },
+          "18" : {
+
+          },
+          "19" : {
+
+          },
+          "20": {
+
+          }
+       }
+  }
+}
