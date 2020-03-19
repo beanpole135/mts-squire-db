@@ -74,7 +74,7 @@
       }
     },
     "+inventory.cylinder-rifle" : {
-      "_name" : "Pepperbox",
+      "_name" : "Cylinder Rifle",
       "_description" : "This long-barreled early firearm has a slim horizontal disk with eight uncovered slots, each of which can hold one bullet and 1 dose of black powder (but not alchemical cartridges). Each time the weapon is fired, the disk rotates to load the next available shot. Misfiring with a cylinder rifle causes rogue sparks to cause the gun to erratically fire all the remaining bullets loaded in the disk, and each stray bullet has a 50% chance to hit the wielder, dealing 1d6 points of damage. Reloading a cylinder rifle requires two full-round actions, regardless of the number of slots being loaded. The Rapid ReloadUC feat reduces this to a single full-round action.",
       "weight" : 4,
       "type" : "weapon",
@@ -108,6 +108,31 @@
         "_hit_r10" : { "base" : -18, "_suffix" : " < range x 10"},
         "_damage" : { "dice" : 1, "_suffix" : "d8", "_bonus" : { "ranged" : "dex" } },
         "damage_type" : "Blunt and Pierce"
+      }
+    },
+    "+inventory.musket" : {
+      "_name" : "Musket",
+      "_description" : "This long-barreled firearm has a much greater range than a pistol.<br>A musket uses either a bullet and a single dose of black powder or an alchemical cartridge as its ammunition.",
+      "weight" : 9,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Early Firearm",
+        "hands_needed" : 2,
+        "range" : { "base" : 40, "_suffix" : " ft" },
+        "_damage" : { "_name" : "Damage", "dice" : 1, "_suffix" : "d12", "_bonus" : {} },
+        "_critical" : "20 (x4), misfire 1-2 (10ft)",
+        "special" : "1 Standard Action per load. Hit vs touch-ac within 1 range interval.",
+        "uses" : "inventory.ammo_shot",
+        "_hit" : { "_name" : "Hit", "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","dex"] },
+        "_hit_r01" : { "base" : "inventory.musket._hit", "_suffix" : "  < range"},
+        "_hit_r02" : { "base" : ["inventory.musket._hit",-2], "_suffix" : "  < range x 2"},
+        "_hit_r03" : { "base" : ["inventory.musket._hit",-4], "_suffix" : "  < range x 3"},
+        "_hit_r04" : { "base" : ["inventory.musket._hit",-6], "_suffix" : "  < range x 4"},
+        "_hit_r05" : { "base" : ["inventory.musket._hit",-8], "_suffix" : "  <  range x 5"},
+        "damage_type" : "Blunt and Pierce",
+        "is_light" : false,
+        "is_ranged" : true
       }
     }
 
