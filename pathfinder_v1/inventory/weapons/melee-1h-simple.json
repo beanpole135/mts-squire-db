@@ -1,4 +1,23 @@
 {
+    "+inventory.battle_aspergillum" : {
+      "_name" : "Battle Aspergillum",
+      "_description" : "Named for the common aspergillum, a mace-like tool used by priests to sprinkle holy water, this light mace has a hollow head and a metal plug to fit the hollow’s neck.<br>When the mace strikes a creature, holy water sprinkles out through tiny holes throughout the weapon’s head; creatures subject to damage from holy water take 1 point of damage in addition to the normal effect of being struck by the mace (a nonmagical aspergillum can deal holy water damage to an incorporeal creature in this manner, even if the mace itself deals no damage). After 5 hits, the battle aspergillum is empty and needs to be refilled.<br>Filling it with holy water is a standard action that provokes an attack of opportunity (like drinking a potion). A filled aspergillum is normally carried upright, otherwise the holy water leaks out as the weapon moves.",
+      "weight" : 4,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 5, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d6", "_bonus" : { "melee" : "str"} },
+        "_critical" : "20 (x2)",
+        "special" : "",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "damage_type" : "Blunt",
+        "is_light" : true,
+        "is_ranged" : false
+      }
+    },
     "+inventory.brass_knives" : {
       "_name" : "Knives (Brass)",
       "_description" : "Pirates often carry long brass knives for working aboard a ship. Though brass doesn’t hold as sharp an edge as steel, it isn’t vulnerable to rust like steel is. In a pinch, a pirate can use his brass knife as a weapon. Mostly, though, they are used for cutting ropes, cleaning fish, and other sundry tasks.",
@@ -11,7 +30,7 @@
         "hands_needed" : 1,
         "range" : { "base" : 10, "_suffix" : " ft" },
         "_damage" : { "dice" : 1, "_suffix" : "d4", "_bonus" : { "melee" : "str"} },
-        "_critical" : "20 (x2)",
+        "_critical" : "19-20 (x2)",
         "special" : "Fragile: Rolling a 1 will break/destroy it",
         "uses" : "inventory.brass_knives.quantity",
         "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
@@ -23,6 +42,380 @@
         "damage_type" : "Pierce | Slash",
         "is_light" : true,
         "is_ranged" : true
+      }
+    },
+    "+inventory.brass_knuckles" : {
+      "_name" : "Brass Knuckles",
+      "_description" : "These close combat weapons are designed to fit comfortably around the knuckles, narrowing the contact area and therefore magnifying the amount of force delivered by a punch.<br>Brass knuckles allow you to deal lethal damage.<br>You may hold, but not wield, a weapon or other object in a hand wearing brass knuckles. You may cast a spell with a somatic component while wearing brass knuckles if you make a concentration check (DC 10 + the level of the spell you’re casting).",
+      "weight" : 1,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 5, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d3", "_bonus" : { "melee" : "str"} },
+        "_critical" : "20 (x2)",
+        "special" : "",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "damage_type" : "Blunt",
+        "is_light" : true,
+        "is_ranged" : false
+      }
+    },
+    "+inventory.cestus" : {
+      "_name" : "Cestus",
+      "_description" : "The cestus is a glove of leather or thick cloth that covers the wielder from mid-finger to mid-forearm. The close combat weapon is reinforced with metal plates over the fingers and often lined with wicked spikes along the backs of the hands and wrists.<br>While wearing a cestus, you are considered armed and your unarmed attacks deal normal damage. If you are proficient with a cestus, your unarmed strikes may deal bludgeoning or piercing damage. Monks are proficient with the cestus.<br>When using a cestus, your fingers are mostly exposed, allowing you to wield or carry items in that hand, but the constriction of the weapon at your knuckles gives you a –2 penalty on all precision-based tasks involving that hand (such as opening locks).",
+      "weight" : 1,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 5, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d4", "_bonus" : { "melee" : "str"} },
+        "_critical" : "19-20 (x2)",
+        "special" : "",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "damage_type" : "Blunt / Pierce",
+        "is_light" : true,
+        "is_ranged" : false
+      }
+    },
+    "+inventory.dagger" : {
+      "_name" : "Dagger",
+      "_description" : "A dagger has a blade that is about 1 foot in length.<br>You get a +2 bonus on Sleight of Hand skill checks made to conceal a dagger on your body",
+      "_icon" : "daggers",
+      "weight" : 1,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 10, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d4", "_bonus" : { "melee" : "str"} },
+        "_critical" : "19-20 (x2)",
+        "special" : "",
+        "uses" : "inventory.dagger.quantity",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "_hit_r01" : { "base" : ["stats.hit","dex"], "_suffix" : " Thrown < 10ft"},
+        "_hit_r02" : { "base" : ["inventory.dagger._hit_r01",-2], "_suffix" : " Thrown < 20ft"},
+        "_hit_r03" : { "base" : ["inventory.dagger._hit_r01",-4], "_suffix" : " Thrown < 30ft"},
+        "_hit_r04" : { "base" : ["inventory.dagger._hit_r01",-6], "_suffix" : " Thrown < 40ft"},
+        "_hit_r05" : { "base" : ["inventory.dagger._hit_r01",-8], "_suffix" : " Thrown < 50ft"},
+        "damage_type" : "Pierce | Slash",
+        "is_light" : true,
+        "is_ranged" : true
+      }
+    },
+    "+inventory.punching_dagger" : {
+      "_name" : "Punching Dagger",
+      "_description" : "A punching dagger’s blade is attached to a horizontal handle that projects out from the fist when held.",
+      "weight" : 1,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 5, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d4", "_bonus" : { "melee" : "str"} },
+        "_critical" : "20 (x3)",
+        "special" : "",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "damage_type" : "Pierce",
+        "is_light" : true,
+        "is_ranged" : false
+      }
+    },
+    "+inventory.spiked_gauntlet" : {
+      "_name" : "Spiked Gauntlet",
+      "_description" : "An attack with a spiked gauntlet is considered an armed attack. Your opponent cannot use a disarm action to disarm you of spiked gauntlets.",
+      "weight" : 1,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 5, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d4", "_bonus" : { "melee" : "str"} },
+        "_critical" : "20 (x2)",
+        "special" : "",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "damage_type" : "Pierce",
+        "is_light" : true,
+        "is_ranged" : false
+      }
+    },
+    "+inventory.handwraps" : {
+      "_name" : "Handwraps",
+      "_description" : "Many unarmed fighters wrap their hands in cloth to minimize injuries to their fists.<br>Some martial artists also weave small coins or metal bars into their handwraps, adding special material effects as well. Handwraps don’t alter the damage a character’s unarmed attacks deal. However, masterwork handwraps can be enchanted as weapons, providing their benefits on unarmed attacks the character makes with her hands. A character can’t benefit from both handwraps and other items that provide enhancement bonuses or weapon special abilities on the same attack.",
+      "weight" : 1,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 5, "_suffix" : " ft" },
+        "_damage" : { "dice" : 0, "_suffix" : "d6", "_bonus" : { "melee" : "str"} },
+        "_critical" : "-",
+        "special" : "",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "damage_type" : "Blunt",
+        "is_light" : true,
+        "is_ranged" : false
+      }
+    },
+    "+inventory.traveling_kettle" : {
+      "_name" : "Traveling Kettle",
+      "_description" : "These small tea kettles are made with clamping lids and heavily reinforced handles, allowing them to be swung like a club. A traveling kettle with boiling water inside deals an additional 1 point of fire damage on a hit. Boiling water cools to a non-damaging temperature after 5 minutes.",
+      "weight" : 1,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 5, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d6", "_bonus" : { "melee" : "str"} },
+        "_critical" : "20 (x2)",
+        "special" : "",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "damage_type" : "Blunt",
+        "is_light" : true,
+        "is_ranged" : false
+      }
+    },
+    "+inventory.hook_hand" : {
+      "_name" : "Hook Hand",
+      "_description" : "Pirates who lose a hand in the course of their adventures sometimes attach hooks to their wrists.<br>Your opponent cannot use a disarm action to disarm you of a hook hand. Hook hands generally do not interfere with routine activities, but you cannot use another weapon two-handed if you have a hook hand attached. You cannot use any type of weapon if both your hands are hook hands, and you may have trouble with routine activities.<br>Hook hands presume that the wrist joint is intact. If the wrist joint is not intact, use the prosthesis statistics instead. It takes 1 minute to attach or detach a hook hand.",
+      "weight" : 1,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 5, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d4", "_bonus" : { "melee" : "str"} },
+        "_critical" : "20 (x2)",
+        "special" : "",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "damage_type" : "Slash",
+        "is_light" : true,
+        "is_ranged" : false
+      }
+    },
+    "+inventory.kunei" : {
+      "_name" : "Kunei",
+      "_description" : "Crafted from a single piece of iron, a kunai has a leaf-shaped blade and a ring for a pommel. Adapted from the common trowel, the kunai has a thick blade that is sharpened only near the tip.<br>Unlike finer weapons, the kunai can readily substitute for a crowbar or piton without being damaged in the process.",
+      "weight" : 2,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 10, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d4", "_bonus" : { "melee" : "str"} },
+        "_critical" : "20 (x2)",
+        "special" : "",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "_hit_r01" : { "base" : ["stats.hit","dex"], "_suffix" : " Thrown < 10ft"},
+        "_hit_r02" : { "base" : ["inventory.kunei._hit_r01",-2], "_suffix" : " Thrown < 20ft"},
+        "_hit_r03" : { "base" : ["inventory.kunei._hit_r01",-4], "_suffix" : " Thrown < 30ft"},
+        "_hit_r04" : { "base" : ["inventory.kunei._hit_r01",-6], "_suffix" : " Thrown < 40ft"},
+        "_hit_r05" : { "base" : ["inventory.kunei._hit_r01",-8], "_suffix" : " Thrown < 50ft"},
+        "damage_type" : "Blunt / Pierce",
+        "is_light" : true,
+        "is_ranged" : false
+      }
+    },
+    "+inventory.mace_light" : {
+      "_name" : "Mace (Light)",
+      "_description" : "A light mace is made up of an ornate metal head attached to a simple wooden or metal shaft.",
+      "weight" : 4,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 5, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d6", "_bonus" : { "melee" : "str"} },
+        "_critical" : "20 (x2)",
+        "special" : "",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "damage_type" : "Blunt",
+        "is_light" : true,
+        "is_ranged" : false
+      }
+    },
+    "+inventory.sickle" : {
+      "_name" : "Sickle",
+      "_description" : "A nearly-circular blade on a short handle. You can use this weapon to make trip attacks. If you are tripped during your own trip attempt, you can drop the weapon to avoid being tripped",
+      "weight" : 2,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 5, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d6", "_bonus" : { "melee" : "str"} },
+        "_critical" : "20 (x2)",
+        "special" : "",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "damage_type" : "Slash",
+        "is_light" : true,
+        "is_ranged" : false
+      }
+    },
+    "+inventory.spring_blade" : {
+      "_name" : "Spring Blade",
+      "_description" : "This 4-inch blade is attached via a hinge to a wooden handle with a slot in the center, into which the blade can be folded. With a click of a switch, a spring thrusts the blade outward, where it locks into place until it is reset.<br>Releasing the blade is a free action, and resetting it is a move action. The handle must be in your hand for the blade to be released; placing it in your hand requires the same type of action as drawing a weapon. A spring blade is easy to conceal: an observer must succeed at a DC 20 Perception check to notice the blade hidden within the wooden handle, and you gain a +4 bonus on Sleight of Hand checks to conceal a spring blade on your body.",
+      "weight" : 1,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 10, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d4", "_bonus" : { "melee" : "str"} },
+        "_critical" : "20 (x2)",
+        "special" : "",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "_hit_r01" : { "base" : ["stats.hit","dex"], "_suffix" : " Thrown < 10ft"},
+        "_hit_r02" : { "base" : ["inventory.spring_blade._hit_r01",-2], "_suffix" : " Thrown < 20ft"},
+        "_hit_r03" : { "base" : ["inventory.spring_blade._hit_r01",-4], "_suffix" : " Thrown < 30ft"},
+        "_hit_r04" : { "base" : ["inventory.spring_blade._hit_r01",-6], "_suffix" : " Thrown < 40ft"},
+        "_hit_r05" : { "base" : ["inventory.spring_blade._hit_r01",-8], "_suffix" : " Thrown < 50ft"},
+        "damage_type" : "Pierce / Slash",
+        "is_light" : true,
+        "is_ranged" : false
+      }
+    },
+    "+inventory.wooden_stake" : {
+      "_name" : "Wooden Stake",
+      "_description" : "This close combat weapon is just a sharpened piece of wood.<br>Note: Iron spikes used as weapons deal damage as wooden stakes.",
+      "weight" : 1,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 10, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d4", "_bonus" : { "melee" : "str"} },
+        "_critical" : "20 (x2)",
+        "special" : "",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "_hit_r01" : { "base" : ["stats.hit","dex"], "_suffix" : " Thrown < 10ft"},
+        "_hit_r02" : { "base" : ["inventory.wooden_stake._hit_r01",-2], "_suffix" : " Thrown < 20ft"},
+        "_hit_r03" : { "base" : ["inventory.wooden_stake._hit_r01",-4], "_suffix" : " Thrown < 30ft"},
+        "_hit_r04" : { "base" : ["inventory.wooden_stake._hit_r01",-6], "_suffix" : " Thrown < 40ft"},
+        "_hit_r05" : { "base" : ["inventory.wooden_stake._hit_r01",-8], "_suffix" : " Thrown < 50ft"},
+        "damage_type" : "Pierce",
+        "is_light" : true,
+        "is_ranged" : false
+      }
+    },
+    "+inventory.club" : {
+      "_name" : "Club",
+      "_description" : "This weapon is usually just a shaped piece of wood, sometimes with a few nails or studs embedded in it.",
+      "weight" : 3,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 10, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d6", "_bonus" : { "melee" : "str"} },
+        "_critical" : "20 (x2)",
+        "special" : "",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "_hit_r01" : { "base" : ["stats.hit","dex"], "_suffix" : " Thrown < 10ft"},
+        "_hit_r02" : { "base" : ["inventory.club._hit_r01",-2], "_suffix" : " Thrown < 20ft"},
+        "_hit_r03" : { "base" : ["inventory.club._hit_r01",-4], "_suffix" : " Thrown < 30ft"},
+        "_hit_r04" : { "base" : ["inventory.club._hit_r01",-6], "_suffix" : " Thrown < 40ft"},
+        "_hit_r05" : { "base" : ["inventory.club._hit_r01",-8], "_suffix" : " Thrown < 50ft"},
+        "damage_type" : "Blunt",
+        "is_light" : false,
+        "is_ranged" : false
+      }
+    },
+    "+inventory.mere_club" : {
+      "_name" : "Mere Club",
+      "_description" : "Traditionally made of carved stone, the mere (MEH-reh) is a short, flat-sided, sharp-pointed club.",
+      "weight" : 2,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 5, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d4", "_bonus" : { "melee" : "str"} },
+        "_critical" : "20 (x2)",
+        "special" : "Fragile: Becomes broken/destroyed on roll of 1",
+        "hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "damage_type" : "Blunt / Pierce",
+        "is_light" : false,
+        "is_ranged" : false
+      }
+    },
+    "+inventory.mace_heavy" : {
+      "_name" : "Mace (Heavy)",
+      "_description" : "A heavy mace has a larger head and a longer handle than a normal (light) mace.",
+      "weight" : 8,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 5, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d8", "_bonus" : { "melee" : "str"} },
+        "_critical" : "20 (x2)",
+        "special" : "",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "damage_type" : "Blunt",
+        "is_light" : false,
+        "is_ranged" : false
+      }
+    },
+    "+inventory.morningstar" : {
+      "_name" : "Morningstar",
+      "_description" : "A morningstar is a spiked metal ball, affixed to the top of a long handle.",
+      "weight" : 8,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 5, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d8", "_bonus" : { "melee" : "str"} },
+        "_critical" : "20 (x2)",
+        "special" : "",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "damage_type" : "Blunt / Pierce",
+        "is_light" : false,
+        "is_ranged" : false
+      }
+    },
+    "+inventory.spear_short" : {
+      "_name" : "Shortspear",
+      "_description" : "A shortspear is about 3 feet in length, making it a suitable thrown weapon.",
+      "weight" : 3,
+      "type" : "weapon",
+      "quantity" : 1,
+      "weapon" : {
+        "type" : "Simple",
+        "hands_needed" : 1,
+        "range" : { "base" : 20, "_suffix" : " ft" },
+        "_damage" : { "dice" : 1, "_suffix" : "d6", "_bonus" : { "melee" : "str"} },
+        "_critical" : "20 (x2)",
+        "special" : "",
+        "_hit" : { "base" : 1, "_suffix" : "d20", "_bonus" : ["stats.hit","str"] },
+        "_hit_r01" : { "base" : ["stats.hit","dex"], "_suffix" : " Thrown < 20ft"},
+        "_hit_r02" : { "base" : ["inventory.spear_short._hit_r01",-2], "_suffix" : " Thrown < 40ft"},
+        "_hit_r03" : { "base" : ["inventory.spear_short._hit_r01",-4], "_suffix" : " Thrown < 60ft"},
+        "_hit_r04" : { "base" : ["inventory.spear_short._hit_r01",-6], "_suffix" : " Thrown < 80ft"},
+        "_hit_r05" : { "base" : ["inventory.spear_short._hit_r01",-8], "_suffix" : " Thrown < 100ft"},
+        "damage_type" : "Pierce ",
+        "is_light" : false,
+        "is_ranged" : false
       }
     }
 }
