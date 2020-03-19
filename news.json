@@ -11,8 +11,14 @@
     ]
   },
   "squire-db" : {
-    "version" : "2019-08-09",
+    "version" : "2020-03-19",
     "news" : [
+	{
+	"title" : "Weapon systems activate!",
+	"date" : "March 19, 2020",
+	"link" : "",
+	"text" : "All of the simple and martial 1-handed weapons are now available in the database for Pathfinder (v1)"
+	},
 	{
 	"title" : "Online Database active",
 	"date" : "September 8, 2019",
