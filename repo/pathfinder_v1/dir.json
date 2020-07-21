@@ -1,0 +1,9 @@
+{
+  "name" : "Pathfinder (1st edition)",
+  "description" : "The Pathfinder role-playing game - first edition",
+  "icon_url" : "/static/icon_pathfinder.png",
+  "author" : "Paizo Inc.",
+  "author_url" : "https://paizo.com/",
+  "license" : "Open Game License",
+  "license_url" : "/db/pathfinder_v1/LICENSE.txt"
+}

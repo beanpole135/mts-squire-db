@@ -1,0 +1,5 @@
+{
+  "name" : "Items",
+  "description" : "Pre-defined weapons, armor, and other general equipment.",
+  "icon_url" : "/static/helmet.svg"
+}
