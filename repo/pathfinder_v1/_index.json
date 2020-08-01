@@ -6,27 +6,27 @@
     "class" : {
       "name" : "Classes",
       "description" : "Playable classes",
-      "icon" : "",
+      "icon" : ""
     },
     "feats" : {
       "name" : "Feats",
       "description" : "Traits and abilities to make your character unique!",
-      "icon" : "",
-    }
+      "icon" : ""
+    },
     "items" : {
       "name" : "Items",
       "description" : "Items and equipment",
-      "icon" : "",
-    }
+      "icon" : ""
+    },
     "race" : {
       "name" : "Races",
       "description" : "Playable races",
-      "icon" : "",
-    }
+      "icon" : ""
+    },
     "spells" : {
       "name" : "Spells",
       "description" : "",
-      "icon" : "",
+      "icon" : ""
     }
   }
 }
