@@ -1,0 +1,12 @@
+{
+  "name" : "Game Rules",
+  "description" : "Select an RPG game system",
+  "icon" : "",
+  "subdirs" : {
+    "pathfinder_v1" : {
+      "name" : "Pathfinder (1st edition)",
+      "description" : "The Pathfinder roleplaying game from Paizo Inc.",
+      "icon" : "",
+    }
+  }
+}

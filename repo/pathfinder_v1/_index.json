@@ -1,0 +1,32 @@
+{
+  "name" : "Pathfinder (1st edition)",
+  "description" : "The Pathfinder role-playing game from Paizo Inc. (first edition)",
+  "icon_url" : "/static/icon_pathfinder.png",
+  "subdirs" : {
+    "class" : {
+      "name" : "Classes",
+      "description" : "Playable classes",
+      "icon" : "",
+    },
+    "feats" : {
+      "name" : "Feats",
+      "description" : "Traits and abilities to make your character unique!",
+      "icon" : "",
+    }
+    "items" : {
+      "name" : "Items",
+      "description" : "Items and equipment",
+      "icon" : "",
+    }
+    "race" : {
+      "name" : "Races",
+      "description" : "Playable races",
+      "icon" : "",
+    }
+    "spells" : {
+      "name" : "Spells",
+      "description" : "",
+      "icon" : "",
+    }
+  }
+}
