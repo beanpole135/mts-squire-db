@@ -1,0 +1,28 @@
+{
+  "character_id" : "",
+  "profile" : {
+    "name" : "",
+    "player_name" : "",
+    "gender" : "",
+    "alignment" : "",
+    "race" : "",
+    "age" : "",
+    "backstory" : "",
+    "relationshipts" : "",
+    "personality" : "",
+    "dislikes" : "",
+    "likes" : "",
+    "hair" : "",
+    "eyes" : "",
+    "scars" : "",
+    "height" : "",
+    "skin" : "",
+    "weight" : "",
+    "other" : ""
+  },
+  "stats" : {
+    "" : {
+
+    }
+  }
+}

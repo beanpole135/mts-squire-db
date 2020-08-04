@@ -1,0 +1,13 @@
+{
+  "name" : "",
+  "description" : "",
+  "icon" : "",
+  "dice" : {
+    "dice" : {},
+    "bonus" : {},
+    "size" : 20
+  },
+  "is_template" : false,
+  "name_template" : "skill_%s",
+  "id_template" : "skill_%s"
+}

@@ -1,0 +1,34 @@
+{
+  "character_id" : "",
+  "profile" : {
+    "name" : "",
+    "player_name" : "",
+    "gender" : "",
+    "alignment" : "",
+    "race" : "",
+    "age" : "",
+    "backstory" : "",
+    "relationshipts" : "",
+    "personality" : "",
+    "dislikes" : "",
+    "likes" : "",
+    "hair" : "",
+    "eyes" : "",
+    "scars" : "",
+    "height" : "",
+    "skin" : "",
+    "weight" : "",
+    "other" : ""
+  },
+  "stats" : {},
+  "skills" : {},
+  "passives" : {},
+  "abilities" : {},
+  "conditions" : {},
+  "todo" : {},
+  "logs" : {},
+  "level_up" : {},
+  "class" : {
+    "class_name" : {}
+  }
+}

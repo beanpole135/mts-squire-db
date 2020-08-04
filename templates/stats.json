@@ -1,0 +1,12 @@
+{
+  "name" : "",
+  "description" : "",
+  "icon" : "",
+  "dice" : {
+    "dice" : {},
+    "bonus" : {},
+    "dice_size" : 20
+  },
+  "value" : [""],
+  "disabled" : false
+}
