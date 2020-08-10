@@ -1,0 +1,14 @@
+{
+  "filename" : "skills.json",
+  "name" : "+1 Skill Point / Level",
+  "description" : "Gain one extra skill point every time your featured class levels up",
+  "icon" : "skills",
+  "is_enhanced" : true,
+  "change" : {
+    "on_enable" :  {
+      "itempath" : "stats.skill_points",
+      "set_id" : "featured_class"
+      "set_value" : "class.featured_class().level"
+    }
+  }
+}

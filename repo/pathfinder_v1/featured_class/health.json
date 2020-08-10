@@ -1,0 +1,14 @@
+{
+  "filename" : "health.json",
+  "name" : "+1 HP / Level",
+  "description" : "Gain one extra health point every time your featured class levels up",
+  "icon" : "heart-plus",
+  "is_enhanced" : true,
+  "change" : {
+    "on_enable" :  {
+      "itempath" : "stats.hp",
+      "set_id" : "featured_class"
+      "set_value" : "class.featured_class().level"
+    }
+  }
+}
