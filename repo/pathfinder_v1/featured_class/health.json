@@ -4,6 +4,7 @@
   "description" : "Gain one extra health point every time your featured class levels up",
   "icon" : "heart-plus",
   "is_enhanced" : true,
+  "source" : "Core Rules",
   "change" : {
     "on_enable" :  {
       "itempath" : "stats.hp",

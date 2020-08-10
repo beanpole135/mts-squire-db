@@ -7,6 +7,8 @@
     "bonus" : {},
     "dice_size" : 20
   },
-  "value" : [""],
-  "disabled" : false
+  "value" : {""},
+  "disabled" : false,
+  "minimum" : 0,
+  "maximum" : null
 }

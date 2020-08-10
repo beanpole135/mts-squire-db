@@ -1,5 +1,7 @@
 {
+  "game_rules" : "pathfinder_v1",
   "character_id" : "",
+  "version" : 1,
   "profile" : {
     "name" : "",
     "player_name" : "",
@@ -21,8 +23,79 @@
     "other" : ""
   },
   "stats" : {
-    "" : {
+    "str" : {
+      "name" : "Strength",
+      "description" : "Strength measures muscle and physical power. This ability is important for those who engage in hand-to-hand (or “melee”) combat. Strength also sets the maximum amount of weight your character can carry.",
+      "icon" : "strong",
+      "value" : {"base" : 10},
+      "minimum" : 0
+    },
+    "dex" : {
+      "name" : "Dexterity",
+      "description" : "Dexterity measures agility, reflexes, and balance. This ability is useful for characters who wear light or medium armor or no armor at all. This ability is vital for characters seeking to excel with ranged weapons.",
+      "icon" : "sensuousness",
+      "value" : {"base" : 10},
+      "minimum" : 0
+    },
+    "con" : {
+      "name" : "Constitution",
+      "description" : "Constitution represents your character’s health and stamina. A Constitution bonus increases a character’s hit points, so the ability is important for all classes.",
+      "icon" : "person",
+      "value" : {"base" : 10},
+      "minimum" : 0
+    },
+    "int" : {
+      "name" : "Intelligence",
+      "description" : "Intelligence determines how well your character learns and reasons.",
+      "icon" : "smart",
+      "value" : {"base" : 10},
+      "minimum" : 0
+    },
+    "wis" : {
+      "name" : "Wisdom",
+      "description" : "Wisdom describes a character’s willpower, common sense, awareness, and intuition.",
+      "icon" : "prayer",
+      "value" : {"base" : 10},
+      "minimum" : 0
+    },
+    "cha" : {
+      "name" : "Charisma",
+      "description" : "Charisma measures a character’s personality, personal magnetism, ability to lead, and appearance.",
+      "icon" : "public-speaker",
+      "value" : {"base" : 10},
+      "minimum" : 0
+    },
+    "size" : {
+      "name" : "Size Modifier (1=small, 0=normal, -1=large)",
+      "icon" : "giant",
+      "value" : {"base" : 0},
+      "minimum" : -2,
+      "maximum" : 2
+    },
+    "hp" : {
+      "name" : "Hit Points",
+      "description" : "Overall health of character. Start dying when this reaches 0",
+      "icon" : "health-normal",
+      "value" : {"base" : {"multiply":[ "stats.character_level()", "stats.con.modifier"]} },
+      "minimum" : "-stats.con"
+    },
+    "initiative" : {
+      "name" : "Initiative Bonus",
+      "description" : "Added to a d20 dice roll when rolling for battle initiative. Determines turn order.",
+      "icon" : "sprint",
+      "value" : {"base" : "stats.dex.modifier"}
+    },
+    "ac" {
+      "name" : "Armor Class",
+      "description" : "Determines the value your opponents must roll on an attack in order to hit you.",
+      "icon" : "shield",
+      "value" : {
+        "base" : [10, "stats.size"],
+        "dexmod" : {
+          "if"
+        }
 
+      }
     }
   }
 }
