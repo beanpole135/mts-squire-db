@@ -22,6 +22,7 @@
     "weight" : "",
     "other" : ""
   },
+  "languages" : [],
   "stats" : {
     "str" : {
       "name" : "Strength",
@@ -69,8 +70,26 @@
       "name" : "Size Modifier (1=small, 0=normal, -1=large)",
       "icon" : "giant",
       "value" : {"base" : 0},
+      "minimum" : -4,
+      "maximum" : 4
+    },
+    "size_modifier" : {
+      "name" : "internal size modifier value",
+      "value" : { "base" : { "index" : ["stats.size", 4], "table" : [-8,-4,-2,-1,0,1,2,4,8] } }
+    },
+    "fly_modifier" : {
+      "name" : "internal size modifier value for the flying skill",
+      "value" : { "base" : {"multiply" : [2, "stats.size"] } }
+    },
+    "maneuverability" : {
+      "name" : "internal maneuverability rating for flying [1=good, 0=normal, -1=poor]",
+      "value" : { "base" : 0 },
       "minimum" : -2,
       "maximum" : 2
+    },
+    "maneuverability_modifier" : {
+      "name" : "internal maneuverability modifier for the flying skill",
+      "value" : {"base" : { "multiply" : ["stats.maneuverability", 4] } }
     },
     "hp" : {
       "name" : "Hit Points",
@@ -85,17 +104,157 @@
       "icon" : "sprint",
       "value" : {"base" : "stats.dex.modifier"}
     },
-    "ac" {
+    "ac" : {
       "name" : "Armor Class",
       "description" : "Determines the value your opponents must roll on an attack in order to hit you.",
       "icon" : "shield",
-      "value" : {
-        "base" : [10, "stats.size"],
-        "dexmod" : {
-          "if"
-        }
-
-      }
+      "value" : {"base" : [10, "stats.size_modifier", "stats.ac_dexmod"] }
+    },
+    "ac_dexmod" : {
+      "name" : "Armor Class Internal (Dexterity Modifier)",
+      "value" : { "base" : { "smallest" : ["stats.dex.modifier()", "stats.maxdex_ac"] } },
+      "minimum" : 0
+    },
+    "ac_touch" : {
+      "name" : "Armor Class (vs Touch)",
+      "description" : "Determines the value your opponents must roll on an attack in order to hit you with a touch attack. Armor class without modifiers from equipment",
+      "icon" : "back-pain",
+      "value" : { "base" : { "smaller" : ["stats.dex.modifier()", "stats.maxdex_ac"] } }
+    },
+    "ac_flatfoot" : {
+      "name" : "Armor Class (Caught Flatfooted)",
+      "description" : "Determines the value your opponents must roll on an attack in order to hit you whan you are caught flatfooted. Armor class without dexterity bonus",
+      "icon" : "backstab",
+      "value" : { "base" : ["stats.ac", "-stats.ac_dexmod"] }
+    },
+    "ac_maxdex" : {
+      "name" : "Armor Class Internal (Maximum dex bonus)",
+      "value" : { "base" : 0 }
+    },
+    "armor_penalty" : {
+      "name" : "Equipment Internal (penalty to Dex-based skills)",
+      "value" : { "base" : 0 }
+    },
+    "hit" : {
+      "name" : "Equipment Internal (Basic hit bonus - all types)",
+      "value" : { "base" : ["stats.bab","stats.size_modifier"] }
+    },
+    "save_fort" : {
+      "name" : "Fortitude Saving Throw",
+      "description" : "Roll this when attempting to resist bodily effects such as poison or bleeding.",
+      "dice" : {  "dice": 1, "size" : 20, "bonus": "." },
+      "icon" : "despair",
+      "value" : { "base" : "stats.con.modifier" }
+    },
+    "save_ref" : {
+      "name" : "Reflex Saving Throw",
+      "description" : "Roll this when attempting to avoid getting hit (such as dodging out of the way of an attack)",
+      "dice" : {  "dice": 1, "size" : 20, "bonus": "." },
+      "icon" : "dodging",
+      "value" : { "base" : "stats.dex.modifier" }
+    },
+    "save_will" : {
+      "name" : "Will Saving Throw",
+      "description" : "Roll this when attempting to resist metal effects such as mind control or illusions.",
+      "dice" : {  "dice": 1, "size" : 20, "bonus": "." },
+      "icon" : "rear-aura",
+      "value" : { "base" : "stats.wis.modifier" }
+    },
+    "bab" : {
+      "name" : "Base Attack Bonus",
+      "description" : "Class-based bonus to attack rolls",
+      "value" : { "base" : 0 }
+    },
+    "cmb" : {
+      "name" : "Combat Maneuver Bonus",
+      "value" : { "base" : ["stats.bab","stats.str.modifier()","-stats.size"] }
+    },
+    "cmd" : {
+      "name" : "Combat Maneuver Defence",
+      "value" : { "base" : [10, "stats.bab","stats.str.modifier()","stats.dex.modifier()","-stats.size"] }
+    },
+    "cmd_bullrush" : {
+      "name" : "Bullrush Combat Maneuver Defence",
+      "value" : { "base" : "cmd" }
+    },
+    "cmd_trip" : {
+      "name" : "Trip Combat Maneuver Defence",
+      "value" : { "base" : "cmd" }
+    },
+    "cmd_dirtytrick" : {
+      "name" : "Dirty Trick Combat Maneuver Defence",
+      "value" : { "base" : "cmd" }
+    },
+    "cmd_disarm" : {
+      "name" : "Disarm Combat Maneuver Defence",
+      "value" : { "base" : "cmd" }
+    },
+    "cmd_drag" : {
+      "name" : "Drag Combat Maneuver Defence",
+      "value" : { "base" : "cmd" }
+    },
+    "cmd_grapple" : {
+      "name" : "Grapple Combat Maneuver Defence",
+      "value" : { "base" : "cmd" }
+    },
+    "cmd_overrun" : {
+      "name" : "Overrun Combat Maneuver Defence",
+      "value" : { "base" : "cmd" }
+    },
+    "cmd_reposition" : {
+      "name" : "Reposition Combat Maneuver Defence",
+      "value" : { "base" : "cmd" }
+    },
+    "cmd_steal" : {
+      "name" : "Steal Combat Maneuver Defence",
+      "value" : { "base" : "cmd" }
+    },
+    "cmd_sunder" : {
+      "name" : "Sunder Combat Maneuver Defence",
+      "value" : { "base" : "cmd" }
+    },
+    "speed" : {
+      "name" : "Base Movement speed (feet/round)",
+      "value" : { "base" : [30, {"multiply" : ["stats.size_modifier", -10] } ] },
+      "minimum" : 5
+    },
+    "speed_swim" : {
+      "name" : "Base Swim speed (feet/round)",
+      "value" : { "base" : "stats.speed" },
+      "minimum" : 0
+    },
+    "speed_fly" : {
+      "name" : "Base Fly speed (feet/round)",
+      "value" : { "base" : 0 },
+      "minimum" : 0
+    },
+    "speed_climb" : {
+      "name" : "Base Climbing speed (feet/round)",
+      "value" : { "base" : {"numerator" : "stats.speed", "denominator" : 4} },
+      "minimum" : 0
+    },
+    "speed_burrow" : {
+      "name" : "Base Burrowing speed (feet/round)",
+      "value" : { "base" : 0 },
+      "minimum" : 0
+    },
+    "vision" : {
+      "name" : "Sight distance in normal light (feet)",
+      "value" : { "base" : 30 }
+    },
+    "vision_bright" : {
+      "name" : "Sight distance in bright light (feet)",
+      "value" : { "base" : "stats.vision" }
+    },
+    "vision_dim" : {
+      "name" : "Sight distance in dim light (feet)",
+      "value" : { "base" : 20 }
+    },
+    "vision_dark" : {
+      "name" : "Sight distance in darkness (feet)",
+      "value" : { "base" : 0 }
     }
   }
+
+
 }
