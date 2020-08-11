@@ -22,7 +22,65 @@
     "weight" : "",
     "other" : ""
   },
-  "languages" : [],
+  "languages" : {
+    "aboleth" : {
+      "name" : "Aboleth",
+      "description" : "Spoken by Aboleth and other deep sea aberrations"
+    },
+    "abyssal" : {
+      "name" : "Abyssal",
+      "description" : "The language of demons, Abyssal is often spoken by evil spirits."
+    },
+    "aklo" : {
+      "name" : "Aklo",
+      "description" : "This ancient tongue is spoken by strange eldritch entities, and certain ancient beings (Derro, otherworldy monsters, evil fey)"
+    },
+    "aquan" : {
+      "name" : "Aquan",
+      "description" : "The so-called “tongue of the sea” is spoken primarily in the sunken nation of the locathahs— those who trade frequently with the ocean empires often speak this tongue as well."
+    },
+    "auran" : {
+      "name" : "Auran",
+      "description" : "A soft-spoken, breathy language, also known as the “tongue of the heavens.”"
+    },
+    "boggard" : {
+      "name" : "Boggard",
+      "description" : "Spoken primarily by boggards."
+    },
+    "celestial" : {
+      "name" : "Celestial",
+      "description" : "The language of angels and other good outsiders."
+    },
+    "common" : {
+      "name" : "Common",
+      "description" : "Spoken by humans and most other core races (elf, dwarf, etc..)"
+    },
+    "cyclops" : {
+      "name" : "Cyclops",
+      "description" : "Once the ancient language of the giants, this tongue was created by the cyclops before the rise of humanity."
+    },
+    "dark_folk" : {
+      "name" : "Dark Folk",
+      "description" : "Spoken by all the various kinds of dark folk"
+    },
+    "draconic" : {
+      "name" : "Draconic",
+      "description" : "Primarily language of dragons, this is also spoken by various other reptilian humanoids"
+    },
+    "drow_sign_language" : {
+      "name" : "Drow Sign Language",
+      "description" : "A secret sign language created and shared only among the drow race"
+    },
+    "druidic" : {
+      "name" : "Druidic",
+      "description" : "A secret language only known to Druids. This has it own alphabet and is forbidden to be taught to non-Druids."
+    },
+    "dwarven" : {
+      "name" : "Dwarven",
+      "description" : "Spoken by dwarves"
+    }
+
+  },
   "stats" : {
     "str" : {
       "name" : "Strength",
