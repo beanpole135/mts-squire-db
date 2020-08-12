@@ -90,6 +90,74 @@
     "giant" : {
       "name" : "Giant",
       "description" : "This brutish tongue and its numerous minor variants are spoken in any region where the wrath of giants is known."
+    },
+    "gnoll" : {
+      "name" : "Gnoll",
+      "description" : "Spoken by Gnolls"
+    },
+    "gnome" : {
+      "name" : "Gnome",
+      "description" : "A common language typically spoken by Gnomes"
+    },
+    "goblin" : {
+      "name" : "Goblin",
+      "description" : "The official language of hobgoblins, this is also used by goblins and bugbears"
+    },
+    "grippli" : {
+      "name" : "Grippli",
+      "description" : "Spoken by Grippli"
+    },
+    "halfling" : {
+      "name" : "Halfling",
+      "description" : "Spoken by Halflings"
+    },
+    "ignan" : {
+      "name" : "Ignan",
+      "description" : "Called the \"Tongue of Fire\" due to being used by fire-based creatures from the elemental planes."
+    },
+    "infernal" : {
+      "name" : "Infernal",
+      "description" : "The language of devils, this is often used by evil spirits or lawful-evil outsiders."
+    },
+    "necril" : {
+      "name" : "Necril",
+      "description" : "An ancient language of the dead, this whispering tongue is shared among undead and is often associated with necromancy."
+    },
+    "orc" : {
+      "name" : "Orc",
+      "description" : "A common language created and used by Orcs"
+    },
+    "protean" : {
+      "name" : "Protean",
+      "description" : "Like the Proteans chaotic nature, this language is mutable, evolving so quickly that few outsiders can understand it without magical aid."
+    },
+    "sphinx" : {
+      "name" : "Sphinx",
+      "description" : "An uncommon language typically only spoken by Sphinxes"
+    },
+    "sylvan" : {
+      "name" : "Sylvan",
+      "description" : "The language of the Fey, this language is also spoken by Centaurs, Unicorns, and plant-based creatures"
+    },
+    "tengu" : {
+      "name" : "Tengu",
+      "description" : "The official language of the Tengu race."
+    },
+    "terran" : {
+      "name" : "Terran",
+      "description" : "Called the \"Tongue of Earth\" due to being used by earth-based creatures from the elemental planes."
+    },
+    "treant" : {
+      "name" : "Treant",
+      "description" : "An uncommon language typically only spoken by Treants"
+    },
+    "undercommon" : {
+      "name" : "Undercommon",
+      "description" : "The language of the underdark, this is derived from an ancient combination of Elven and even older tongues. Typically used by Drow, Duergar, Morlocks, Svirfneblin, and other creatures of the underworld."
+    },
+    "vegepygmy" : {
+      "name" : "Vegepygmy",
+      "description" : "A unspoken language since Vegepygmies cannot speak. This is a crude language of rhythmic taps, beats, and clicks."
     }
 
   },
