@@ -78,6 +78,18 @@
     "dwarven" : {
       "name" : "Dwarven",
       "description" : "Spoken by dwarves"
+    },
+    "dziriak" : {
+      "name" : "D’ziriak",
+      "description" : "The insectoid d’ziriak language consists of buzzes and chitters. It is an obscure one known by few outside their race."
+    },
+    "elven" : {
+      "name" : "Elven",
+      "description" : "A common language typically spoken by elves and half-elves"
+    },
+    "giant" : {
+      "name" : "Giant",
+      "description" : "This brutish tongue and its numerous minor variants are spoken in any region where the wrath of giants is known."
     }
 
   },
