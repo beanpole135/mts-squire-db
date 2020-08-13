@@ -1,0 +1,19 @@
+{
+  "name" : "Dwarven",
+  "description" : "A common language created by the dwarves",
+  "is_enhanced" : true,
+  "source" : "Pathfinder Official",
+  "source_url" : "https://www.d20pfsrd.com/skills/linguistics",
+  "change" : {
+    "on_enable" : [
+      {
+        "itempath" : "languages",
+        "set_id" : "dwarven",
+        "set_value" : {
+          "name" : "Dwarven",
+          "description" : "A common language created by the dwarves"
+        }
+      }
+    ]
+  }
+}

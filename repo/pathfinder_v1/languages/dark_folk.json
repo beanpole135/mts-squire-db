@@ -1,0 +1,19 @@
+{
+  "name" : "Dark Folk",
+  "description" : "Spoken by all the various kinds of dark folk",
+  "is_enhanced" : true,
+  "source" : "Pathfinder Official",
+  "source_url" : "https://www.d20pfsrd.com/skills/linguistics",
+  "change" : {
+    "on_enable" : [
+      {
+        "itempath" : "languages",
+        "set_id" : "dark_folk",
+        "set_value" : {
+          "name" : "Dark Folk",
+          "description" : "Spoken by all the various kinds of dark folk"
+        }
+      }
+    ]
+  }
+}
