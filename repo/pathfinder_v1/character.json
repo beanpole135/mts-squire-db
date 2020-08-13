@@ -487,7 +487,7 @@
       "template_name" : "Profession (%s)",
       "template_id": "profession_%s"
     },
-    "Ride" : {
+    "ride" : {
       "name" : "Ride",
       "description" : "You are skilled at riding mounts, usually a horse, but possibly something more exotic, like a griffon or pegasus. If you attempt to ride a creature that is ill suited as a mount, you take a –5 penalty on your Ride checks.",
       "icon" : "",
@@ -537,7 +537,7 @@
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
       "value" : { "base" : "stats.wis.modifier()", "rank" : ".rank" }
     },
-    "Swim" : {
+    "swim" : {
       "name" : "Swim",
       "description" : "You know how to swim and can do so even in stormy water.",
       "icon" : "",
