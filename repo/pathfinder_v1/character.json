@@ -243,7 +243,7 @@
       "icon" : "acrobatic",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.dex.modifier()" }
+      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank" }
     },
     "appraise" : {
       "name" : "Appraise",
@@ -251,7 +251,7 @@
       "icon" : "cash",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.int.modifier()" }
+      "value" : { "base" : "stats.int.modifier()", "rank" : ".rank" }
     },
     "bluff" : {
       "name" : "Bluff",
@@ -259,7 +259,7 @@
       "icon" : "talk",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.cha.modifier()" }
+      "value" : { "base" : "stats.cha.modifier()", "rank" : ".rank" }
     },
     "climb" : {
       "name" : "Climb",
@@ -267,7 +267,7 @@
       "icon" : "jump-across",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.str.modifier()" }
+      "value" : { "base" : "stats.str.modifier()", "rank" : ".rank" }
     },
     "craft" : {
       "name" : "Craft (Template)",
@@ -275,7 +275,7 @@
       "icon" : "crafting",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.int.modifier()", "class_bonus" : {"if" : { "path" : ".rank", "comparison" : ">", "value" : 0}, "then" : 3} },
+      "value" : { "base" : "stats.int.modifier()", "rank" : ".rank" },
       "is_template" : true,
       "name_template" : "Craft (%s)",
       "id_template" : "craft_%s"
@@ -286,7 +286,7 @@
       "icon" : "discussion",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.cha.modifier()" }
+      "value" : { "base" : "stats.cha.modifier()", "rank" : ".rank" }
     },
     "disable_device" : {
       "name" : "Disable Device",
@@ -294,7 +294,7 @@
       "icon" : "cracked-disk",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.dex.modifier()" },
+      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank" },
       "need_rank" : true
     },
     "disguise" : {
@@ -303,7 +303,7 @@
       "icon" : "duality-mask",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.cha.modifier()" }
+      "value" : { "base" : "stats.cha.modifier()", "rank" : ".rank" }
     },
     "escape_artist" : {
       "name" : "Escape Artist",
@@ -311,7 +311,7 @@
       "icon" : "handcuffed",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.dex.modifier()" }
+      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank" }
     },
     "fly" : {
       "name" : "Fly",
@@ -319,7 +319,7 @@
       "icon" : "wingfoot",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.dex.modifier()" }
+      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank" }
     },
     "handle_animal" : {
       "name" : "Handle Animal",
@@ -327,7 +327,7 @@
       "icon" : "paw-print",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.cha.modifier()" },
+      "value" : { "base" : "stats.cha.modifier()", "rank" : ".rank" },
       "need_rank" : true
     },
     "heal" : {
@@ -336,7 +336,7 @@
       "icon" : "first-aid-kit",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.wis.modifier()" }
+      "value" : { "base" : "stats.wis.modifier()", "rank" : ".rank" }
     },
     "intimidate" : {
       "name" : "Intimidate",
@@ -344,7 +344,7 @@
       "icon" : "shouting",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.cha.modifier()" }
+      "value" : { "base" : "stats.cha.modifier()", "rank" : ".rank" }
     },
     "knowledge" : {
       "name" : "Knowledge (Template)",
@@ -352,7 +352,7 @@
       "icon" : "brain",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.int.modifier()" },
+      "value" : { "base" : "stats.int.modifier()", "rank" : ".rank" },
       "need_rank" : true,
       "is_template" : true,
       "template_name" : "Knowledge (%s)",
@@ -364,7 +364,7 @@
       "icon" : "brain",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.int.modifier()" },
+      "value" : { "base" : "stats.int.modifier()", "rank" : ".rank" },
       "need_rank" : true
     },
     "knowledge_dungeoneering" : {
@@ -373,7 +373,7 @@
       "icon" : "brain",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.int.modifier()" },
+      "value" : { "base" : "stats.int.modifier()", "rank" : ".rank" },
       "need_rank" : true
     },
     "knowledge_engineering" : {
@@ -382,7 +382,7 @@
       "icon" : "brain",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.int.modifier()" },
+      "value" : { "base" : "stats.int.modifier()", "rank" : ".rank" },
       "need_rank" : true
     },
     "knowledge_geography" : {
@@ -391,7 +391,7 @@
       "icon" : "brain",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.int.modifier()" },
+      "value" : { "base" : "stats.int.modifier()", "rank" : ".rank" },
       "need_rank" : true
     },
     "knowledge_history" : {
@@ -400,7 +400,7 @@
       "icon" : "brain",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.int.modifier()" },
+      "value" : { "base" : "stats.int.modifier()", "rank" : ".rank" },
       "need_rank" : true
     },
     "knowledge_local" : {
@@ -409,7 +409,7 @@
       "icon" : "brain",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.int.modifier()" },
+      "value" : { "base" : "stats.int.modifier()", "rank" : ".rank" },
       "need_rank" : true
     },
     "knowledge_nature" : {
@@ -418,7 +418,7 @@
       "icon" : "brain",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.int.modifier()" },
+      "value" : { "base" : "stats.int.modifier()", "rank" : ".rank" },
       "need_rank" : true
     },
     "knowledge_nobility" : {
@@ -427,7 +427,7 @@
       "icon" : "brain",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.int.modifier()" },
+      "value" : { "base" : "stats.int.modifier()", "rank" : ".rank" },
       "need_rank" : true
     },
     "knowledge_planes" : {
@@ -436,7 +436,7 @@
       "icon" : "brain",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.int.modifier()" },
+      "value" : { "base" : "stats.int.modifier()", "rank" : ".rank" },
       "need_rank" : true
     },
     "knowledge_religion" : {
@@ -445,7 +445,7 @@
       "icon" : "brain",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.int.modifier()" },
+      "value" : { "base" : "stats.int.modifier()", "rank" : ".rank" },
       "need_rank" : true
     },
     "linguistics" : {
@@ -454,7 +454,7 @@
       "icon" : "scroll-unfurled",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.int.modifier()" }
+      "value" : { "base" : "stats.int.modifier()", "rank" : ".rank" }
     },
     "perception" : {
       "name" : "Perception",
@@ -462,7 +462,7 @@
       "icon" : "eye-target",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.wis.modifier()" }
+      "value" : { "base" : "stats.wis.modifier()", "rank" : ".rank" }
     },
     "perform" : {
       "name" : "Perform (Template)",
@@ -470,7 +470,7 @@
       "icon" : "musical-notes",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.cha.modifier()" },
+      "value" : { "base" : "stats.cha.modifier()", "rank" : ".rank" },
       "is_template" : true,
       "template_name" : "Perform (%s)",
       "template_id": "perform_%s"
@@ -481,7 +481,7 @@
       "icon" : "hanger",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.wis.modifier()" },
+      "value" : { "base" : "stats.wis.modifier()", "rank" : ".rank" },
       "need_rank" : true,
       "is_template" : true,
       "template_name" : "Profession (%s)",
@@ -493,7 +493,7 @@
       "icon" : "",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.dex.modifier()" }
+      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank" }
     },
     "sense_motive" : {
       "name" : "Sense Motive",
@@ -501,7 +501,7 @@
       "icon" : "",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.wis.modifier()" }
+      "value" : { "base" : "stats.wis.modifier()", "rank" : ".rank" }
     },
     "sleight_of_hand" : {
       "name" : "Sleight of Hand",
@@ -509,7 +509,7 @@
       "icon" : "",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.dex.modifier()" },
+      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank" },
       "need_rank" : true
     },
     "spellcraft" : {
@@ -518,7 +518,7 @@
       "icon" : "",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.int.modifier()" },
+      "value" : { "base" : "stats.int.modifier()", "rank" : ".rank" },
       "need_rank" : true
     },
     "stealth" : {
@@ -527,7 +527,7 @@
       "icon" : "",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.dex.modifier()" }
+      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank" }
     },
     "survival" : {
       "name" : "Survival",
@@ -535,7 +535,7 @@
       "icon" : "",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.wis.modifier()" }
+      "value" : { "base" : "stats.wis.modifier()", "rank" : ".rank" }
     },
     "Swim" : {
       "name" : "Swim",
@@ -543,7 +543,7 @@
       "icon" : "",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.str.modifier()" }
+      "value" : { "base" : "stats.str.modifier()", "rank" : ".rank" }
     },
     "use_magic_device" : {
       "name" : "Use Magic Device",
@@ -551,7 +551,7 @@
       "icon" : "",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.cha.modifier()" }
+      "value" : { "base" : "stats.cha.modifier()", "rank" : ".rank" }
     }
   }
 }
