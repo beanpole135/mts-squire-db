@@ -1,0 +1,22 @@
+{
+  "name" : "Human (Standard)",
+  "description" : "",
+  "icon" : "",
+  "is_enhanced" : true,
+  "source" : "Pathfinder Core",
+  "source_url" : "https://www.d20pfsrd.com/races/core-races/human",
+  "change" : {
+    "on_enable" : [
+      { "itempath" : "profile", "set_id": "race", "set_value": "human" },
+      { "action" : "import()", "itempath" : "languages/common" },
+      { "action" : "languages.common.learn()" },
+      {"itempath": "todo", "set_id": "human_languages", "set_value": {
+        "name": "Learn Languages",
+        "description": "Learn a number of languages equal to your Intelligence modifier. Humans can learn any language except secret languages.",
+        "icon": "talk",
+        "dynamic_prompt": ["browse-db","languages"]
+        }
+      }
+    ]
+  }
+}

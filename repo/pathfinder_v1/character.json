@@ -105,7 +105,7 @@
     "ac_flatfoot" : {
       "name" : "Armor Class (Caught Flatfooted)",
       "description" : "Determines the value your opponents must roll on an attack in order to hit you whan you are caught flatfooted. Armor class without dexterity bonus",
-      "icon" : "backstab",
+      "icon" : "surprised",
       "value" : { "base" : ["stats.ac", "-stats.ac_dexmod"] }
     },
     "ac_maxdex" : {
