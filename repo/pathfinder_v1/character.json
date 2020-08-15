@@ -89,7 +89,7 @@
       "name" : "Armor Class",
       "description" : "Determines the value your opponents must roll on an attack in order to hit you.",
       "icon" : "shield",
-      "value" : {"base" : [10, "stats.size_modifier", "stats.ac_dexmod"] }
+      "value" : {"base" : [10, "stats.size_modifier", "stats.ac_dexmod"], "cond_blind": { "if": "conditions.blind.enabled", "then" : [-2, "-stats.ac_dexmod"] } }
     },
     "ac_dexmod" : {
       "name" : "Armor Class Internal (Dexterity Modifier)",
@@ -113,7 +113,7 @@
       "value" : { "base" : 0 }
     },
     "armor_penalty" : {
-      "name" : "Equipment Internal (penalty to Dex-based skills)",
+      "name" : "Equipment Internal (penalty to some skills from equipment)",
       "value" : { "base" : 0 }
     },
     "hit" : {
@@ -221,19 +221,23 @@
     },
     "vision" : {
       "name" : "Sight distance in normal light (feet)",
-      "value" : { "base" : 30 }
+      "value" : { "base" : 30 },
+      "maximum" : { "if": "conditions.blind.enabled", "then" : 0, "else" : 9999 }
     },
     "vision_bright" : {
       "name" : "Sight distance in bright light (feet)",
-      "value" : { "base" : "stats.vision" }
+      "value" : { "base" : "stats.vision" },
+      "maximum" : { "if": "conditions.blind.enabled", "then" : 0, "else" : 9999 }
     },
     "vision_dim" : {
       "name" : "Sight distance in dim light (feet)",
-      "value" : { "base" : 20 }
+      "value" : { "base" : 20 },
+      "maximum" : { "if": "conditions.blind.enabled", "then" : 0, "else" : 9999 }
     },
     "vision_dark" : {
       "name" : "Sight distance in darkness (feet)",
-      "value" : { "base" : 0 }
+      "value" : { "base" : 0 },
+      "maximum" : { "if": "conditions.blind.enabled", "then" : 0, "else" : 9999 }
     }
   },
   "skills" : {
@@ -243,7 +247,7 @@
       "icon" : "acrobatic",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank" }
+      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank", "ac_penalty" : "stats.armor_penalty", "cond_blind": { "if": "conditions.blind.enabled", "then" : -4} }
     },
     "appraise" : {
       "name" : "Appraise",
@@ -267,7 +271,7 @@
       "icon" : "jump-across",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.str.modifier()", "rank" : ".rank" }
+      "value" : { "base" : "stats.str.modifier()", "rank" : ".rank", "ac_penalty" : "stats.armor_penalty", "cond_blind": { "if": "conditions.blind.enabled", "then" : -4} }
     },
     "craft" : {
       "name" : "Craft (Template)",
@@ -294,7 +298,7 @@
       "icon" : "cracked-disk",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank" },
+      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank", "ac_penalty" : "stats.armor_penalty", "cond_blind": { "if": "conditions.blind.enabled", "then" : -4} },
       "need_rank" : true
     },
     "disguise" : {
@@ -311,7 +315,7 @@
       "icon" : "handcuffed",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank" }
+      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank", "ac_penalty" : "stats.armor_penalty", "cond_blind": { "if": "conditions.blind.enabled", "then" : -4} }
     },
     "fly" : {
       "name" : "Fly",
@@ -319,7 +323,7 @@
       "icon" : "wingfoot",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank" }
+      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank", "ac_penalty" : "stats.armor_penalty", "cond_blind": { "if": "conditions.blind.enabled", "then" : -4} }
     },
     "handle_animal" : {
       "name" : "Handle Animal",
@@ -462,7 +466,7 @@
       "icon" : "eye-target",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.wis.modifier()", "rank" : ".rank" }
+      "value" : { "base" : "stats.wis.modifier()", "rank" : ".rank", "cond_blind": { "if": "conditions.blind.enabled", "then" : -4} }
     },
     "perform" : {
       "name" : "Perform (Template)",
@@ -493,7 +497,7 @@
       "icon" : "",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank" }
+      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank", "ac_penalty" : "stats.armor_penalty", "cond_blind": { "if": "conditions.blind.enabled", "then" : -4} }
     },
     "sense_motive" : {
       "name" : "Sense Motive",
@@ -509,7 +513,7 @@
       "icon" : "",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank" },
+      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank", "ac_penalty" : "stats.armor_penalty", "cond_blind": { "if": "conditions.blind.enabled", "then" : -4} },
       "need_rank" : true
     },
     "spellcraft" : {
@@ -527,7 +531,7 @@
       "icon" : "",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank" }
+      "value" : { "base" : "stats.dex.modifier()", "rank" : ".rank", "ac_penalty" : "stats.armor_penalty", "cond_blind": { "if": "conditions.blind.enabled", "then" : -4} }
     },
     "survival" : {
       "name" : "Survival",
@@ -543,7 +547,7 @@
       "icon" : "",
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
-      "value" : { "base" : "stats.str.modifier()", "rank" : ".rank" }
+      "value" : { "base" : "stats.str.modifier()", "rank" : ".rank", "ac_penalty" : "stats.armor_penalty", "cond_blind": { "if": "conditions.blind.enabled", "then" : -4} }
     },
     "use_magic_device" : {
       "name" : "Use Magic Device",
@@ -552,6 +556,23 @@
       "dice" : { "dice" : 1, "dice_size" : 20, "bonus" : {"base" : "."} },
       "rank" : { "minimum": 0, "maximum": "class.character_level()" },
       "value" : { "base" : "stats.cha.modifier()", "rank" : ".rank" }
+    }
+  },
+  "conditions" : {
+    "bleed" : {
+      "name" : "Bleed",
+      "description" : "A creature that is taking bleed damage takes the listed amount of damage at the beginning of its turn. Bleeding can be stopped by a DC 15 Heal check or through the application of any spell that cures hit point damage (even if the bleed is ability damage). Some bleed effects cause ability damage or even ability drain. Bleed effects do not stack with each other unless they deal different kinds of damage. When two or more bleed effects deal the same kind of damage, take the worse effect. In this case, ability drain is worse than ability damage.",
+      "icon" : "bleeding-wound"
+    },
+    "blind" : {
+      "name" : "Blind",
+      "description" : "The creature cannot see. It takes a –2 penalty to Armor Class, loses its Dexterity bonus to AC (if any), and takes a –4 penalty on most Strength– and Dexterity-based skill checks and on opposed Perception skill checks. All checks and activities that rely on vision (such as reading and Perception checks based on sight) automatically fail. All opponents are considered to have total concealment (50% miss chance) against the blinded character. Blind creatures must make a DC 10 Acrobatics skill check to move faster than half speed. Creatures that fail this check fall prone. Characters who remain blinded for a long time grow accustomed to these drawbacks and can overcome some of them.",
+      "icon" : "blindfold"
+    },
+    "confused" :  {
+      "name" : "Confused",
+      "description" : "",
+      "icon" : "abstract-037"
     }
   }
 }
