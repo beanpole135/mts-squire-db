@@ -89,12 +89,13 @@
       "name" : "Armor Class",
       "description" : "Determines the value your opponents must roll on an attack in order to hit you.",
       "icon" : "shield",
-      "value" : {"base" : [10, "stats.size_modifier", "stats.ac_dexmod"], "cond_blind": { "if": "conditions.blind.enabled", "then" : [-2, "-stats.ac_dexmod"] } }
+      "value" : {"base" : [10, "stats.size_modifier", "stats.ac_dexmod"], "cond_blind": { "if": "conditions.blind.enabled", "then" : -2 } }
     },
     "ac_dexmod" : {
       "name" : "Armor Class Internal (Dexterity Modifier)",
       "value" : { "base" : { "smallest" : ["stats.dex.modifier()", "stats.maxdex_ac"] } },
-      "minimum" : 0
+      "minimum" : 0,
+      "maximum" : { "if_complex": [ ["conditions.blind.enabled", "conditions.cowering.enabled"]], "then" : 0, "else" : 9999 }
     },
     "ac_touch" : {
       "name" : "Armor Class (vs Touch)",
@@ -573,6 +574,151 @@
       "name" : "Confused",
       "description" : "",
       "icon" : "abstract-037"
+    },
+    "cowering" :  {
+      "name" : "Cowering",
+      "description" : "",
+      "icon" : ""
+    },
+    "dazed" :  {
+      "name" : "Dazed",
+      "description" : "",
+      "icon" : ""
+    },
+    "dazzled" :  {
+      "name" : "Dazzled",
+      "description" : "",
+      "icon" : ""
+    },
+    "dead" :  {
+      "name" : "Dead",
+      "description" : "",
+      "icon" : ""
+    },
+    "deafened" :  {
+      "name" : "Deafened",
+      "description" : "",
+      "icon" : ""
+    },
+    "disabled" :  {
+      "name" : "Disabled",
+      "description" : "",
+      "icon" : ""
+    },
+    "dying" :  {
+      "name" : "Dying",
+      "description" : "",
+      "icon" : ""
+    },
+    "energy_drained" :  {
+      "name" : "Energy Drained",
+      "description" : "",
+      "icon" : ""
+    },
+    "entangled" :  {
+      "name" : "Entangled",
+      "description" : "",
+      "icon" : ""
+    },
+    "exhausted" :  {
+      "name" : "Exhausted",
+      "description" : "",
+      "icon" : ""
+    },
+    "fascinated" :  {
+      "name" : "fascinated",
+      "description" : "",
+      "icon" : ""
+    },
+    "fatigued" :  {
+      "name" : "Fatigued",
+      "description" : "",
+      "icon" : ""
+    },
+    "frightened" :  {
+      "name" : "Frightened",
+      "description" : "",
+      "icon" : ""
+    },
+    "grappled" :  {
+      "name" : "Grappled",
+      "description" : "",
+      "icon" : ""
+    },
+    "helpless" :  {
+      "name" : "Helpless",
+      "description" : "",
+      "icon" : ""
+    },
+    "incorporeal" :  {
+      "name" : "Incorporeal",
+      "description" : "",
+      "icon" : ""
+    },
+    "invisible" :  {
+      "name" : "Invisible",
+      "description" : "",
+      "icon" : ""
+    },
+    "nauseated" :  {
+      "name" : "Nauseated",
+      "description" : "",
+      "icon" : ""
+    },
+    "panicked" :  {
+      "name" : "Panicked",
+      "description" : "",
+      "icon" : ""
+    },
+    "paralyzed" :  {
+      "name" : "Paralyzed",
+      "description" : "",
+      "icon" : ""
+    },
+    "petrified" :  {
+      "name" : "Petrified",
+      "description" : "",
+      "icon" : ""
+    },
+    "pinned" :  {
+      "name" : "Pinned",
+      "description" : "",
+      "icon" : ""
+    },
+    "prone" :  {
+      "name" : "Prone",
+      "description" : "",
+      "icon" : ""
+    },
+    "shaken" :  {
+      "name" : "Shaken",
+      "description" : "",
+      "icon" : ""
+    },
+    "sickened" :  {
+      "name" : "sickened",
+      "description" : "",
+      "icon" : ""
+    },
+    "stable" :  {
+      "name" : "Stable",
+      "description" : "",
+      "icon" : ""
+    },
+    "staggered" :  {
+      "name" : "Staggered",
+      "description" : "A staggered creature may take a single move action or standard action each round (but not both, nor can he take full-round actions). A staggered creature can still take free, swift, and immediate actions. A creature with nonlethal damage exactly equal to its current hit points gains the staggered condition.",
+      "icon" : ""
+    },
+    "stunned" :  {
+      "name" : "Stunned",
+      "description" : "A stunned creature drops everything held, can’t take actions, takes a –2 penalty to AC, and loses its Dexterity bonus to AC (if any).\n\nAttackers receive a +4 bonus on attack rolls to perform combat maneuvers against a stunned opponent.",
+      "icon" : ""
+    },
+    "unconscious" :  {
+      "name" : "Unconscious",
+      "description" : "Unconscious creatures are knocked out and helpless. Unconsciousness can result from having negative hit points (but not more than the creature’s Constitution score), or from nonlethal damage in excess of current hit points.",
+      "icon" : ""
     }
   }
 }
