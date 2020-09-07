@@ -1,7 +1,7 @@
 {
   "name" : "Pathfinder (1st edition)",
   "description" : "The Pathfinder role-playing game from Paizo Inc. (first edition)",
-  "icon_url" : "/static/icon_pathfinder.png",
+  "icon_url" : "/web/icon_pathfinder.png",
   "subdirs" : {
     "class" : {
       "name" : "Classes",
