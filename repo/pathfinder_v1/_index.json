@@ -1,32 +1,50 @@
 {
-  "name" : "Pathfinder (1st edition)",
-  "description" : "The Pathfinder role-playing game from Paizo Inc. (first edition)",
-  "icon_url" : "/web/icon_pathfinder.png",
-  "subdirs" : {
-    "class" : {
-      "name" : "Classes",
-      "description" : "Playable classes",
-      "icon" : ""
+  "name": "Pathfinder (1st edition)",
+  "description": "The Pathfinder role-playing game from Paizo Inc. (first edition)",
+  "icon": "",
+  "subdirs": {
+    "class": {
+      "dirname": "class",
+      "name": "Classes",
+      "description": "Pre-defined character classes and variations",
+      "icon": ""
     },
-    "feats" : {
-      "name" : "Feats",
-      "description" : "Traits and abilities to make your character unique!",
-      "icon" : ""
+    "feats": {
+      "dirname": "feats",
+      "name": "Feats",
+      "description": "Pre-defined skills and enhancements for characters.",
+      "icon": ""
     },
-    "items" : {
-      "name" : "Items",
-      "description" : "Items and equipment",
-      "icon" : ""
+    "featured_class": {
+      "dirname": "featured_class",
+      "name": "featured_class",
+      "description": "",
+      "icon": ""
     },
-    "race" : {
-      "name" : "Races",
-      "description" : "Playable races",
-      "icon" : ""
+    "items": {
+      "dirname": "items",
+      "name": "Items",
+      "description": "Pre-defined weapons, armor, and other general equipment.",
+      "icon": ""
     },
-    "spells" : {
-      "name" : "Spells",
-      "description" : "",
-      "icon" : ""
+    "languages": {
+      "dirname": "languages",
+      "name": "languages",
+      "description": "",
+      "icon": ""
+    },
+    "race": {
+      "dirname": "race",
+      "name": "Race",
+      "description": "Pre-defined character races and variations",
+      "icon": ""
+    },
+    "spells": {
+      "dirname": "spells",
+      "name": "Spells and Spell-like Abilities",
+      "description": "",
+      "icon": ""
     }
-  }
+  },
+  "files": {}
 }

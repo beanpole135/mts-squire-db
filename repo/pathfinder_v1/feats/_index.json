@@ -1,5 +1,7 @@
 {
-  "name" : "Feats",
-  "description" : "Pre-defined skills and enhancements for characters.",
-  "icon" : ""
+  "name": "Feats",
+  "description": "Pre-defined skills and enhancements for characters.",
+  "icon": "",
+  "subdirs": {},
+  "files": {}
 }

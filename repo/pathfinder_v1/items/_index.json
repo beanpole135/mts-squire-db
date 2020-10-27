@@ -1,5 +1,7 @@
 {
-  "name" : "Items",
-  "description" : "Pre-defined weapons, armor, and other general equipment.",
-  "icon" : ""
+  "name": "Items",
+  "description": "Pre-defined weapons, armor, and other general equipment.",
+  "icon": "",
+  "subdirs": {},
+  "files": {}
 }

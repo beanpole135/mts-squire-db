@@ -1,5 +1,7 @@
 {
-  "name" : "Spells and Spell-like Abilities",
-  "description" : "",
-  "icon" : ""
+  "name": "Spells and Spell-like Abilities",
+  "description": "",
+  "icon": "",
+  "subdirs": {},
+  "files": {}
 }

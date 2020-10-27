@@ -1,5 +1,7 @@
 {
-  "name" : "Classes",
-  "description" : "Pre-defined character classes and variations",
-  "icon" : ""
+  "name": "Classes",
+  "description": "Pre-defined character classes and variations",
+  "icon": "",
+  "subdirs": {},
+  "files": {}
 }

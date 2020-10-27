@@ -1,5 +1,14 @@
 {
-  "name" : "Race",
-  "description" : "Pre-defined character races and variations",
-  "icon" : ""
+  "name": "Race",
+  "description": "Pre-defined character races and variations",
+  "icon": "",
+  "subdirs": {
+    "human": {
+      "dirname": "human",
+      "name": "Human",
+      "description": "Ambition alone drives countless humans, and for many, adventuring serves as a means to an end, whether it be wealth, acclaim, social status, or arcane knowledge. A few pursue adventuring careers simply for the thrill of danger. Humans hail from myriad regions and backgrounds, and as such can fill any role within an adventuring party",
+      "icon": "person"
+    }
+  },
+  "files": {}
 }
