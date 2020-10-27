@@ -1,0 +1,18 @@
+{
+  "name": "Human",
+  "description": "Ambition alone drives countless humans, and for many, adventuring serves as a means to an end, whether it be wealth, acclaim, social status, or arcane knowledge. A few pursue adventuring careers simply for the thrill of danger. Humans hail from myriad regions and backgrounds, and as such can fill any role within an adventuring party",
+  "icon": "person",
+  "subdirs": {},
+  "files": {
+    "standard.json": {
+      "filename": "standard.json",
+      "name": "Human (Standard)",
+      "description": "Medium character with 30ft movement speed, +2 bonus to any base attribute, bonus feat at lvl 1, extra skill point with every level",
+      "icon": "person",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Core",
+      "source_url": "https://www.d20pfsrd.com/races/core-races/human"
+    }
+  }
+}
