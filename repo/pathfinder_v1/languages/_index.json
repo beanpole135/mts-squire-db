@@ -1,0 +1,348 @@
+{
+  "name": "languages",
+  "description": "",
+  "icon": "",
+  "subdirs": {},
+  "files": {
+    "aboleth.json": {
+      "filename": "aboleth.json",
+      "name": "Aboleth",
+      "description": "Spoken by Aboleth and other deep sea aberrations",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "abyssal.json": {
+      "filename": "abyssal.json",
+      "name": "Abyssal",
+      "description": "The language of demons, Abyssal is often spoken by evil spirits.",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "aklo.json": {
+      "filename": "aklo.json",
+      "name": "Aklo",
+      "description": "This ancient tongue is spoken by strange eldritch entities, and certain ancient beings (Derro, otherworldy monsters, evil fey)",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "aquan.json": {
+      "filename": "aquan.json",
+      "name": "Aquan",
+      "description": "The so-called “tongue of the sea” is spoken primarily in the sunken nation of the locathahs— those who trade frequently with the ocean empires often speak this tongue as well.",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "auran.json": {
+      "filename": "auran.json",
+      "name": "Auran",
+      "description": "A soft-spoken, breathy language, also known as the “tongue of the heavens.”",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "boggard.json": {
+      "filename": "boggard.json",
+      "name": "Boggard",
+      "description": "Spoken primarily by boggards.",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "celestial.json": {
+      "filename": "celestial.json",
+      "name": "Celestial",
+      "description": "The language of angels and other good outsiders.",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "common.json": {
+      "filename": "common.json",
+      "name": "Common",
+      "description": "Spoken by humans and most other core races (elf, dwarf, etc..)",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "cyclops.json": {
+      "filename": "cyclops.json",
+      "name": "Cyclops",
+      "description": "Once the ancient language of the giants, this tongue was created by the cyclops before the rise of humanity.",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "dark_folk.json": {
+      "filename": "dark_folk.json",
+      "name": "Dark Folk",
+      "description": "Spoken by all the various kinds of dark folk",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "draconic.json": {
+      "filename": "draconic.json",
+      "name": "Draconic",
+      "description": "Primary language of dragons, this is also spoken by various other reptilian humanoids",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "drow_sign_language.json": {
+      "filename": "drow_sign_language.json",
+      "name": "Drow Sign Language",
+      "description": "[Unspoken] A secret sign language created and shared only among the drow race",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "druidic.json": {
+      "filename": "druidic.json",
+      "name": "Druidic",
+      "description": "A secret language only known to Druids. This has it own alphabet and is forbidden to be taught to non-Druids.",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "dwarven.json": {
+      "filename": "dwarven.json",
+      "name": "Dwarven",
+      "description": "A common language created by the dwarves",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "dziriak.json": {
+      "filename": "dziriak.json",
+      "name": "D’ziriak",
+      "description": "The insectoid d’ziriak language consists of buzzes and chitters. It is an obscure one known by few outside their race.",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "elven.json": {
+      "filename": "elven.json",
+      "name": "Elven",
+      "description": "A common language typically spoken by elves and half-elves",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "giant.json": {
+      "filename": "giant.json",
+      "name": "Giant",
+      "description": "This brutish tongue and its numerous minor variants are spoken in any region where the wrath of giants is known.",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "gnoll.json": {
+      "filename": "gnoll.json",
+      "name": "Gnoll",
+      "description": "Spoken by Gnolls",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "gnome.json": {
+      "filename": "gnome.json",
+      "name": "Gnome",
+      "description": "A common language typically spoken by Gnomes",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "goblin.json": {
+      "filename": "goblin.json",
+      "name": "Goblin",
+      "description": "The official language of hobgoblins, this is also used by goblins and bugbears",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "grippli.json": {
+      "filename": "grippli.json",
+      "name": "Grippli",
+      "description": "Spoken by Grippli",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "halfling.json": {
+      "filename": "halfling.json",
+      "name": "Halfling",
+      "description": "Spoken by Halflings",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "ignan.json": {
+      "filename": "ignan.json",
+      "name": "Ignan",
+      "description": "Called the \"Tongue of Fire\" due to being used by fire-based creatures from the elemental planes.",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "infernal.json": {
+      "filename": "infernal.json",
+      "name": "Infernal",
+      "description": "The language of devils, this is often used by evil spirits or lawful-evil outsiders.",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "necril.json": {
+      "filename": "necril.json",
+      "name": "Necril",
+      "description": "An ancient language of the dead, this whispering tongue is shared among undead and is often associated with necromancy.",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "orc.json": {
+      "filename": "orc.json",
+      "name": "Orc",
+      "description": "A common language created and used by Orcs",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "protean.json": {
+      "filename": "protean.json",
+      "name": "Protean",
+      "description": "Like the Proteans chaotic nature, this language is mutable, evolving so quickly that few outsiders can understand it without magical aid.",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "sphinx.json": {
+      "filename": "sphinx.json",
+      "name": "Sphinx",
+      "description": "An uncommon language typically only spoken by Sphinxes",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "sylvan.json": {
+      "filename": "sylvan.json",
+      "name": "Sylvan",
+      "description": "The language of the Fey, this language is also spoken by Centaurs, Unicorns, and plant-based creatures",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "tengu.json": {
+      "filename": "tengu.json",
+      "name": "Tengu",
+      "description": "The official language of the Tengu race.",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "terran.json": {
+      "filename": "terran.json",
+      "name": "Terran",
+      "description": "Called the \"Tongue of Earth\" due to being used by earth-based creatures from the elemental planes.",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "treant.json": {
+      "filename": "treant.json",
+      "name": "Treant",
+      "description": "An uncommon language typically only spoken by Treants",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "undercommon.json": {
+      "filename": "undercommon.json",
+      "name": "Undercommon",
+      "description": "The language of the underdark, this is derived from an ancient combination of Elven and even older tongues. Typically used by Drow, Duergar, Morlocks, Svirfneblin, and other creatures of the underworld.",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    },
+    "vegepygmy.json": {
+      "filename": "vegepygmy.json",
+      "name": "Vegepygmy",
+      "description": "[Unspoken] This is a crude language of rhythmic taps, beats, and clicks created by the vegepygmies (who cannot speak).",
+      "icon": "",
+      "is_enhanced": true,
+      "is_official": false,
+      "source": "Pathfinder Official",
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+    }
+  }
+}
