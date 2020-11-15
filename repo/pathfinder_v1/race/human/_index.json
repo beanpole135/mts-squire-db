@@ -4,10 +4,10 @@
   "icon": "person",
   "subdirs": {},
   "files": {
-    "standard.json": {
-      "filename": "standard.json",
+    "_standard.json": {
+      "filename": "_standard.json",
       "name": "Human (Standard)",
-      "description": "Medium character with 30ft movement speed, +2 bonus to any base attribute, bonus feat at lvl 1, extra skill point with every level",
+      "description": "Medium character with 30ft movement speed\n +2 bonus to any base attribute\n bonus feat at lvl 1\n extra skill point with every level",
       "icon": "person",
       "is_enhanced": true,
       "is_official": false,
