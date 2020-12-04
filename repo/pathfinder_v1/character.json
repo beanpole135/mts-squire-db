@@ -9,48 +9,49 @@
       "name" : "Strength",
       "description" : "Strength measures muscle and physical power. This ability is important for those who engage in hand-to-hand (or “melee”) combat. Strength also sets the maximum amount of weight your character can carry.",
       "icon" : "biceps",
-      "value" : {"base" : 10},
+      "basevalue" : 10,
       "minimum" : 0
     },
     "dex" : {
       "name" : "Dexterity",
       "description" : "Dexterity measures agility, reflexes, and balance. This ability is useful for characters who wear light or medium armor or no armor at all. This ability is vital for characters seeking to excel with ranged weapons.",
       "icon" : "sensuousness",
-      "value" : {"base" : 10},
+      "basevalue" : 10,
       "minimum" : 0
     },
     "con" : {
       "name" : "Constitution",
       "description" : "Constitution represents your character’s health and stamina. A Constitution bonus increases a character’s hit points, so the ability is important for all classes.",
       "icon" : "strong",
-      "value" : {"base" : 10},
+      "basevalue" : 10,
       "minimum" : 0
     },
     "int" : {
       "name" : "Intelligence",
       "description" : "Intelligence determines how well your character learns and reasons.",
       "icon" : "smart",
-      "value" : {"base" : 10},
+      "basevalue" : 10,
       "minimum" : 0
     },
     "wis" : {
       "name" : "Wisdom",
       "description" : "Wisdom describes a character’s willpower, common sense, awareness, and intuition.",
       "icon" : "wisdom",
-      "value" : {"base" : 10},
+      "basevalue" : 10,
       "minimum" : 0
     },
     "cha" : {
       "name" : "Charisma",
       "description" : "Charisma measures a character’s personality, personal magnetism, ability to lead, and appearance.",
       "icon" : "public-speaker",
-      "value" : {"base" : 10},
+      "basevalue" : 10,
       "minimum" : 0
     },
     "size" : {
-      "name" : "Size Modifier (1=small, 0=normal, -1=large)",
+      "name" : "Size Modifier",
+      "description" : "Size modifier index value: 1=small, 0=normal, -1=large"
       "icon" : "giant",
-      "value" : {"base" : 0},
+      "basevalue" : 0,
       "minimum" : -4,
       "maximum" : 4
     },
