@@ -49,7 +49,7 @@
     },
     "size" : {
       "name" : "Size Modifier",
-      "description" : "Size modifier index value: 1=small, 0=normal, -1=large"
+      "description" : "Size modifier index value: 1=small, 0=normal, -1=large",
       "icon" : "giant",
       "basevalue" : 0,
       "minimum" : -4,
