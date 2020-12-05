@@ -4,6 +4,9 @@
   "is_enhanced" : true,
   "source" : "Pathfinder Official",
   "source_url" : "https://www.d20pfsrd.com/skills/linguistics",
+  "requirements" : {
+    "if" : { "path": "languages.abyssal", "comparison" : "notexist" }
+  },
   "change" : {
     "on_enable" : [
       {

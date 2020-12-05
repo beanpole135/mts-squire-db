@@ -12,7 +12,14 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "languages.aboleth",
+          "comparison": "notexist",
+          "value": null
+        }
+      }
     },
     "abyssal.json": {
       "filename": "abyssal.json",
@@ -22,7 +29,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "aklo.json": {
       "filename": "aklo.json",
@@ -32,7 +45,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "aquan.json": {
       "filename": "aquan.json",
@@ -42,7 +61,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "auran.json": {
       "filename": "auran.json",
@@ -52,7 +77,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "boggard.json": {
       "filename": "boggard.json",
@@ -62,7 +93,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "celestial.json": {
       "filename": "celestial.json",
@@ -72,7 +109,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "common.json": {
       "filename": "common.json",
@@ -82,7 +125,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "cyclops.json": {
       "filename": "cyclops.json",
@@ -92,7 +141,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "dark_folk.json": {
       "filename": "dark_folk.json",
@@ -102,7 +157,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "draconic.json": {
       "filename": "draconic.json",
@@ -112,7 +173,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "drow_sign_language.json": {
       "filename": "drow_sign_language.json",
@@ -122,7 +189,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "druidic.json": {
       "filename": "druidic.json",
@@ -132,7 +205,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "dwarven.json": {
       "filename": "dwarven.json",
@@ -142,7 +221,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "dziriak.json": {
       "filename": "dziriak.json",
@@ -152,7 +237,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "elven.json": {
       "filename": "elven.json",
@@ -162,7 +253,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "giant.json": {
       "filename": "giant.json",
@@ -172,7 +269,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "gnoll.json": {
       "filename": "gnoll.json",
@@ -182,7 +285,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "gnome.json": {
       "filename": "gnome.json",
@@ -192,7 +301,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "goblin.json": {
       "filename": "goblin.json",
@@ -202,7 +317,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "grippli.json": {
       "filename": "grippli.json",
@@ -212,7 +333,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "halfling.json": {
       "filename": "halfling.json",
@@ -222,7 +349,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "ignan.json": {
       "filename": "ignan.json",
@@ -232,7 +365,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "infernal.json": {
       "filename": "infernal.json",
@@ -242,7 +381,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "necril.json": {
       "filename": "necril.json",
@@ -252,7 +397,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "orc.json": {
       "filename": "orc.json",
@@ -262,7 +413,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "protean.json": {
       "filename": "protean.json",
@@ -272,7 +429,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "sphinx.json": {
       "filename": "sphinx.json",
@@ -282,7 +445,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "sylvan.json": {
       "filename": "sylvan.json",
@@ -292,7 +461,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "tengu.json": {
       "filename": "tengu.json",
@@ -302,7 +477,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "terran.json": {
       "filename": "terran.json",
@@ -312,7 +493,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "treant.json": {
       "filename": "treant.json",
@@ -322,7 +509,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "undercommon.json": {
       "filename": "undercommon.json",
@@ -332,7 +525,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     },
     "vegepygmy.json": {
       "filename": "vegepygmy.json",
@@ -342,7 +541,13 @@
       "is_enhanced": true,
       "is_official": false,
       "source": "Pathfinder Official",
-      "source_url": "https://www.d20pfsrd.com/skills/linguistics"
+      "source_url": "https://www.d20pfsrd.com/skills/linguistics",
+      "requirements": {
+        "if": {
+          "path": "",
+          "value": null
+        }
+      }
     }
   }
 }
